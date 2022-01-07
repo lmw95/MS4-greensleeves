@@ -213,3 +213,25 @@ Greensleeves offers a diverse range of high quality and well cared-for indoor pl
 * [Policies](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/wireframes/policies.png)
 
 ---
+
+## **Surface**
+The overall design of the website will be minimal with splashes of colour coming from the icons and certain sections of each page.
+
+***Colour*** 
+
+The colour palette will feature mostly 'Earthy' and muted colours, keeping in tone with the website's products. I chose the colours below using [Coolors]().
+
+![](documentation/design/palette.png)
+
+***Imagery***
+
+The images used in the website will come from [Flaticon]() and are linked in the Credits section. All images will be relevant to the content they are used in conjunction with, and will be used sparingly throughout the site. 
+
+***Typography***
+* [Pacifico](https://fonts.google.com/specimen/Pacifico?category=Handwriting#standard-styles) will be used for the brand logo only
+* [Prata](https://fonts.google.com/specimen/Prata?category=Serif) will be used for headers
+* [Be Vietnam Pro](https://fonts.google.com/specimen/Be+Vietnam+Pro?category=Sans+Serif&preview.text=%C2%A315.00&preview.text_type=custom) will be used as the body text
+
+***Iconography***
+
+Icons will be from [FontAwesome]() and [Flaticon]() and will be used to highlight certain bits of information or interactive elements like buttons
