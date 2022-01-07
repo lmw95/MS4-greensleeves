@@ -1,0 +1,12 @@
+:root {
+    --black: #313232;
+    --black-t: rgba(19, 20, 20, 0.85);
+    --brown: #4D352A;
+    --beige: #BDB6A0;
+    --green: #C7D1B3;
+    --white: #FEFEFE;
+    --grey: #666666;
+    --header: 'Prata', serif;
+    --body-text: 'Be Vietnam Pro', sans-serif;
+    --brand: 'Pacifico', cursive;
+}

@@ -1,0 +1,109 @@
+/*----------------- [General] -----------------*/
+
+html {
+    height: 100%;
+    color: var(--black);
+}
+
+.header-container {
+    padding-top: 110px;
+    background-color: var(--white);
+}
+
+body {
+    height: calc(100vh - 110px);
+}
+
+/*----------------- [Navigation] -----------------*/
+
+.navbar-container {
+    background-color: var(--white);
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand {
+    color: var(--black);
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: var(--brand);
+}
+
+.navbar-brand:hover {
+    color: var(--black);
+}
+
+.nav-link i {
+    color: var(--black);
+}
+
+.menu-nav-container {
+    background-color: var(--black-t);
+    font-family: var(--header);
+}
+
+.menu-nav {
+    font-family: var(--body-text);
+    height: 50px;
+    box-shadow: 0 10px 15px 0 rgb(0 0 0 / 10%);
+}
+
+.menu-nav-link {
+    color: var(--white);
+    transition: all 0.1s ease-in-out;
+    letter-spacing: 1px;
+}
+
+.menu-nav-link:hover {
+    color: var(--green);
+}
+
+.menu-search {
+    border: none;
+    background-color: var(--white);
+}
+
+.menu-search:focus {
+    background-color: var(--white);
+}
+
+.form-control::placeholder {
+    font-family: var(--body-text);
+    font-size: 0.9em;
+    color: var(--black);
+}
+
+.rounded-pill {
+    background-color: var(--beige);
+    color: var(--black);
+    font-family: var(--body-text);
+    font-size: 0.7em;
+}
+
+.toggle-icon {
+    color: var(--white);
+    animation: wiggle 3s infinite;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.mobile-icon {
+    color: var(--white) !important;
+}
+
+.mobile-nav {
+    margin-bottom: 0;
+    padding-left: 0 !important;
+}
