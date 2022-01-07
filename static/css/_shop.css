@@ -62,3 +62,38 @@
     border-top: 2px solid var(--green);
     width: 100px;
 }
+
+/*----------------- [Search filters] -----------------*/
+
+.search-filters {
+    color: var(--black);
+    background-color: var(--green-t);
+    font-family: var(--body-text);
+}
+
+.search-filters h6 {
+    font-family: var(--header);
+}
+
+.dropdown-toggle::after {
+    float: right;
+    margin-top: 0.5em;
+}
+
+.collection-toggle {
+    background-color: var(--white);
+}
+
+button:focus:not(:focus-visible) {
+    outline: solid 3px var(--green);
+    box-shadow: none;
+}
+
+.collection-toggle:focus {
+    outline: 3px solid var(--black);
+}
+
+.collection-option:hover,
+.collection-option:focus {
+    background-color: var(--beige);
+}

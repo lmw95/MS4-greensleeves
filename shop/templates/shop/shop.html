@@ -23,6 +23,54 @@
     <!---
     [Filtering]
     -->
+    <div class="row mt-3">
+        <div class="col">
+            <div class="container search-filters p-3">
+                <div class="row">
+                    <div class="col">
+                        <h6 class="fw-bold fs-3">Filter your search...</h6>
+                    </div>
+                </div>
+                <div class="row py-4 collection-filters">
+                    <div class="col-4">
+                        <p class="mb-2 bc">By collection:</p>
+                        <div class="dropdown collection-dropdown mb-3">
+                            <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterCollection" data-bs-toggle="dropdown" aria-expanded="false">
+                              Choose a collection...
+                            </button>
+                            <ul class="dropdown-menu w-100 rounded-0" aria-labelledby="searchFilterCollection">
+                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?category=plants">Show all</a></li>
+                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?seasonal_collection=winter">Winter collection</a></li>
+                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?seasonal_collection=valentines">Valentines collection</a></li>
+                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?seasonal_collection=spring">Spring collection</a></li>
+                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?seasonal_collection=summer">Summer collection</a></li>
+                            </ul>
+                          </div>
+                          <p class="mb-2 bc">By category:</p>
+                        <div class="dropdown collection-dropdown">
+                            <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                              Choose a collection...
+                            </button>
+                            <ul class="dropdown-menu w-100 rounded-0" aria-labelledby="searchFilterType">
+                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}">Show all</a></li>
+                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?category=plants">Plants</a></li>
+                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?category=accessories">Accessories</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="col-8">
+                        <!--
+                        [light]
+                        [watering]
+                        [temperature]
+                        [humidity]
+                        [growth rate]
+                        [ease of care]-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row mt-5">
         <div class="col d-flex justify-content-center align-items-center results-num">
             {% if products %}
