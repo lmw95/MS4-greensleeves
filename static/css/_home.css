@@ -1,0 +1,159 @@
+/*----------------- [Hero image] -----------------*/
+
+.hero-container {
+    background: url('/media/header-image-plants.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.hero-brand {
+    margin-right: 0;
+}
+
+.hero-left {
+    background-color: var(--green-t);
+    height: 100vh !important;
+    color: var(--black);
+}
+
+.hero-left h1 {
+    font-family: var(--header);
+    font-weight: 700;
+}
+
+.hero-left li {
+    font-family: var(--body-text);
+    font-weight: 400;
+}
+
+.hero-left i {
+    margin-right: 10px;
+}
+
+.hero-left-links a {
+    border: var(--black) solid 2px;
+    border-radius: none;
+    transition: all 0.1s ease-in-out;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.hero-left-links a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.hero-right {
+    padding: 0;
+    height: 100vh !important;
+}
+
+hr {
+    border-top: 2px solid var(--white);
+    position: absolute;
+    opacity: 1;
+}
+
+/*----------------- [Why Greensleeves] -----------------*/
+
+.why-greensleeves {
+    font-family: var(--body-text);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.why-greensleeves h1 {
+    font-family: var(--header);
+    font-weight: 700;
+}
+
+.why-greensleeves-answers ul {
+    padding-left: 0;
+}
+
+.why-greensleeves-answers p {
+    text-align: justify;
+}
+
+.why-text {
+    width: 80%;
+}
+
+/*----------------- [Plant for Everyonr] -----------------*/
+
+.everyone-image {
+    background: url(/media/plants.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh !important;
+    padding: 0;
+}
+
+.everyone-text {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: var(--body-text);
+    height: 100vh !important;
+}
+
+.everyone-text h1 {
+    font-family: var(--header);
+}
+
+.everyone-text li i {
+    margin-right: 10px;
+}
+
+.everyone-links a {
+    border: var(--white) solid 2px;
+    border-radius: none;
+    transition: all 0.1s ease-in-out;
+    color: var(--white);
+    font-weight: 700;
+    font-family: var(--body-text);
+}
+
+.everyone-links a:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/*----------------- [Seasonal collection] -----------------*/
+
+.seasonal-collection {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: var(--body-text);
+}
+
+.seasonal-text h1 {
+    font-family: var(--header);
+    font-weight: 700;
+}
+
+.seasonal-links {
+    align-items: center;
+}
+
+.seasonal-links a {
+    border: var(--black) solid 2px;
+    border-radius: none;
+    transition: all 0.1s ease-in-out;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.seasonal-links a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/*----------------- [Testimonials] -----------------*/
+
+.testimonials {
+    background-color: var(--white);
+}
+
+.testimonials-text h1 {
+    font-family: var(--header);
+    font-weight: 700;
+    color: var(--black);
+}

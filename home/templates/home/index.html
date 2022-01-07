@@ -10,3 +10,172 @@
     </div>
 </div>
 {% endblock %}
+
+{% block content %}
+<div class="container-fluid hero-container">
+    <div class="row h-100">
+        <div class="col-sm-12 col-md-6 h-100 d-flex justify-content-center align-items-center order-sm-0 order-md-0 order-last hero-left">
+            <div class="hero-left-text animated fadeInLeft">
+                <h1 class="mb-3">For the love of <span>things that grow</span></h1>      
+                <ul class="list-unstyled mb-5">
+                    <li><i class="fas fa-leaf"></i> Discover our diverse range of indoor plants</li>
+                    <li><i class="fas fa-leaf"></i> Learn how to care for your new family member</li>
+                    <li><i class="fas fa-leaf"></i> Browse for accessories to care for your budding nursery</li>
+                    <li><i class="fas fa-leaf"></i> Find the perfect gift for a loved one</li>
+                </ul>
+                <div class="d-grid gap-2 hero-left-links pb-4">
+                    <a href="" class="py-3 text-center text-decoration-none" target="_self">Browse plants</a>
+                    <a href="" class="py-3 text-center text-decoration-none" target="_self">Browse accessories</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 h-100 order-md-1 order-first hero-right d-flex justify-content-center align-items-center">
+            <hr class="d-lg-none"> 
+            <a href="{% url 'home' %}" class="navbar-brand hero-brand text-center fs-1 p-4 mr-0 d-block d-lg-none rounded-3 animated slideInUp" target="_self">
+                <img src="/media/brand-logo.png" alt="Greensleeves logo" width="60" height="60" class="d-inline-block align-text-center">
+                Greensleeves
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid why-greensleeves p-5">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <h1 class="text-center pt-5">Greensleeves provides</h1>
+        </div>
+    </div>
+    <div class="p-4 why-greensleeves-answers">
+        <div class="row d-flex flex-column">
+            <div class="col">
+                <ul class="d-flex justify-content-around flex-wrap">
+                    <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="media/agriculture.png" width="80" height="80" alt="Person caring for plants">
+                            <div class="why-text">
+                                <h2 class="text-center fs-6 mt-3 fw-bold">Sustainability</h2>
+                                <p class="text-center mb-5">
+                                    Our plants are sourced from local and ethical growers
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="media/delivery.png" width="80" height="80" alt="Plant in a box">
+                            <div class="why-text">
+                                <h2 class="text-center fs-6 mt-3 fw-bold">Delivery</h2>
+                                <p class="text-center mb-5">
+                                    Orders are delivered straight to your door in 2-3 working days
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="media/guidance.png" width="80" height="80" alt="Person carrying plant">
+                            <div class="why-text">
+                                <h2 class="text-center fs-6 mt-3 fw-bold">Guidance</h2>
+                                <p class="text-center mb-5">
+                                    Our team are always on hand to help with any plant-parenting questions
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="media/secure-shopping.png" width="80" height="80" alt="Credit card and padlock">
+                            <div class="why-text">
+                                <h2 class="text-center fs-6 mt-3 fw-bold">Security</h2>
+                                <p class="text-center mb-5">
+                                    Shop and purchase with confidence that your information will be secure with us
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="media/pinky-promise.png" width="80" height="80" alt="Pinky swearing">
+                            <div class="why-text">
+                                <h2 class="text-center fs-6 mt-3 fw-bold">Promise</h2>
+                                <p class="text-center mb-5">
+                                    We will provide 100% refund if you are not happy with your order
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="media/hand.png" width="80" height="80" alt="Hand holding plant">
+                            <div class="why-text">
+                                <h2 class="text-center fs-6 mt-3 fw-bold">Quality</h2>
+                                <p class="text-center mb-5">
+                                    All our plants and gifts are given pre-shipping checks before delivery
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid everyone-container">
+    <div class="row h-100">
+        <div class="col-sm-12 col-md-6 h-100 everyone-image"></div>
+        <div class="col-sm-12 col-md-6 h-100 d-flex flex-column justify-content-center align-items-center everyone-text p-5">
+            <h1 class="text-center">A plant for everyone</h1>
+            <div class="p-4 mt-3 everyone-text-container">
+                <p class="fw-light">
+                    Here at Greensleeves, we believe plant parenthood is a joy and we want to spread that joy to
+                    everyone who enters our site.
+                </p>
+                <p class="fw-bold">
+                    We supply:
+                </p>
+                <ul class="list-unstyled fw-light">
+                    <li class="mb-1"><i class="fas fa-leaf"></i> To all experience levels</li>
+                    <li class="mb-1"><i class="fas fa-leaf"></i> Diverse plants from all over the world</li>
+                    <li class="mb-1"><i class="fas fa-leaf"></i> Varying levels of care and plant needs</li>
+                </ul>
+                <p class="fw-light">
+                    You can use our search filters to find the perfect plant, whether it be humidity, light, watering, pot type
+                    or ease of care needs, we've got something for everyone.
+                </p>
+                <div class="d-grid gap-2 everyone-links mt-5">
+                    <a href="" class="py-3 text-center text-decoration-none" target="_self">Browse plants</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid seasonal-collection">
+    <div class="row">
+        <div class="col-lg-4 seasonal-text p-5 d-flex flex-column flex-md-row flex-lg-column">
+            <div class="col-12 col-md-6 col-lg-12 d-flex flex-column justify-content-center align-items-center">
+                <h1 class="text-center p-4">Seasonal gifts</h1>
+                <p class="text-center w-75">Browse our seasonal gifts this [seasonal variable] that are bound to make you feeling 
+                    [emotion vairables]
+                </p>
+            </div>
+            <div class="col-12 col-md-4 offset-md-2 offset-lg-0 col-lg-12 d-grid gap-2 seasonal-links mt-5 pb-4">
+                <a href="" class="py-3 text-center text-decoration-none" target="_self">Browse collection</a>
+            </div>
+        </div>
+        <div class="col-lg-8 seasonal-carousel p-4 d-flex justify-content-center align-items-center">
+            [seasonal collection carousel]
+        </div>
+    </div>
+</div>
+<div class="container-fluid testimonials">
+    <div class="row">
+        <div class="col-12 testimonials-text p-5 d-flex flex-column">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                <h1 class="text-center p-2">What our customers say...</h1>
+            </div>
+            <div class="col-12 testimonials-carousel p-4 d-flex justify-content-center align-items-center">
+                [testimonials carousel]
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

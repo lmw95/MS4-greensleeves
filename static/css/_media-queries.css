@@ -1,3 +1,67 @@
+@media only screen and (max-width: 375px) {
+
+    .everyone-text h1 {
+        margin-bottom: 20px !important;
+    }
+
+    .everyone-text-container {
+        margin-bottom: 20px;
+    }
+
+    .why-text {
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width: 576px) {
+
+    .hero-left-text {
+        max-width: 80%;
+        font-size: 0.8em;
+    }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .hero-container {
+        background: none;
+    }
+    
+    .hero-left {
+        height: auto !important;
+        background-color: var(--green);
+        padding: 2em;
+    }
+
+    .hero-left h1 {
+        text-align: center;
+    }
+
+    .hero-right {
+        background: url('/media/header-image-mob.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    .everyone-text {
+        height: auto !important;
+    }
+
+    .everyone-text h1 {
+        margin-bottom: 40px;
+    }
+
+    .everyone-text p, 
+    .everyone-text ul {
+        font-size: 0.8em;
+    }
+
+}
+
+
 @media only screen and (max-width: 991px) {
 
     .header-container {
@@ -28,6 +92,67 @@
 
     .nav-item {
         width: 100%;
+    }
+
+    .header-container {
+        padding-top: 0;
+    }
+
+    .navbar-toggler {
+        float: left;
+        padding: 0.5em;
+    }
+
+    .navbar-brand-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-bar-item {
+        width: 100% !important;
+        padding: 0.3em;
+    }
+
+    .hero-brand {
+        z-index: 100;
+        backdrop-filter: blur(20px);
+        color: var(--black) !important;
+        border: 2px solid var(--white);
+    }
+
+    .social-media-container {
+        margin: 40px 0;
+    }
+
+    .everyone-text {
+        padding: 0;
+    }
+
+    .everyone-text-container {
+        padding: 0 !important;
+    }
+
+}
+
+
+@media only screen and (min-width: 991px) {
+
+    .hero-left-text {
+        width: 70%;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1050px) {
+
+    .hero-left-text {
+        max-width: 80%;
+        font-size: 0.8em;
+    }
+
+    .hero-right .navbar-brand {
+        color: var(--black) !important;
     }
 
 }
