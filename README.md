@@ -170,3 +170,25 @@ Greensleeves offers a diverse range of high quality and well cared-for indoor pl
 * There is a time limit which may place constraints on certain elements which will need to be planned carefully
 
 ---
+
+## **Structure**
+***Architecture***
+
+![](documentation/structure/information-architecture.png)
+
+***Organisation***
+* Header: Collapsable navbar with brand logo and navigation links
+* Homepage: Hero image, information about the company, suggested plants, company reviews and offers on delivery etc.
+* Profile: Registered users can see delivery info, preferred payment info, favourited items "for later"
+* About: Company info, statements and history
+* Plants: All the available plants to buy
+* Accessories: All the available accessories to buy
+* Product page: Information about the selected product
+* Shopping bag: User's items to buy
+* Contact us: Get in touch with company
+* Footer: Social media links and statements
+
+***Database structure***
+
+[to be added]
+
