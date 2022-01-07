@@ -66,6 +66,7 @@ SEASONAL_COLLECTION = {
 
 # Size options
 SIZE_OPTIONS = {
+    ('1x pack', '1X PACK'),
     ('5kg', '5KG'),
     ('10kg', '10KG'),
     ('20kg', '20KG'),
@@ -74,7 +75,9 @@ SIZE_OPTIONS = {
     ('small', 'SMALL'),
     ('medium', 'MEDIUM'),
     ('large', 'LARGE'),
-    ('various sizes', 'VARIOUS SIZES')
+    ('various sizes', 'VARIOUS SIZES'),
+    ('one bunch', 'ONE BUNCH'),
+    ('one pair', 'ONE PAIR'),
 }
 
 class Product(models.Model):
