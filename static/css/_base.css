@@ -124,3 +124,57 @@ body {
 .discount-banner img {
     margin-left: 20px;
 }
+
+/*----------------- [Footer] -----------------*/
+
+footer {
+    background-color: var(--black);
+    color: var(--grey);
+    font-family: var(--body-text);
+}
+
+footer p,
+footer h1,
+footer ul {
+    filter: brightness(150%);
+}
+
+.footer ul {
+    font-size: 0.8em;
+}
+
+.footer ul a {
+    color: var(--grey);
+}
+
+.footer ul i {
+    margin-right: 10px;
+}
+
+.social-media-icon i {
+    color: var(--grey);
+    filter: brightness(150%);
+    transition: all 0.1s ease-in-out;
+}
+
+.social-media-icon i:hover {
+    color: var(--white);
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    background-color: var(--grey);
+    font-family: var(--body-text);
+}
+
+.footer-bottom p {
+    filter: brightness(200%);
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.github-icon {
+    margin-right: 5px;
+    color: var(--black) !important;
+    filter: brightness(-100%);
+}

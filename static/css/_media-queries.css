@@ -30,6 +30,19 @@
         font-size: 0.8em;
     }
 
+    .footer-bottom p {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.6em;
+    }
+
+    .footer-bottom-container {
+        margin: 0;
+    }
+
 }
 
 
