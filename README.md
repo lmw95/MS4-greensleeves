@@ -99,3 +99,74 @@ Greensleeves offers a diverse range of high quality and well cared-for indoor pl
 * As site admin, I want to manage orders from the console so I can know I have dispatched orders
 
 ---
+
+## **Scope**
+***Functional requirements***
+* Content
+    * Responsive design 
+    * Collapsable menu
+* User authentication
+    * User can register securely
+    * User can log in / log out
+    * User can edit profile information
+    * User can view profile
+    * User can delete profile
+* Search & shop
+    * See all items
+    * Sort items by various filters 
+    * Search website with search bar
+    * Display search details
+    * Paginate site items
+* Shopping bag & checkout
+    * Display shopping bag notification
+    * Add / delete item
+    * View shopping bag
+    * Update quantities
+    * Add / edit delivery information
+    * Add gift option
+    * Add gift option message
+    * Enter payment details
+    * Process & complete payment
+    * Show order in user's account
+* Feeback
+    * Feedback on user authentication
+    * Email to verify user email
+    * Email for order confirmation
+    * Email for order dispatch
+    * Feedback for deleted user
+* Contact & interaction
+    * User can leave reviews
+    * Display testimonials
+    * Contact site owner
+    * Links to social media
+* Site administration
+    * Add / edit / delete items
+    * Add / edit / delete filters
+    * Link items to filter categories
+    * Display items 
+    * Update all site content
+* Inventory
+    * Add stock quantities
+    * Adjust stock quantities after orders
+* Error handling
+    * Handle errors 403, 404, 500
+
+***Non-functional requirements***  
+* Interactive components
+* Navigatable and minimal design
+* Aesthetically pleasing display of items and content
+
+***Content rquirements***
+* Details about company
+* Information regarding plant care
+* Information regarding accessories
+* Images of plants and accessories
+* Forms where user input is needed
+* Attractive layout to guide users through site
+* Icons for interactive elements and sub-sections
+
+***Limitations***
+* The site owner is in the process of learning Python and Django which may limit the features available on the website
+* There is a time limit which may place constraints on certain elements which will need to be planned carefully
+
+---
