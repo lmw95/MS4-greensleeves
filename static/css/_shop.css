@@ -97,3 +97,71 @@ button:focus:not(:focus-visible) {
 .collection-option:focus {
     background-color: var(--beige);
 }
+
+/*----------------- [Item page] -----------------*/
+
+.item-left {
+    height: auto;
+}
+
+.item-right {
+    height: 100vh;
+}
+
+.item-left {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: var(--body-text);
+}
+
+.item-left h1 {
+    font-family: var(--header);
+    font-weight: 700;
+}
+
+.item-left a {
+    color: var(--white);
+}
+
+.item-left a i,
+.plant-needs-container {
+    margin-right: 5px;
+}
+
+.item-info {
+    width: 80%;
+    margin-top: 40px;
+}
+
+.item-left-links a {
+    border: 2px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-left-links a i {
+    color: var(--green);
+    margin-left: auto;
+}
+
+.plant-needs {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.plant-needs h1,
+.top-tip-title {
+    font-family: var(--header);
+    font-weight: 700;
+}
+
+.plant-needs-container {
+    padding-left: 0;
+}
+
+.top-tip-content,
+.lightbulb {
+    color: var(--black);
+    background-color: var(--green);
+}

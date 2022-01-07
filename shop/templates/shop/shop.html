@@ -20,9 +20,6 @@
             </h1>
         </div>
     </div>
-    <!---
-    [Filtering]
-    -->
     <div class="row mt-3">
         <div class="col">
             <div class="container search-filters p-3">
@@ -89,16 +86,18 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                         <div class="card border-0 h-100">
                             {% if product.image %}
-                            <a href="" target="_self">
+                            <a href="{% url 'item_page' product.id %}" target="_self">
                                 <img class="card-img-top" src="/media/{{ product.image }}" alt="Image of {{ product.name }}">
                             </a>
                             {% else %}
-                            <a href="" target="_self">
+                            <a href="{% url 'item_page' product.id %}" target="_self">
                                 <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                             </a>
                             {% endif %}
                             <div class="card-body px-3 pt-2 pb-4 mt-2">
-                                <h6 class="fw-bold fs-3">{{ product.friendly_name }}</h6>
+                                <a href="{% url 'item_page' product.id %}" target="_self" class="text-decoration-none">
+                                    <h6 class="fw-bold fs-3">{{ product.friendly_name }}</h6>
+                                </a>
                                 {% if product.is_in_seasonal_collection %}
                                 <a href="" target="_self" class="text-decoration-none text-uppercase">
                                     <p><i class="fas fa-tag fa-lg"></i> {{ product.seasonal_collection }} collection</p>

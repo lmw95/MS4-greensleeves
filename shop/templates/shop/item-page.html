@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}| {{ product.friendly_name }} {% endblock %}
+
+{% block header_extra %}
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid shop-container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 item-left d-flex justify-content-center align-items-center order-sm-0 order-md-0 order-last py-5">
+            <div class="item-info">
+                <h1>{{ product.friendly_name }}</h1>
+                {% if product.is_in_seasonal_collection %}
+                <a href="" target="_self" class="text-decoration-none text-uppercase">
+                    <p><i class="fas fa-tag fa-lg"></i> {{ product.seasonal_collection }} collection</p>
+                </a>
+                {% else %}
+                {% endif %}
+                <p class="mb-1 fs-4">£{{ product.price }}</p>
+                <p>{{ product.size }}</p>
+
+                <!--SIZE DROPDOWN HERE-->
+                
+                <div class="d-grid gap-2 item-left-links pb-4 mt-5">
+                    <a href="" class="py-3 px-2 text-center text-decoration-none fw-bold" target="_self">Add to wishlist <i class="far fa-heart float-end fa-lg"></i></a>
+                    <a href="" class="py-3 px-2 text-center text-decoration-none fw-bold" target="_self">Add to bag <i class="fas fa-cart-plus float-end fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 item-right order-md-1 order-first" 
+            style="background: url(/media/{{product.image}}) no-repeat top;
+            background-size: cover;">
+        </div>
+    </div>
+    {% if product.is_plant %}
+    <div class="row plant-needs d-flex flex-column">
+        <div class="col text-center mt-5 mb-3">
+            <h1>About ~ {{ product.friendly_name }}</h1>
+        </div>
+        <div class="col py-4">
+            <ul class="d-flex justify-content-around flex-wrap plant-needs-container">
+                <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                    <div class="d-flex justify-content-center flex-column align-items-center">
+                        <img src="/media/watering-can.png" width="80" height="80" alt="Person caring for plants">
+                        <div class="why-text">
+                            <h2 class="text-center fs-5 mt-3 fw-bold text-uppercase">{{ product.water_need }}</h2>
+                            <p class="text-center mb-5">
+                                [water description]
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                    <div class="d-flex justify-content-center flex-column align-items-center">
+                        <img src="/media/humidity.png" width="80" height="80" alt="Person caring for plants">
+                        <div class="why-text">
+                            <h2 class="text-center fs-5 mt-3 fw-bold text-uppercase">{{ product.humidity_need }}</h2>
+                            <p class="text-center mb-5">
+                                [humidity description]
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                    <div class="d-flex justify-content-center flex-column align-items-center">
+                        <img src="/media/growth.png" width="80" height="80" alt="Person caring for plants">
+                        <div class="why-text">
+                            <h2 class="text-center fs-5 mt-3 fw-bold text-uppercase">{{ product.growth_need }}</h2>
+                            <p class="text-center mb-5">
+                                [growth description]
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                    <div class="d-flex justify-content-center flex-column align-items-center">
+                        <img src="/media/thermometer.png" width="80" height="80" alt="Person caring for plants">
+                        <div class="why-text">
+                            <h2 class="text-center fs-5 mt-3 fw-bold text-uppercase">{{ product.temp_need }}</h2>
+                            <p class="text-center mb-5">
+                                [temp description]
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                    <div class="d-flex justify-content-center flex-column align-items-center">
+                        <img src="/media/cloudy-day.png" width="80" height="80" alt="Person caring for plants">
+                        <div class="why-text">
+                            <h2 class="text-center fs-5 mt-3 fw-bold text-uppercase">{{ product.light_need }}</h2>
+                            <p class="text-center mb-5">
+                                [light description]
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
+                    <div class="d-flex justify-content-center flex-column align-items-center">
+                        <img src="/media/hand-brown.png" width="80" height="80" alt="Person caring for plants">
+                        <div class="why-text">
+                            <h2 class="text-center fs-5 mt-3 fw-bold text-uppercase">{{ product.ease_of_care }}</h2>
+                            <p class="text-center mb-5">
+                                [ease of care description]
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-3 p-4 d-flex justify-content-center align-items-center top-tip-title">
+            <h1 class="fw-bold"> Top tip</h1>
+        </div>
+        <div class="col-1 d-flex justify-content-center align-items-center lightbulb">
+            <h1>
+                <i class="far fa-lightbulb"></i>
+            </h1>
+        </div>
+        <div class="col-sm-12 col-md-8 p-4 d-flex align-items-center top-tip-content">
+            <div class="top-tip-text">
+                <p class="fs-6 mb-0">{{ product.top_tip }}</p>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    {% endif %}
+</div>
+{% endblock %}

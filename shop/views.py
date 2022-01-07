@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
 from .models import Product, Category
 
 # Create your views here.
@@ -45,3 +47,15 @@ def shop(request):
     }
 
     return render(request, 'shop/shop.html', context)
+
+
+def item_page(request, product_id):
+    """A view to return item page with product information"""
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product
+    }
+
+    return render(request, 'shop/item-page.html', context)
