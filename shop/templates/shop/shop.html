@@ -12,4 +12,73 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid shop-container p-3">
+    <div class="row shop-title">
+        <div class="col">
+            <h1 class="text-center fw-bold">
+                Browse shop
+            </h1>
+        </div>
+    </div>
+    <!---
+    [Filtering]
+    -->
+    <div class="row mt-5">
+        <div class="col d-flex justify-content-center align-items-center results-num">
+            {% if products %}
+            <p class="fw-bold">Showing {{ products|length }} result(s)</p>
+            {% else %}
+            <p class="fw-bold">No results found!</p>
+            {% endif %}
+            <hr class="underline mt-5">
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <div class="container p-3 shop-items">
+                <div class="row">
+                    {% for product in products %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="card border-0 h-100">
+                            {% if product.image %}
+                            <a href="" target="_self">
+                                <img class="card-img-top" src="/media/{{ product.image }}" alt="Image of {{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="" target="_self">
+                                <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
+                            <div class="card-body px-3 pt-2 pb-4 mt-2">
+                                <h6 class="fw-bold fs-3">{{ product.friendly_name }}</h6>
+                                {% if product.is_in_seasonal_collection %}
+                                <a href="" target="_self" class="text-decoration-none text-uppercase">
+                                    <p><i class="fas fa-tag fa-lg"></i> {{ product.seasonal_collection }} collection</p>
+                                </a>
+                                {% else %}
+                                {% endif %}
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pb-3">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="fw-bold">£{{ product.price }}</p>
+                                    </div>
+                                    <div class="col-6 text-end favourite">
+                                        <i class="far fa-heart fa-lg"></i>
+                                    </div>
+                                </div>
+                                <div class="row mt-1">
+                                    <div class="col add-to-bag">
+                                        <button class="w-100 p-3">Add to bag</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

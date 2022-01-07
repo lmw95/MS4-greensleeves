@@ -1,0 +1,64 @@
+/*----------------- [Browse products] -----------------*/
+
+.shop-container {
+    height: auto;
+    background-color: var(--white);
+}
+
+.shop-title {
+    margin-top: 90px;
+}
+
+.shop-title,
+.item-title {
+    font-family: var(--header);
+    color: var(--black);
+}
+
+.card {
+    color: var(--black);
+    background: linear-gradient(112deg, var(--white) 60%, var(--green) 40%);
+    font-family: var(--body-text);
+}
+
+.card:hover {
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+}
+
+.card-img-top {
+    height: 400px;
+}
+
+.card a {
+    color: var(--black);
+    font-weight: 500;
+}
+
+.card a i {
+    margin-right: 5px;
+}
+
+.card-body h6 {
+    font-family: var(--header);
+}
+
+.card-footer {
+    font-family: var(--body-text);
+}
+
+.add-to-bag button {
+    background-color: transparent;
+    border: 2px solid var(--black);
+    color: var(--black);
+    transition: all 0.1s ease-in-out;
+}
+
+.add-to-bag button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.underline {
+    border-top: 2px solid var(--green);
+    width: 100px;
+}
