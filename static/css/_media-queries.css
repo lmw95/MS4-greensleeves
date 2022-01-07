@@ -1,3 +1,11 @@
+@media only screen and (max-width: 322px) {
+
+    .discount-banner img {
+        margin-right: 20px;
+    }
+    
+}
+
 @media only screen and (max-width: 375px) {
 
     .everyone-text h1 {
