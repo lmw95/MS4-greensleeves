@@ -1,0 +1,58 @@
+<div class="p-2 d-block d-lg-none">
+    <ul class="mobile-nav h-100">
+        <li class="list-inline-item">
+            <a class="nav-link d-block d-lg-none" href="{% url 'home' %}">
+                <div class="text-center">
+                    <i class="fas fa-home mobile-icon"></i>
+                </div>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="nav-link d-block d-lg-none" href="#" id="mobile-search" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div><i class="fas fa-search mobile-icon"></i></div>
+                </div>
+            </a>
+            <div class="dropdown-menu col-12 col-lg-4 my-auto p-3" aria-labelledby="mobile-search">
+                <form method="GET" action="">
+                  <div class="input-group w-100">
+                      <input class="form-control rounded-0" type="text" name="q" placeholder="Browse shop...">
+                      <div class="input-group-append">
+                          <button class="form-control btn" type="submit">
+                              <span class="icon">
+                                  <i class="fas fa-search mobile-icon"></i>
+                              </span>
+                          </button>
+                      </div>
+                  </div>
+                </form>
+              </div>
+        </li>
+        <li class="list-inline-item">
+            <div class="text-center">
+                <a class="nav-link d-block d-lg-none" href="#" id="">
+                    <div class="text-center">
+                        <i class="far fa-user-circle mobile-icon"></i>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <li class="list-inline-item">
+            <div class="text-center">
+                <a class="nav-link d-block d-lg-none" data-bs-toggle="offcanvas" href="#shopping-bag" role="button" aria-controls="shopping-bag">
+                    <div class="text-center">
+                        <div class="position-relative">
+                            <i class="fas fa-shopping-cart mobile-icon"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                            {% if items_in_bag %}
+                            {% else %}
+                                0
+                            {% endif %}
+                            </span>
+                        </div> 
+                    </div>
+                </a>
+            </div>
+        </li>
+    </ul>
+    </div>
