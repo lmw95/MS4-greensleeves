@@ -149,21 +149,39 @@
         </div>
     </div>
 </div>
-<div class="container-fluid seasonal-collection">
+<div class="container-fluid seasonal-collection h-100">
     <div class="row">
-        <div class="col-lg-4 seasonal-text p-5 d-flex flex-column flex-md-row flex-lg-column">
+        <div class="col-lg-4 seasonal-text p-5 d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-center">
             <div class="col-12 col-md-6 col-lg-12 d-flex flex-column justify-content-center align-items-center">
                 <h1 class="text-center p-4">Seasonal gifts</h1>
-                <p class="text-center w-75">Browse our seasonal gifts this [seasonal variable] that are bound to make you feeling 
-                    [emotion vairables]
+                <p class="text-center w-75">Browse our seasonal gifts this {{ collection_active }} that are bound to leave you feeling 
+                    {{ emotion }}
                 </p>
             </div>
             <div class="col-12 col-md-4 offset-md-2 offset-lg-0 col-lg-12 d-grid gap-2 seasonal-links mt-5 pb-4">
-                <a href="{% url 'shop' %}" class="py-3 text-center text-decoration-none" target="_self">Browse collection</a>
+                <a href="{% url 'shop' %}?seasonal_collection={{ collection_active }}" class="py-3 text-center text-decoration-none" target="_self">Browse collection</a>
             </div>
         </div>
-        <div class="col-lg-8 seasonal-carousel p-4 d-flex justify-content-center align-items-center">
-            [seasonal collection carousel]
+        <div class="col-lg-8 seasonal-carousel p-4">
+            <div class="carousel pb-4"
+                data-flickity='{ "draggable": false }'>
+                    {% for item in seasonal_items %}
+                    <div class="carousel-cell rounded-0">
+                        <div class="card index-card">
+                            {% if item.image %}
+                            <img class="card-img-top index-img" src="/media/{{ item.image }}" alt="Image of {{ item.name }}">
+                            {% else %}
+                            <img class="card-img-top index-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+                            {% endif %}
+                            <div class="card-body item-card">
+                                <h5 class="card-title">{{ item.friendly_name }}</h5>
+                                <p class="fw-bold">£{{ item.price }}</p>
+                                <a href="{% url 'item_page' item.id %}" class="btn view-item p-3 rounded-0 w-100">View item</a>
+                            </div>
+                            </div>
+                    </div>
+                    {% endfor %}
+            </div>
         </div>
     </div>
 </div>

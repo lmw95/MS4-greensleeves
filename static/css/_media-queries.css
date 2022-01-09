@@ -23,6 +23,32 @@
 }
 
 
+@media only screen and (max-width: 425px) {
+
+    .carousel-cell {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 426px) {
+
+    .carousel-cell {
+        width: 75%;
+    }
+
+}
+
+
+@media only screen and (min-width: 576px) {
+
+    .carousel-cell {
+        width: 45%;
+    }
+
+}
+
+
 @media only screen and (max-width: 576px) {
 
     .hero-left-text {
@@ -168,6 +194,10 @@
 
     .hero-left-text {
         width: 70%;
+    }
+
+    .carousel-cell {
+        width: 33% !important;
     }
 
 }

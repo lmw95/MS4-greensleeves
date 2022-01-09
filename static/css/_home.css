@@ -146,6 +146,53 @@ hr {
     color: var(--white);
 }
 
+.carousel {
+    height: 100%;
+}
+
+.flickity-viewport {
+    height: 100%;
+}
+
+.carousel-cell {
+    width: 33%;
+    height: 500px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+}
+
+.flickity-page-dots {
+    position: relative;
+}
+
+.flickity-button {
+    color: var(--brown);
+    background: none;
+    background-color: var(--beige);
+    padding: 1em;
+}
+
+.index-card {
+    height: 500px;
+}
+
+.index-img {
+    height: 330px;
+}
+
+.view-item {
+    background-color: transparent;
+    border: 2px solid var(--black);
+    color: var(--black);
+    transition: all 0.1s ease-in-out;
+}
+
+.view-item:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
 /*----------------- [Testimonials] -----------------*/
 
 .testimonials {

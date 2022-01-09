@@ -15,7 +15,7 @@
     color: var(--black);
 }
 
-.card {
+.item-card {
     color: var(--black);
     background: linear-gradient(112deg, var(--white) 60%, var(--green) 40%);
     font-family: var(--body-text);
@@ -25,7 +25,7 @@
     box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
 }
 
-.card-img-top {
+.shop-item-img {
     height: 400px;
 }
 
@@ -44,41 +44,6 @@
 
 .card-footer {
     font-family: var(--body-text);
-}
-
-.add-to-bag button {
-    background-color: transparent;
-    border: 2px solid var(--black);
-    color: var(--black);
-    transition: all 0.1s ease-in-out;
-}
-
-.add-to-bag button:hover {
-    background-color: var(--black);
-    color: var(--white);
-}
-
-.underline {
-    border-top: 2px solid var(--green);
-    width: 100px;
-}
-
-.category-badge {
-    border: 2px solid var(--black);
-    color: var(--black);
-}
-
-.results-for {
-    font-family: var(--header);
-}
-
-.results-badge {
-    border: 2px solid var(--beige);
-    transition: all 0.1s ease-in-out;
-}
-
-.results-badge:hover {
-    background-color: var(--beige) !important;
 }
 
 /*----------------- [Search filters] -----------------*/
@@ -150,6 +115,11 @@ button:focus:not(:focus-visible) {
     color: var(--white);
 }
 
+.underline {
+    border-top: 2px solid var(--green);
+    width: 100px;
+}
+
 /*----------------- [Item page] -----------------*/
 
 .item-left {
@@ -195,6 +165,18 @@ button:focus:not(:focus-visible) {
 .item-left-links a i {
     color: var(--green);
     margin-left: auto;
+}
+
+.add-to-bag button {
+    background-color: transparent;
+    border: 2px solid var(--black);
+    color: var(--black);
+    transition: all 0.1s ease-in-out;
+}
+
+.add-to-bag button:hover {
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .plant-needs {

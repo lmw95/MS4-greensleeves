@@ -175,14 +175,14 @@
                 <div class="row">
                     {% for product in products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
-                        <div class="card border-0 h-100">
+                        <div class="card item-card border-0 h-100">
                             {% if product.image %}
                             <a href="{% url 'item_page' product.id %}" target="_self">
-                                <img class="card-img-top" src="/media/{{ product.image }}" alt="Image of {{ product.name }}">
+                                <img class="card-img-top shop-item-img" src="/media/{{ product.image }}" alt="Image of {{ product.name }}">
                             </a>
                             {% else %}
                             <a href="{% url 'item_page' product.id %}" target="_self">
-                                <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                <img class="card-img-top shop-item-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                             </a>
                             {% endif %}
                             <div class="card-body px-3 pt-2 pb-4 mt-2">
