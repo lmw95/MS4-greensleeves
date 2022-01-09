@@ -17,7 +17,7 @@
 
 .item-card {
     color: var(--black);
-    background: linear-gradient(112deg, var(--white) 60%, var(--green) 40%);
+    background: linear-gradient(112deg, var(--white) 60%, var(--beige) 40%);
     font-family: var(--body-text);
 }
 
@@ -116,7 +116,7 @@ button:focus:not(:focus-visible) {
 }
 
 .underline {
-    border-top: 2px solid var(--green);
+    border-top: 2px solid var(--brown);
     width: 100px;
 }
 
