@@ -63,9 +63,28 @@
     width: 100px;
 }
 
+.category-badge {
+    border: 2px solid var(--black);
+    color: var(--black);
+}
+
+.results-for {
+    font-family: var(--header);
+}
+
+.results-badge {
+    border: 2px solid var(--beige);
+    transition: all 0.1s ease-in-out;
+}
+
+.results-badge:hover {
+    background-color: var(--beige) !important;
+}
+
 /*----------------- [Search filters] -----------------*/
 
-.search-filters {
+.search-filters,
+.sort-filter {
     color: var(--black);
     background-color: var(--green-t);
     font-family: var(--body-text);
@@ -94,7 +113,9 @@ button:focus:not(:focus-visible) {
 }
 
 .collection-option:hover,
-.collection-option:focus {
+.collection-option:focus,
+.sort-option:hover,
+.sort-option:focus {
     background-color: var(--beige);
 }
 

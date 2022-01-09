@@ -28,7 +28,7 @@
                         <h6 class="fw-bold fs-3">Filter your search...</h6>
                     </div>
                 </div>
-                <div class="row py-4 collection-filters">
+                <div class="row py-4">
                     <div class="col-sm-12 col-lg-4">
                         <p class="mb-2 bc">By collection:</p>
                         <div class="dropdown collection-dropdown mb-3">
@@ -113,7 +113,7 @@
                                 </ul>
                             </div>
                             <div class="col-sm-12 col-lg-4 mb-3">
-                                <p class="mb-2 bc">Esse of care:</p>
+                                <p class="mb-2 bc">Ease of care:</p>
                                 <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
                                     Choose an option...
                                   </button>
@@ -127,6 +127,35 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="row mt-5">
+        <div class="col">
+            <div class="container">
+                {% if current_categories %}
+                    {% for c in current_categories %}
+                    <p class="results-for fs-2 mr-3">Showing results for:
+                        <span class="fw-bold results-badge p-3 fs-5">{{ c.name }}</span></p>
+                    {% endfor %}
+                {% else %}
+                    <p class="results-for fs-2">Showing results for:
+                    <span class="fw-bold results-badge p-3 fs-5">all</span></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>-->
+    <div class="row mt-5">
+        <div class="col">
+            <div class="container sort-filter d-flex justify-content-center align-items-center p-3">
+                <select class="form-select w-25" aria-label="Default select example" id="sort-selector">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                </select>
             </div>
         </div>
     </div>

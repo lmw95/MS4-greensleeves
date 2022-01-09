@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category
 
 # Create your views here.
@@ -11,6 +12,14 @@ def shop(request):
     query = None
     categories = None
     seasonal_collection = None
+    water_need = None
+    light_need = None
+    temp_need = None
+    humidity_need = None
+    growth_need = None
+    ease_of_care = None
+    sort = None
+    direction = None
 
     if request.GET:
         if 'seasonal_collection' in request.GET:
@@ -46,6 +55,20 @@ def shop(request):
             ease_of_care = request.GET['ease_of_care'].split(',')
             products = products.filter(ease_of_care__in=ease_of_care)
 
+        if request.GET:
+            if 'sort' in request.GET:
+                sortkey = request.GET['sort']
+                sort = sortkey
+                if sortkey == 'name':
+                    sortkey = 'lower_name'
+                    products = products.annotate(lower_name=Lower('name'))
+
+                if 'direction' in request.GET:
+                    direction = request.GET['direction']
+                    if direction == 'desc':
+                        sortkey = f'-{sortkey}'
+                products = products.order_by(sortkey)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -64,10 +87,14 @@ def shop(request):
                 ease_of_care__icontains=query)
             products = products.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'products': products,
         'search_term': query,
+        'current_seasonal': seasonal_collection,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'shop/shop.html', context)
