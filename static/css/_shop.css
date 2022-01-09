@@ -130,6 +130,26 @@ button:focus:not(:focus-visible) {
     border-color: var(--beige);
 }
 
+.to-top-button {
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
+    background-color: var(--brown);
+    border-radius: 50%;
+}
+
+.to-top-link {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.to-top-link:hover {
+    color: var(--white);
+}
+
 /*----------------- [Item page] -----------------*/
 
 .item-left {
