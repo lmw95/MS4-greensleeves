@@ -2,8 +2,8 @@
     <div class="offcanvas-header h">
       <button type="button" class="btn-close text-reset shopping-bag-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
-      {% if bag_items %}
+    <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center shopping-bag-body">
+      {% if items_in_bag %}
       <a href="{% url 'view_bag' %}">View bag</a>
       {% else %}
       <div class="container d-flex flex-column">

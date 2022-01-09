@@ -4,6 +4,11 @@
     font-family: var(--header);
 }
 
+.shopping-bag-body {
+    max-height: 80%;
+    overflow-y: scroll;
+}
+
 .close-bag {
     border: var(--black) solid 2px;
     border-radius: none;
@@ -15,4 +20,20 @@
 .close-bag:hover {
     background-color: var(--black);
     color: var(--white) !important;
+}
+
+.checkout {
+    margin-top: 120px;
+    color: var(--black);
+}
+
+.checkout h1 {
+    font-family: var(--header);
+    font-weight: 700;
+}
+
+.section-header {
+    font-family: var(--header);
+    font-weight: 700;
+    background-color: var(--green);
 }
