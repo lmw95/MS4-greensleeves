@@ -36,12 +36,12 @@ def index(request):
     elif spr_start <= current_date <= spr_end:
         collection_active = "spring"
         emotion = "set for a fresh start"
-    elif sum_start <= current_date <= spr_end:
+    elif sum_start <= current_date <= sum_end:
         collection_active = "summer"
         emotion = "refreshingly vibrant"
     else:
         collection_active = "valentines"
-        emotion = "loved up"
+        emotion = "like falling in love"
 
     seasonal_items = Product.objects.filter(seasonal_collection=collection_active)
 

@@ -1,0 +1,18 @@
+/*----------------- [Shopping bag preview] -----------------*/
+
+.bag-empty {
+    font-family: var(--header);
+}
+
+.close-bag {
+    border: var(--black) solid 2px;
+    border-radius: none;
+    transition: all 0.1s ease-in-out;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.close-bag:hover {
+    background-color: var(--black);
+    color: var(--white) !important;
+}
