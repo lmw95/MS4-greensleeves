@@ -44,7 +44,7 @@ TEMP_CHOICE = {
 
 LIGHT_CHOICE = {
     ('loves the shade', 'LOVES THE SHADE'),
-    ('needs a bit of both', 'LOVES A BIT OF BOTH'),
+    ('loves a bit of both', 'LOVES A BIT OF BOTH'),
     ('loves bright light','LOVES BRIGHT LIGHT'),
 }
 
