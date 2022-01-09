@@ -190,7 +190,7 @@
                                     <h6 class="fw-bold fs-3">{{ product.friendly_name }}</h6>
                                 </a>
                                 {% if product.is_in_seasonal_collection %}
-                                <a href="" target="_self" class="text-decoration-none text-uppercase">
+                                <a href="{% url 'shop' %}?seasonal_collection={{ product.seasonal_collection }}" target="_self" class="text-decoration-none text-uppercase">
                                     <p><i class="fas fa-tag fa-lg"></i> {{ product.seasonal_collection }} collection</p>
                                 </a>
                                 {% else %}
