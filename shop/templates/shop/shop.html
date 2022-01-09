@@ -147,6 +147,16 @@
         </div>
     </div>-->
     <div class="row mt-5">
+        <div class="col d-flex justify-content-center align-items-center results-num">
+            {% if products %}
+            <p class="fw-bold">Showing {{ products|length }} result(s)</p>
+            {% else %}
+            <p class="fw-bold">No results found!</p>
+            {% endif %}
+            <hr class="underline mt-5">
+        </div>
+    </div>
+    <div class="row mt-5">
         <div class="col">
             <div class="container sort-filter d-flex justify-content-center align-items-center p-3">
                 <select class="form-select w-25" aria-label="Default select example" id="sort-selector">
@@ -157,16 +167,6 @@
                         <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
                 </select>
             </div>
-        </div>
-    </div>
-    <div class="row mt-5">
-        <div class="col d-flex justify-content-center align-items-center results-num">
-            {% if products %}
-            <p class="fw-bold">Showing {{ products|length }} result(s)</p>
-            {% else %}
-            <p class="fw-bold">No results found!</p>
-            {% endif %}
-            <hr class="underline mt-5">
         </div>
     </div>
     <div class="row mt-5">
