@@ -177,19 +177,19 @@ button:focus:not(:focus-visible) {
 
 .item-info {
     width: 80%;
-    margin-top: 40px;
+    margin-top: 120px;
 }
 
-.item-left-links a {
+.item-left-links button {
     border: 2px solid var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
 }
 
-.item-left-links a i {
+.item-left-links button i {
     color: var(--green);
     margin-left: auto;
+    padding: 0.2em;
 }
 
 .sale-badge {
@@ -200,6 +200,10 @@ button:focus:not(:focus-visible) {
 
 .sale-price {
     margin-left: 5px;
+}
+
+.quantity {
+    width: 65px;
 }
 
 .add-to-bag button {

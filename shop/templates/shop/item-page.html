@@ -34,10 +34,27 @@
 
                 <!--SIZE DROPDOWN HERE-->
                 
-                <div class="d-grid gap-2 item-left-links pb-4 mt-5">
-                    <a href="" class="py-3 px-2 text-center text-decoration-none fw-bold" target="_self">Add to wishlist <i class="far fa-heart float-end fa-lg"></i></a>
-                    <a href="" class="py-3 px-2 text-center text-decoration-none fw-bold" target="_self">Add to bag <i class="fas fa-cart-plus float-end fa-lg"></i></a>
-                </div>
+                <form class="form mt-5" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Quantity</p>
+                            <div class="form-group">
+                                <div class="input-group quantity">
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-grid gap-2 item-left-links pb-4 mt-5">
+                                <button type="submit" value="Add to bag" class="py-3 px-2 text-center text-decoration-none fw-bold" target="_self">Add to bag<i class="fas fa-cart-plus float-end fa-lg"></i></button>
+                                <button type="submit" class="py-3 px-2 text-center text-decoration-none fw-bold" target="_self">Add to wishlist<i class="far fa-heart float-end fa-lg align-text-center"></i></button>
+                            </div>
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+
+                </form>
             </div>
         </div>
         <div class="col-sm-12 col-md-6 item-right order-md-1 order-first" 
