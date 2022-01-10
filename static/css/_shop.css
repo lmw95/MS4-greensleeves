@@ -29,6 +29,10 @@
     height: 400px;
 }
 
+.collection-link i {
+    color: var(--green);
+}
+
 .card a {
     color: var(--black);
     font-weight: 500;
