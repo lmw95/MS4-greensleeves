@@ -141,6 +141,10 @@ button:focus:not(:focus-visible) {
     width: 100px;
 }
 
+.end-of-results {
+    font-family: var(--header) !important;
+}
+
 /*----------------- [Item page] -----------------*/
 
 .item-left {
