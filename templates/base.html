@@ -75,10 +75,11 @@
                         <div class="position-relative">
                             <i class="fas fa-shopping-cart fa-lg"></i>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                            {% if items_in_bag %}
-                              {% else %}
-                              0
-                              {% endif %}
+                            {% if bag_items %}
+                                {{ bag_items|length }}
+                            {% else %}
+                                0
+                            {% endif %}
                             </span>
                         </div> 
                     </div>
