@@ -20,13 +20,16 @@
 }
 
 .shopping-bag-body {
-    max-height: 80%;
-    overflow-y: scroll;
     color: var(--black);
 }
 
 .shopping-bag-body h1 {
     font-family: var(--header);
+}
+
+.shopping-bag-height {
+    max-height: 80%;
+    overflow-y: scroll;
 }
 
 /*----------------- [Shopping bag] -----------------*/
