@@ -178,6 +178,14 @@
                         <div class="card item-card border-0 h-100">
                             {% if product.image %}
                             <a href="{% url 'item_page' product.id %}" target="_self">
+                                {% if product.is_on_sale %}
+                                <div class="position-absolute discount-price-wrapper">
+                                    <div class="discount-price d-flex p-3">
+                                        <p class="my-auto mx-auto text-center">NOW <span class="fw-bold fs-4">£{{ product.sale_price }}</span></p>
+                                    </div>
+                                </div>
+                                {% else %}
+                                {% endif %}
                                 <img class="card-img-top shop-item-img" src="/media/{{ product.image }}" alt="Image of {{ product.name }}">
                             </a>
                             {% else %}
@@ -200,7 +208,11 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <p class="fw-light text-uppercase mb-0">{{ product.category }}</p>
+                                        {% if product.is_on_sale %}
+                                        <p class="fw-bold old-price p-2"><s>£{{ product.price }}</s></p>
+                                        {% else %}
                                         <p class="fw-bold">£{{ product.price }}</p>
+                                        {% endif %}
                                     </div>
                                     <div class="col-6 text-end favourite">
                                         <i class="far fa-heart fa-lg"></i>

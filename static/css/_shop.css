@@ -50,6 +50,23 @@
     font-family: var(--body-text);
 }
 
+.discount-price-wrapper {
+    margin: -7px 0 0 -7px;
+}
+
+.discount-price {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--brown);
+    color: var(--white);
+    font-family: var(--header);
+}
+
+.old-price {
+    color: var(--red) !important;
+}
+
 /*----------------- [Search filters] -----------------*/
 
 .search-filters,
@@ -169,6 +186,16 @@ button:focus:not(:focus-visible) {
 .item-left-links a i {
     color: var(--green);
     margin-left: auto;
+}
+
+.sale-badge {
+    border: 1px solid var(--white);
+    width: 70px;
+    margin: 10px 10px 0 0;
+}
+
+.sale-price {
+    margin-left: 5px;
 }
 
 .add-to-bag button {
