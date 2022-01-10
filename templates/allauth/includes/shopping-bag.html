@@ -3,8 +3,37 @@
       <button type="button" class="btn-close text-reset shopping-bag-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center shopping-bag-body">
-      {% if items_in_bag %}
-      <a href="{% url 'view_bag' %}">View bag</a>
+      {% if bag_items %}
+      <div class="col-12 p-3">
+        <h1 class="fs-5 fw-bold">Your bag contains:</h1>
+        <div class="table-responsive rounded">
+            <table class="table table-sm table-borderless order-summary">
+                {% for item in bag_items %}
+                    <tr class="order-summary-body">
+                        <td class="pr-3 bag-item-img-row">
+                            <img src="{{ item.product.image.url }}" class="img-fluid rounded-2 bag-item-img">
+                        </td>
+                        <td class="px-3">
+                            <p class="mt-0 mb-0 fw-bold">
+                                {{ item.product.friendly_name }}
+                            </p>
+                            <p class="my-2 small text-muted">
+                                {{ item.product.sku }}
+                            </p>
+                            <p class="my-2">
+                                £{{ item.product.price }}
+                            </p>
+                            <p class="mt-0 mb-0">
+                                Qty: {{ item.quantity }}
+                            </p>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+      <a href="{% url 'view_bag' %}" class="view-bag-link p-3 text-decoration-none w-75 text-center" target="_self">View bag</a>
+      <button type="button" class="btn text-reset shopping-bag-close close-bag p-3 rounded-0 mt-2 w-75" data-bs-dismiss="offcanvas">Continue shopping</button>
       {% else %}
       <div class="container d-flex flex-column">
         <img src="/media/wallet.png" height=150 width=150 class="my-auto mx-auto">

@@ -19,8 +19,35 @@
         </div>
     </div>
     <div class="row">
-        <div class="col p-3">
-            <p class="section-header fs-5 p-3">Order details</p>
+        <div class="col-12 p-3">
+            <p class="section-header fs-5 p-3 mb-0">Order details</p>
+        </div>
+        <div class="col-12 p-3">
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless order-summary">
+                    {% for item in bag_items %}
+                        <tr class="order-summary-body">
+                            <td class="pr-3 bag-item-img-row">
+                                <img src="{{ item.product.image.url }}" class="img-fluid rounded-2 bag-item-img">
+                            </td>
+                            <td class="px-3">
+                                <p class="mt-0 mb-0 fw-bold">
+                                    {{ item.product.friendly_name }}
+                                </p>
+                                <p class="my-2 small text-muted">
+                                    {{ item.product.sku }}
+                                </p>
+                                <p class="my-2">
+                                    £{{ item.product.price }}
+                                </p>
+                                <p class="mt-0 mb-0">
+                                    Qty: {{ item.quantity }}
+                                </p>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
         </div>
     </div>
 </div>
