@@ -220,6 +220,17 @@ button:focus:not(:focus-visible) {
     color: var(--white);
 }
 
+.decrement-qty,
+.increment-qty {
+    background-color: var(--green-t);
+    color: var(--black);
+}
+
+.decrement-qty:hover,
+.increment-qty:hover {
+    background-color: var(--green);
+}
+
 .plant-needs {
     background-color: var(--white);
     color: var(--black);
