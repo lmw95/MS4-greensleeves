@@ -32,6 +32,12 @@
     overflow-y: scroll;
 }
 
+.ed,
+.bag-total {
+    color: var(--black);
+    font-family: var(--body-text);
+}
+
 /*----------------- [Shopping bag] -----------------*/
 
 .checkout {
@@ -68,8 +74,28 @@
 }
 
 .bag-item-img {
-    height: 150px;
-    width: 130px;
+    height: 160px;
+    width: 140px;
 }
 
+.bag-quantity {
+    width: 120px;
+}
+
+.order-summary-body .update-bag {
+    color: var(--black);
+}
+
+.order-summary-body .remove-item {
+    color: var(--red);
+}
+
+.remove-item i {
+    padding: 1em 0 0 3.5em;
+}
+
+.update-bag:hover,
+.remove-item:hover {
+    cursor: pointer;
+}
 

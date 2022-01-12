@@ -21,11 +21,12 @@ $( document ).ready(function() {
         }
     });
 
-
+    // Takes user to top of page
     $('.to-top-link').click(function(e) {
         window.scrollTo(0,0)
     });
 
+    // Triggers Boostrap tool tips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
