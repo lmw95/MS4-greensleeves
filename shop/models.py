@@ -64,6 +64,11 @@ SEASONAL_COLLECTION = {
     ('summer', 'SUMMER'),
 }
 
+SIZE_CHOICE = {
+    ('one size', 'ONE SIZE'),
+    ('10kg', '10kg'),
+}
+
 
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
@@ -74,7 +79,7 @@ class Product(models.Model):
     friendly_name = models.CharField(max_length=254, null=False, blank=False, default=name)
     height = models.CharField(max_length=254, null=True, blank=True)
     has_size_choice = models.BooleanField(default=False, null=True, blank=False)
-    has_weight_choice = models.BooleanField(default=False, null=True, blank=False)
+    size = models.CharField(max_length=254, choices=SIZE_CHOICE, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     water_need = models.CharField(max_length=254, choices=WATER_CHOICE, blank=True)
     humidity_need = models.CharField(max_length=254, choices=HUMIDITY_CHOICE, blank=True)

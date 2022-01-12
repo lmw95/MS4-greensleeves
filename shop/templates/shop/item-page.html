@@ -24,42 +24,26 @@
                 {% else %}
                 {% endif %}
                 {% if product.is_on_sale %}
-                <p class="sale-badge mb-0 p-2 text-center d-inline">SALE!</p>
-                <p class="fw-bold old-price fs-4 mb-0 d-inline"><s>£{{ product.price }}</s></p>
-                <p class="fw-bold fs-4 d-inline sale-price">NOW £{{ product.sale_price }}</p>
+                <div class="mb-2">
+                    <p class="sale-badge mb-0 p-2 text-center d-inline">SALE!</p>
+                    <p class="fw-bold old-price fs-4 mb-0 d-inline"><s>£{{ product.price }}</s></p>
+                    <p class="fw-bold fs-4 d-inline sale-price">NOW £{{ product.sale_price }}</p>
+                </div>
                 {% else %}
                 <p class="mb-1 fs-4">£{{ product.price }}</p>
                 {% endif %}
-                <p>{{ product.size }}</p>
-
-                {% with product.has_size_choice as s %}
-                {% if s %}
-                    <div class="col-12 mt-4">
-                        <p>Size</p>
-                        <select class="form-control rounded-0 w-50" name="product_size" id="id_product_size">
-                            <option value="s">Small</option>
-                            <option value="m">Medium</option>
-                            <option value="l">Large</option>
-                        </select>
-                    </div>
+                {% if product.height %}
+                    <p class="mt-1">{{ product.height }}</p>
+                {% else %}
                 {% endif %}
-                {% endwith %}
-                {% with product.has_weight_choice as w %}
-                {% if w %}
-                <div class="col-12 mt-4">
-                    <p>Weight</p>
-                    <select class="form-control rounded-0 w-50" name="product_weight" id="id_product_weight">
-                        <option value="5kg">5kg</option>
-                        <option value="10kg">10kg</option>
-                        <option value="20kg">20kg</option>
-                    </select>
-                </div>
+                {% if product.size %}
+                    <p class="mt-1 text-uppercase">{{ product.size }}</p>
+                {% else %}
                 {% endif %}
-                {% endwith %}
                 <form class="form mt-4" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 mt-4">
                             <p>Quantity</p>
                             <div class="form-group">
                                 <div class="input-group quantity w-50">
