@@ -32,16 +32,38 @@
                 {% endif %}
                 <p>{{ product.size }}</p>
 
-                <!--SIZE DROPDOWN HERE-->
-                
-                <form class="form mt-5" action="{% url 'add_to_bag' product.id %}" method="POST">
+                {% with product.has_size_choice as s %}
+                {% if s %}
+                    <div class="col-12 mt-4">
+                        <p>Size</p>
+                        <select class="form-control rounded-0 w-50" name="product_size" id="id_product_size">
+                            <option value="s">Small</option>
+                            <option value="m">Medium</option>
+                            <option value="l">Large</option>
+                        </select>
+                    </div>
+                {% endif %}
+                {% endwith %}
+                {% with product.has_weight_choice as w %}
+                {% if w %}
+                <div class="col-12 mt-4">
+                    <p>Weight</p>
+                    <select class="form-control rounded-0 w-50" name="product_weight" id="id_product_weight">
+                        <option value="5kg">5kg</option>
+                        <option value="10kg">10kg</option>
+                        <option value="20kg">20kg</option>
+                    </select>
+                </div>
+                {% endif %}
+                {% endwith %}
+                <form class="form mt-4" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="row">
                         <div class="col-12">
                             <p>Quantity</p>
                             <div class="form-group">
-                                <div class="input-group quantity">
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <div class="input-group quantity w-50">
+                                    <input class="form-control qty_input rounded-0" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                 </div>
                             </div>
                         </div>

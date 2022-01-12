@@ -64,21 +64,6 @@ SEASONAL_COLLECTION = {
     ('summer', 'SUMMER'),
 }
 
-# Size options
-SIZE_OPTIONS = {
-    ('1x pack', '1X PACK'),
-    ('5kg', '5KG'),
-    ('10kg', '10KG'),
-    ('20kg', '20KG'),
-    ('500ml', '500ml'),
-    ('1l', '1L'),
-    ('small', 'SMALL'),
-    ('medium', 'MEDIUM'),
-    ('large', 'LARGE'),
-    ('various sizes', 'VARIOUS SIZES'),
-    ('one bunch', 'ONE BUNCH'),
-    ('one pair', 'ONE PAIR'),
-}
 
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
@@ -89,10 +74,8 @@ class Product(models.Model):
     friendly_name = models.CharField(max_length=254, null=False, blank=False, default=name)
     height = models.CharField(max_length=254, null=True, blank=True)
     has_size_choice = models.BooleanField(default=False, null=True, blank=False)
-    size = models.CharField(max_length=254, choices=SIZE_OPTIONS, blank=True)
     has_weight_choice = models.BooleanField(default=False, null=True, blank=False)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    is_multiple = models.BooleanField(default=False, null=True, blank=False)
     water_need = models.CharField(max_length=254, choices=WATER_CHOICE, blank=True)
     humidity_need = models.CharField(max_length=254, choices=HUMIDITY_CHOICE, blank=True)
     growth_need = models.CharField(max_length=254, choices=GROWTH_CHOICE, blank=True)
@@ -107,7 +90,6 @@ class Product(models.Model):
     sale_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1054, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    featured_item = models.BooleanField(default=False, null=True, blank=True)
 
     def __str__(self):
         return self.name

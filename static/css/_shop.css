@@ -15,7 +15,13 @@
     color: var(--black);
 }
 
-.item-card {
+.plants {
+    color: var(--black);
+    background: linear-gradient(112deg, var(--white) 60%, var(--green) 40%);
+    font-family: var(--body-text);
+}
+
+.accessories {
     color: var(--black);
     background: linear-gradient(112deg, var(--white) 60%, var(--beige) 40%);
     font-family: var(--body-text);
@@ -200,10 +206,6 @@ button:focus:not(:focus-visible) {
 
 .sale-price {
     margin-left: 5px;
-}
-
-.quantity {
-    width: 65px;
 }
 
 .add-to-bag button {
