@@ -102,6 +102,10 @@ video {
     color: var(--white);
 }
 
+.statement-box p:hover {
+    cursor: pointer;
+}
+
 .environment {
     /*background-color: var(--black);*/
     background: url(/media/environment.jpg) no-repeat center;
@@ -125,6 +129,26 @@ video {
     background: url(/media/evergreen.jpg) no-repeat center;
     background-size: cover;
 }
+
+.overlay-wrapper {
+    background-color: var(--black);
+    z-index: 10;
+    color: var(--white);
+    font-family: var(--body-text);
+}
+
+.overlay-wrapper h1 {
+    font-family: var(--header);
+}
+
+.back-to-statements {
+    margin-top: 70px;
+}
+
+.back-to-statements:hover {
+    cursor: pointer;
+}
+
 
 /*----------------- [policies] -----------------*/
 
