@@ -1,0 +1,64 @@
+.about-container {
+    padding: 0;
+}
+
+.about-left {
+    height: 100vh;
+    background-color: var(--beige);
+    color: var(--black) !important;
+}
+
+.about-left-text {
+    width: 80%;
+}
+
+.about-left-text h1 {
+    font-family: var(--header);
+    font-weight: 700;
+}
+
+.about-left-text p {
+    font-family: var(--body-text);
+}
+
+.about-left-text a {
+    color: var(--black);
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+}
+
+.about-left-text a:hover {
+    text-decoration: underline;
+}
+
+.about-link button {
+    border: var(--black) solid 2px;
+    transition: all 0.1s ease-in-out;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.about-link button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.about-link button:focus {
+    box-shadow: none;
+}
+
+.link-active {
+    background-color: var(--black);
+    color: var(--white) !important;
+}
+
+.about-right {
+    height: auto;
+    background-color: var(--white);
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

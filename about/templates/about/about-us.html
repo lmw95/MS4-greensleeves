@@ -12,4 +12,30 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid about-container">
+    <div class="row w-100 m-0 about-row">
+        <div class="col-sm-12 col-lg-4 col-xl-3 d-flex justify-content-center align-items-center about-left">
+            <div class="about-left-text animated fadeInLeft">
+                <h1 class="mb-3">About us</h1>
+                <p>
+                    Greensleeves has been selling plants for over 30 years.
+                    We pride ourselves on plant care made simple, high quality
+                    customer serivce and a variety of products for everyone -
+                    without all the frills attached.
+                </p>
+                <div class="d-grid gap-2 about-link my-5">
+                    <button type="button" class="btn py-3 text-center text-decoration-none rounded-0" id="statementButton">Statements</a>
+                    <button type="button" class="btn py-3 text-center text-decoration-none rounded-0" id="policyButton">Policies</a>
+                </div>
+                <p class="text-center mb-2">Any questions? <a href="" class="fw-bold">Get in touch</a></p>
+                <p class="text-center">Read our FAQs <a href="{% url 'faqs' %}" class="fw-bold" target="_self">here</a></p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-8 col-xl-9 d-flex justify-content-center align-items-center about-right p-0">
+            <div class="about-section w-100 h-100 p-0" id="about">
+                <video autoplay muted loop src="/media/greensleeves.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

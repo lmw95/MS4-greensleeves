@@ -1,5 +1,6 @@
 $( document ).ready(function() {
    
+    // Sort by functionality
     $('#sort-selector').change(function() {
         var selector = $(this);
         var currentUrl = new URL(window.location);
@@ -24,6 +25,13 @@ $( document ).ready(function() {
     // Takes user to top of page
     $('.to-top-link').click(function(e) {
         window.scrollTo(0,0)
+    });
+
+    // Toggle about buttons
+    $('.about-link button').click(function() {
+        console.log('clicked');
+        $('.about-link .link-active').removeClass('link-active');
+        $(this).addClass('link-active');
     });
 
     // Triggers Boostrap tool tips
