@@ -1,3 +1,5 @@
+/*----------------- [About] -----------------*/
+
 .about-container {
     padding: 0;
 }
@@ -61,4 +63,81 @@ video {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+/*
+.back-to-about {
+    position: absolute;
+    margin: 48vh 0 0 555px;
+    color: var(--white);
+    z-index: 10;
+    transition: all 0.1s ease-in-out;
+}
+
+.back-to-about:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}*/
+
+/*----------------- [Statements] -----------------*/
+
+.statement-section {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.statement-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.statement-box p {
+    font-family: var(--header);
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 1px;
+    padding: 1em;
+    color: var(--white);
+}
+
+.environment {
+    /*background-color: var(--black);*/
+    background: url(/media/environment.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.ethics {
+    /*background-color: var(--brown);*/
+    background: url(/media/ethics.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.everyone {
+    /*background-color: var(--green);*/
+    background: url(/media/everyone.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.evergreen {
+    /*background-color: var(--beige);*/
+    background: url(/media/evergreen.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/*----------------- [policies] -----------------*/
+
+/*----------------- [Animation delays] -----------------*/
+
+.animation-delay-1 {
+    animation-delay: 0.3s;
+}
+
+.animation-delay-2 {
+    animation-delay: 0.6s;
+}
+
+.animation-delay-3 {
+    animation-delay: 0.9s;
 }

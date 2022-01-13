@@ -27,11 +27,34 @@ $( document ).ready(function() {
         window.scrollTo(0,0)
     });
 
-    // Toggle about buttons
+    // Toggle About section buttons
     $('.about-link button').click(function() {
         console.log('clicked');
         $('.about-link .link-active').removeClass('link-active');
         $(this).addClass('link-active');
+    });
+
+    // Toggles statement section
+    $('#statementButton').click(function() {
+        $('#statements').removeClass('d-none');
+        $('#policies').addClass('d-none');
+        $('#about').addClass('d-none');
+        $('.statement-box').addClass('animated fadeInDown');
+    });
+
+    // Toggles policy section
+    $('#policyButton').click(function() {
+        $('#policies').removeClass('d-none').addClass('animated fadeInDown');
+        $('#statements').addClass('d-none');
+        $('#about').addClass('d-none');
+    });
+
+    // Takes user back to About section
+    $('.back-to-about').click(function() {
+        $('#policies').addClass('d-none');
+        $('#statements').addClass('d-none');
+        $('#about').removeClass('d-none');
+        $('.about-link .link-active').removeClass('link-active');
     });
 
     // Triggers Boostrap tool tips
