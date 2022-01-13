@@ -1,0 +1,62 @@
+.faqs-container {
+    background-color: var(--white);
+}
+
+.faqs {
+    width: 60%;
+    color: var(--black);
+}
+
+.faqs h1 {
+    font-family: var(--header);
+    margin-top: 100px;
+}
+
+.accordion-header {
+    background-color: var(--white);
+}
+
+.accordion-body {
+    font-family: var(--body-text);
+    font-size: 0.9em;
+    text-align: justify;
+    background-color: var(--white);
+}
+
+.accordion-button {
+    font-size: 0.6em;
+    font-family: var(--body-text);
+}
+
+.accordion-button {
+    background-color: transparent;
+}
+
+.accordion-button:focus {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    background-image: url(/media/leaf.png);
+    background-size: 1.4rem;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(/media/leaf.png);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--black);
+}
+
+.faqs a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.faqs a:hover {
+    text-decoration: underline;
+}

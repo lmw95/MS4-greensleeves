@@ -101,14 +101,13 @@
         // Updates bag item quantity
         $('.update-bag').click(function(e) {
             var form = $(this).prev('.update-quantity');
-            console.log("Update click");
             form.submit();
         });
 
         // Remove item from bag
         $('.remove-item').click(function(e) {
-            console.log('Remove clickeds')
-            var csrfToken = "{{ csrf_token }}"
+            console.log('Remove clickeds');
+            var csrfToken = "{{ csrf_token }}";
             var itemId = $(this).attr('id').split('remove_')[1];
             var url = `/bag/remove/${itemId}/`;
             var data = {'csrfmiddlewaretoken': csrfToken};
