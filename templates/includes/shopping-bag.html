@@ -29,7 +29,11 @@
                                 {% endif %}
                             {% endif %}
                             <p class="my-2">
+                                {% if item.product.is_on_sale %}
+                                £{{  item.product.sale_price }}
+                                {% else %}
                                 £{{ item.product.price }}
+                                {% endif %}
                             </p>
                             <p class="mt-0 mb-0">
                                 Qty: {{ item.quantity }}

@@ -78,6 +78,19 @@ hr {
     width: 80%;
 }
 
+.about-us-link {
+    border: var(--black) solid 2px;
+    border-radius: none;
+    transition: all 0.1s ease-in-out;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.about-us-link:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
 /*----------------- [Plant for Everyonr] -----------------*/
 
 .everyone-image {
@@ -179,16 +192,21 @@ hr {
     height: 330px;
 }
 
-.view-item {
-    background-color: transparent;
-    border: 2px solid var(--black);
-    color: var(--black);
+.view-item,
+.view-item-accessory {
+    background-color: var(--black);
+    color: var(--white) !important;
     transition: all 0.1s ease-in-out;
 }
 
 .view-item:hover {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--beige);
+    color: var(--black) !important;
+}
+
+.view-item-accessory:hover {
+    background-color: var(--green);
+    color: var(--black) !important;
 }
 
 /*----------------- [Testimonials] -----------------*/

@@ -118,6 +118,11 @@
                 </ul>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <a href="{% url 'about_us' %}" target="_self" class="about-us-link text-decoration-none fw-bold p-3">More about us</a>
+            </div>
+        </div>
     </div>
 </div>
 <div class="container-fluid everyone-container">
@@ -165,22 +170,22 @@
         <div class="col-lg-8 seasonal-carousel p-4">
             <div class="carousel pb-4"
                 data-flickity='{ "draggable": false }'>
-                    {% for item in seasonal_items %}
-                    <div class="carousel-cell rounded-0">
-                        <div class="card index-card">
-                            {% if item.image %}
-                            <img class="card-img-top index-img" src="/media/{{ item.image }}" alt="Image of {{ item.name }}">
-                            {% else %}
-                            <img class="card-img-top index-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
-                            {% endif %}
-                            <div class="card-body item-card">
-                                <h5 class="card-title">{{ item.friendly_name }}</h5>
-                                <p class="fw-bold">£{{ item.price }}</p>
-                                <a href="{% url 'item_page' item.id %}" class="btn view-item p-3 rounded-0 w-100">View item</a>
-                            </div>
-                            </div>
+                {% for item in seasonal_items %}
+                <div class="carousel-cell rounded-0">
+                    <div class="card index-card plants">
+                        {% if item.image %}
+                        <img class="card-img-top index-img" src="/media/{{ item.image }}" alt="Image of {{ item.name }}">
+                        {% else %}
+                        <img class="card-img-top index-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+                        {% endif %}
+                        <div class="card-body item-card">
+                            <h5 class="card-title">{{ item.friendly_name }}</h5>
+                            <p class="fw-bold">£{{ item.price }}</p>
+                            <a href="{% url 'item_page' item.id %}" class="btn view-item p-3 rounded-0 w-100">View item</a>
+                        </div>
                     </div>
-                    {% endfor %}
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

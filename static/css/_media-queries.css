@@ -136,9 +136,8 @@
 
     .hero-brand {
         z-index: 100;
-        backdrop-filter: blur(20px);
+        background-color: var(--white);
         color: var(--black) !important;
-        border: 2px solid var(--white);
     }
 
     .nav-item {

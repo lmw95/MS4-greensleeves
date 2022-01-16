@@ -49,6 +49,10 @@
     box-shadow: none;
 }
 
+.about-link button:focus:not(:focus-visible) {
+    outline: none;
+}
+
 .link-active {
     background-color: var(--black);
     color: var(--white) !important;

@@ -73,12 +73,24 @@
     color: var(--red) !important;
 }
 
+.display-filter-results h1 {
+    font-family: var(--header);
+}
+
+.display-filter-results h1 span {
+    border-bottom: solid 2px var(--green);
+}
+
 /*----------------- [Search filters] -----------------*/
 
-.search-filters,
-.sort-filter {
+.search-filters {
     color: var(--black);
     background-color: var(--green-t);
+    font-family: var(--body-text);
+}
+
+.sort-filter {
+    color: var(--black);
     font-family: var(--body-text);
 }
 
@@ -209,15 +221,16 @@ button:focus:not(:focus-visible) {
 }
 
 .add-to-bag button {
-    background-color: transparent;
-    border: 2px solid var(--black);
-    color: var(--black);
+    background-color: var(--black);
+    color: var(--white);
+    outline: none;
+    border: none;
     transition: all 0.1s ease-in-out;
 }
 
 .add-to-bag button:hover {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--beige);
+    color: var(--black);
 }
 
 .decrement-qty,

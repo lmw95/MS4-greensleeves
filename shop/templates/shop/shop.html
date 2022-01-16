@@ -33,7 +33,11 @@
                         <p class="mb-2 bc">By collection:</p>
                         <div class="dropdown collection-dropdown mb-3">
                             <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterCollection" data-bs-toggle="dropdown" aria-expanded="false">
-                              Choose a collection...
+                                {% if not current_seasonal %}
+                                Choose an option...
+                                {% else %}
+                                {{ current_seasonal.0|capfirst }} collection
+                                {% endif %}
                             </button>
                             <ul class="dropdown-menu w-100 rounded-0" aria-labelledby="searchFilterCollection">
                               <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?category=plants">Show all</a></li>
@@ -46,12 +50,16 @@
                         <p class="mb-2 bc">By category:</p>
                         <div class="dropdown collection-dropdown">
                             <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
-                              Choose a collection...
+                                {% if not current_categories %}
+                                Choose an option...
+                                {% else %}
+                                {{ current_categories.0|capfirst }}
+                                {% endif %}
                             </button>
                             <ul class="dropdown-menu w-100 rounded-0" aria-labelledby="searchFilterType">
-                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}">Show all</a></li>
-                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?category=plants">Plants</a></li>
-                              <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?category=accessories">Accessories</a></li>
+                                <li><a class="dropdown-item collection-option" href="{% url 'shop' %}">Show all</a></li>
+                                <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?category=plants">Plants</a></li>
+                                <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?category=accessories">Accessories</a></li>
                             </ul>
                         </div>
                     </div>
@@ -60,20 +68,28 @@
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Watering:</p>
                                 <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterWater" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if not water_need %}
                                     Choose an option...
-                                  </button>
-                                  <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterWater">
+                                    {% else %}
+                                    {{ water_need.0|capfirst }}
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterWater">
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?water_need=always thirsty">Always thirsty</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?water_need=light watering">Light watering</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?water_need=water only when dry">Water only when dry</a></li>
-                                  </ul>
+                                </ul>
                             </div>
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Light:</p>
                                 <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if not light_need %}
                                     Choose an option...
-                                  </button>
-                                  <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
+                                    {% else %}
+                                    {{ light_need.0|capfirst }}
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?light_need=loves bright light">Loves bright light</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?light_need=loves a bit of both">Loves a bit of both</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?light_need=loves bright light">Loves the shade</a></li>
@@ -82,20 +98,28 @@
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Temperature:</p>
                                 <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if not temp_need %}
                                     Choose an option...
+                                    {% else %}
+                                    {{ temp_need.0|capfirst }}
+                                    {% endif %}
                                 </button>
                                 <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
-                                <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep cool">Keep cool</a></li>
-                                <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep at room temperature">Keep at room temperature</a></li>
-                                <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep warm">Keep warm</a></li>
+                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep cool">Keep cool</a></li>
+                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep at room temperature">Keep at room temperature</a></li>
+                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep warm">Keep warm</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Humidity:</p>
                                 <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if not humidity_need %}
                                     Choose an option...
-                                  </button>
-                                  <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
+                                    {% else %}
+                                    {{ humidity_need.0|capfirst }}
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?humidity_need=prefers dry air">Prefers dry air</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?humidity_need=likes a little moisture">Likes a little moisture</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?humidity_need=prefers humidity">Prefers humidity</a></li>
@@ -104,9 +128,13 @@
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Growth rate:</p>
                                 <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if not growth_need %}
                                     Choose an option...
-                                  </button>
-                                  <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
+                                    {% else %}
+                                    {{ growth_need.0|capfirst }}
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?growth_need=fast grower">Fast grower</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?growth_need=takes its time">Takes its time</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?growth_need=lifelong friend">Lifelong friend</a></li>
@@ -114,10 +142,14 @@
                             </div>
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Ease of care:</p>
-                                <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle ease-of-care" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% if not ease_of_care %}
                                     Choose an option...
-                                  </button>
-                                  <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
+                                    {% else %}
+                                    {{ ease_of_care.0|capfirst }}
+                                    {% endif %}
+                                </button>
+                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=practically unkillable">Practically unkillable</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=easy to care for">Easy to care for</a></li>
                                     <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=needs a bit of love">Needs a bit of love</a></li>
@@ -130,37 +162,50 @@
             </div>
         </div>
     </div>
-    <!--
-    <div class="row mt-5">
+    {% if products %}
+    <div class="row mt-5 pt-5">
         <div class="col">
-            <div class="container">
-                {% if current_categories %}
-                    {% for c in current_categories %}
-                    <p class="results-for fs-2 mr-3">Showing results for:
-                        <span class="fw-bold results-badge p-3 fs-5">{{ c.name }}</span></p>
-                    {% endfor %}
+            <div class="container p-2 display-filter-results text-center">
+                {% if current_seasonal %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">{{ current_seasonal.0 }} collection</span></h1>
+                {% elif current_categories %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">{{ current_categories.0 }}</span></h1>
+                {% elif water_need %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">{{ water_need.0 }}</span></h1>
+                {% elif light_need %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">{{ light_need.0 }}</span></h1>
+                {% elif temp_need %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">{{ temp_need.0 }}</span></h1>
+                {% elif humidity_need %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">{{ humidity_need.0 }}</span></h1>
+                {% elif growth_need %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">{{ growth_need.0 }}</span></h1>
+                {% elif ease_of_care %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">{{ ease_of_care.0 }}</span></h1>
+                {% elif search_term %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">"{{ search_term }}"</span></h1>
                 {% else %}
-                    <p class="results-for fs-2">Showing results for:
-                    <span class="fw-bold results-badge p-3 fs-5">all</span></p>
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">all items</span></h1>
                 {% endif %}
             </div>
         </div>
-    </div>-->
-    <div class="row mt-5">
-        <div class="col d-flex justify-content-center align-items-center results-num">
-            {% if products %}
-            <p class="fw-bold">Showing {{ products|length }} result(s)</p>
-            {% else %}
-            <p class="fw-bold">No results found!</p>
-            {% endif %}
-            <hr class="underline mt-5">
+    </div>
+    <div class="row mt-1">
+        <div class="col">
+            <div class="container d-flex justify-content-center align-items-center results-num">
+                {% if products %}
+                <p class="fw-bold">{{ products|length }} item(s)</p>
+                {% else %}
+                <p class="fw-bold">No results found!</p>
+                <hr class="underline mt-5">
+                {% endif %}
+            </div>
         </div>
     </div>
-    {% if products %}
-    <div class="row mt-5">
+    <div class="row mt-3">
         <div class="col">
             <div class="container sort-filter d-flex justify-content-center align-items-center p-3">
-                <select class="form-select w-25" aria-label="Default select example" id="sort-selector">
+                <select class="form-select w-50" aria-label="Default select example" id="sort-selector">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                         <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                         <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -217,13 +262,17 @@
                                         <p class="fw-bold">£{{ product.price }}</p>
                                         {% endif %}
                                     </div>
-                                    <div class="col-6 text-end favourite">
+                                    <div class="col-6 d-flex flex-column justify-content-center text-end favourite">
                                         <i class="far fa-heart fa-lg"></i>
                                     </div>
                                 </div>
                                 <div class="row mt-1">
                                     <div class="col add-to-bag">
-                                        <button class="w-100 p-3">Add to bag</button>
+                                        {% if product.is_plant %}
+                                        <a href="{% url 'item_page' product.id %}" class="btn view-item p-3 rounded-0 w-100">View item</a>
+                                        {% else %}
+                                        <a href="{% url 'item_page' product.id %}" class="btn view-item-accessory p-3 rounded-0 w-100">View item</a>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
