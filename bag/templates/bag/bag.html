@@ -94,17 +94,17 @@
                     {% endfor %}
                 </table>
             </div>
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-12 subtotals text-end">
-                    <p class="mb-1">Total: £{{ total }}</p>
-                    <p class="mb-1 text-muted small">Delivery: £{{ delivery|floatformat:2 }}</p>
+                    <p class="mb-1 mt-5">Subtotal: £{{ total }}</p>
+                    <p class="text-muted small mb-1">Delivery: £{{ delivery|floatformat:2 }}</p>
                     {% if free_delivery_delta > 0 %}
-                        <p class="mb-1 text-danger mb-3 small">
+                        <p class="text-danger mb-3 small">
                             Spend <strong>£{{ free_delivery_delta }}</strong> more for free delivery!
                         </p>
                     {% endif %}
-                    <h3 class="fw-bold fs-4">Grand total: £{{ grand_total|floatformat:2 }}</h3>
-                    <a class="btn rounded-0 go-to-checkout p-3 text-decoration-none mt-3" target="_self">Checkout</a>
+                    <h3 class="fw-bold fs-4 mt-4">Total to pay: £{{ grand_total|floatformat:2 }}</h3>
+                    <a href="{% url 'checkout' %}" class="btn rounded-0 go-to-checkout p-3 text-decoration-none mt-3" target="_self">Checkout</a>
                 </div>
             </div>
             {% else %}
