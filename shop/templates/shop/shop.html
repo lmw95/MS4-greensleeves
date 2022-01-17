@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load mathfilters %}
 
 {% block extra_title %}| Home {% endblock %}
 
@@ -184,6 +185,8 @@
                 <h1 class="fs-4">Showing results for: <span class="fw-bold">{{ ease_of_care.0 }}</span></h1>
                 {% elif search_term %}
                 <h1 class="fs-4">Showing results for: <span class="fw-bold">"{{ search_term }}"</span></h1>
+                {% elif sale %}
+                <h1 class="fs-4">Showing results for: <span class="fw-bold">sale</span></h1>
                 {% else %}
                 <h1 class="fs-4">Showing results for: <span class="fw-bold">all items</span></h1>
                 {% endif %}
@@ -228,8 +231,10 @@
                             <a href="{% url 'item_page' product.id %}" target="_self">
                                 {% if product.is_on_sale %}
                                 <div class="position-absolute discount-price-wrapper">
-                                    <div class="discount-price d-flex p-3">
-                                        <p class="my-auto mx-auto text-center">NOW <span class="fw-bold fs-4">£{{ product.sale_price }}</span></p>
+                                    <div class="discount-price d-flex flex-column p-3">
+                                        {% with sale_discount=product.price|sub:product.sale_price %}
+                                        <p class="fw-bold my-auto mx-auto text-center fs-5">{{ sale_discount|div:product.price|mul:100|floatformat:0 }}% off!</p>
+                                        {% endwith %}
                                     </div>
                                 </div>
                                 {% else %}
@@ -258,6 +263,9 @@
                                         <p class="fw-light text-uppercase mb-0">{{ product.category }}</p>
                                         {% if product.is_on_sale %}
                                         <p class="fw-bold old-price"><s>£{{ product.price }}</s></p>
+                                            {% if product.is_on_sale %}
+                                            <p class="fw-bold">NOW £{{ product.sale_price }}</p>
+                                            {% endif %}
                                         {% else %}
                                         <p class="fw-bold">£{{ product.price }}</p>
                                         {% endif %}

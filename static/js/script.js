@@ -8,6 +8,7 @@ $( document ).ready(function() {
         var selectedVal = selector.val();
         if(selectedVal != 'reset') {
             var sort = selectedVal.split("_")[0]
+            console.log(sort)
             var direction = selectedVal.split("_")[1];
 
             currentUrl.searchParams.set('sort', sort);

@@ -11,6 +11,7 @@ def shop(request):
     products = Product.objects.all()
     query = None
     categories = None
+    is_on_sale = False
     seasonal_collection = None
     water_need = None
     light_need = None
@@ -55,6 +56,10 @@ def shop(request):
             ease_of_care = request.GET['ease_of_care'].split(',')
             products = products.filter(ease_of_care__in=ease_of_care)
 
+        if 'is_on_sale' in request.GET:
+            is_on_sale = True
+            products = products.filter(is_on_sale=True).order_by('sale_price')
+
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -66,7 +71,7 @@ def shop(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+                products = products.order_by(sortkey)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -89,7 +94,6 @@ def shop(request):
 
     current_sorting = f'{sort}_{direction}'
 
-
     context = {
         'products': products,
         'search_term': query,
@@ -102,6 +106,7 @@ def shop(request):
         'temp_need': temp_need,
         'light_need': light_need,
         'water_need': water_need,
+        'sale': is_on_sale,
     }
 
     return render(request, 'shop/shop.html', context)

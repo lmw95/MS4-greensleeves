@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'mathfilters',
     'crispy_forms',
     'allauth',
     'allauth.account',
