@@ -76,7 +76,7 @@ def shop(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "Oops, you haven't searched for anything!")
+                messages.error(request, "No search entered - dispaying all shop items")
                 return redirect(reverse('shop'))
             
             queries = Q(name__icontains=query) | Q(

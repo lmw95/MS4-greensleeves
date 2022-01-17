@@ -14,6 +14,87 @@ body {
     height: calc(100vh - 110px);
 }
 
+/*----------------- [Toasts] -----------------*/
+
+.message-container {
+    position: fixed;
+    top: 80px;
+    right: 15px;
+    z-index: 9999999999;
+}
+
+.toast {
+    font-family: var(--body-text);
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.toast-header {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.toast-header .btn-close {
+    margin-left: auto;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--white) !important;
+}
+
+.capper-success {
+    background-color: var(--green);
+}
+
+.capper-error {
+    background-color: var(--red);
+}
+
+.capper-info {
+    background-color: var(--beige);
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 7px;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 23px;
+}
+
+.arrow-error {
+    border-bottom-color: var(--red);
+}
+
+.arrow-info {
+    border-bottom-color: var(--beige);
+}
+
+.arrow-warning {
+    border-bottom-color: #FFC118;
+}
+
+.arrow-success {
+    border-bottom-color: var(--green);
+}
+
+.bag-notification-wrapper {
+    max-height: 120px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 /*----------------- [Navigation] -----------------*/
 
 .navbar-container {

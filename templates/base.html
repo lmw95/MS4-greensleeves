@@ -1,5 +1,4 @@
 {% load static %}
-{% load bag_tools %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +105,21 @@
 
     <!--Messages from Django-->
     {% if messages %}
-        <div class="message-container"></div>
+        <div class="message-container">
+            {% for messages in messages %}
+                {% with messages.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast-error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast-warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast-success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast-info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
     {% endif %}
 
     <!--Container to push content down-->
@@ -186,6 +199,11 @@
 
     <!--JS files to load post-loading-->
     {% block postloadjs %}
+    <script type="text/javascript">
+        $(document).ready(function(){  
+            $('.toast').toast('show');
+        });
+    </script>
     {% endblock %}
 
   </body>
