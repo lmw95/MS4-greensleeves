@@ -39,3 +39,8 @@
     border-top: 2px solid var(--green);
 }
 
+.delivery-estimate-payment-options {
+    color: var(--black);
+    font-family: var(--body-text);
+}
+

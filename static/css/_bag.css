@@ -72,12 +72,12 @@
 }
 
 .bag-item-img-row {
-    width: 120px;
+    width: 150px;
 }
 
 .bag-item-img {
-    height: 160px;
-    width: 140px;
+    height: 180px;
+    width: 150px;
 }
 
 .bag-quantity {
@@ -123,4 +123,8 @@
 .go-to-checkout:hover {
     background-color: var(--black);
     color: var(--white);
+}
+
+.order-bottom {
+    border-top: solid 2px var(--beige);
 }
