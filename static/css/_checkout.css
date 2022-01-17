@@ -13,11 +13,29 @@
 .payment-form input {
     margin-bottom: 15px;
     padding: 0.5em;
+    border: 1px solid var(--beige);
 }
 
 .payment-form input:focus {
     outline: none;
-    border: 1px solid #ced4da;
-    box-shadow: 0 0.3rem 0.3rem #ced4da;;
+    border: 1px solid var(--beige);
+    box-shadow: 0 0.3rem 0.3rem var(--beige);
+}
+
+.order-summary-checkout {
+    border: 1px solid var(--beige);
+    background: linear-gradient(112deg, var(--white) 50%, var(--beige) 50%);
+}
+
+.order-summary-checkout:hover {
+    box-shadow: none;
+}
+
+.order-summary-checkout .card-body p {
+    font-family: var(--body-text);
+}
+
+.total-checkout {
+    border-top: 2px solid var(--green);
 }
 

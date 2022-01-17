@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
 
 {% block extra_title %}| Checkout {% endblock %}
 
@@ -23,17 +24,17 @@
         <div class="col-12 p-3">
             <p class="section-header fs-5 p-3 mb-0">Contact details</p>
         </div>
-        <div class="col-sm-12 col-lg-6 p-3">
-            <form action="" method="POST" id="payment-form" class="payment-form">
+        <div class="col-sm-12 col-lg-6 p-3 payment-form-wrapper">
+            <form action="" method="POST" id="payment-form" class="payment-form my-auto">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small w-auto px-2 fw-bold fs-5">Contact details</legend>
+                    <legend class="fieldset-label small w-auto fw-bold fs-5">Contact details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small w-auto px-2 fw-bold fs-5">Delivery address</legend>
+                    <legend class="fieldset-label small w-auto fw-bold fs-5">Delivery address</legend>
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
                     {{ order_form.town_or_city | as_crispy_field }}
@@ -43,6 +44,50 @@
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5"></fieldset>
             </form>
+        </div>
+        <div class="col-sm-12 col-lg-6 p-4">
+            <div class="card w-auto mx-auto mt-4 p-3 text-center order-summary-checkout">
+                <div class="card-body">
+                  <h1 class="card-title fs-2">Order summary</h1>
+                  <div class="d-flex justify-content-between mt-4">
+                      <p class="fw-bold">Item</p>
+                      <p class="fw-bold">Total</p>
+                  </div>
+                  {% for item in bag_items %}
+                  <div class="d-flex justify-content-between mb-4">
+                        <div class="row w-100">
+                            <div class="col-3 pl-0 d-flex justify-content-start">
+                                <img src="{{ item.product.image.url }}" class="img-fluid rounded" height=120 width=90>
+                            </div>
+                            <div class="col text-start">
+                                <a href="{% url 'item_page' item.product.id %}" target="_self" class="text-decoration-none">
+                                    <p class="my-1 fw-bold">{{ item.product.friendly_name }}</p>
+                                </a>
+                                <p class="my-1">{{ item.product.height }}</p>
+                                <p class="mt-1">Qty: {{ item.quantity }}</p>
+                            </div>
+                        </div>
+                        {% if item.product.is_on_sale %}
+                        <p>£{{ item.product.sale_price | calc_subtotal:item.quantity }}</p>
+                        {% else %}
+                        <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        {% endif %}
+                    </div>
+                  {% endfor %}
+                  <div class="d-flex justify-content-between mt-2 total-checkout pt-3">
+                    <p class="my-0">Subtotal: </p>
+                    <p class="mb-1">£{{ total | floatformat:2 }}</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="my-0">Delivery: </p>
+                    <p class="mb-1">£{{ delivery|floatformat:2 }}</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="my-0">Total to pay:</p>
+                    <p class="mb-1 fw-bold">£{{ grand_total | floatformat:2 }}</p>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 </div>
