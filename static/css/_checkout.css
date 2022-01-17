@@ -1,0 +1,23 @@
+.checkout-title p {
+    font-family: var(--body-text);
+}
+
+.payment-form fieldset {
+    font-family: var(--body-text);
+}
+
+.payment-form legend {
+    font-family: var(--header);
+}
+
+.payment-form input {
+    margin-bottom: 15px;
+    padding: 0.5em;
+}
+
+.payment-form input:focus {
+    outline: none;
+    border: 1px solid #ced4da;
+    box-shadow: 0 0.3rem 0.3rem #ced4da;;
+}
+

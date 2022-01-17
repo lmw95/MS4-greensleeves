@@ -74,19 +74,19 @@ body {
 }
 
 .arrow-error {
-    border-bottom-color: var(--red);
+    border-bottom-color: var(--red) !important;
 }
 
 .arrow-info {
-    border-bottom-color: var(--beige);
+    border-bottom-color: var(--beige) !important;
 }
 
 .arrow-warning {
-    border-bottom-color: #FFC118;
+    border-bottom-color: #FFC118 !important;
 }
 
 .arrow-success {
-    border-bottom-color: var(--green);
+    border-bottom-color: var(--green) !important;
 }
 
 .bag-notification-wrapper {
