@@ -116,9 +116,11 @@ def item_page(request, product_id):
     """A view to return item page with product information"""
 
     product = get_object_or_404(Product, pk=product_id)
+    recommended_items = Product.objects.filter(recommended_items=product.id)
 
     context = {
-        'product': product
+        'product': product,
+        'recommended_items': recommended_items,
     }
 
     return render(request, 'shop/item-page.html', context)

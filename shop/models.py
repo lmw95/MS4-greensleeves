@@ -92,6 +92,7 @@ class Product(models.Model):
     top_tip = models.TextField(null=True, blank=True)
     item_description = models.TextField(null=True, blank=True)
     is_on_sale = models.BooleanField(default=False, null=True, blank=True)
+    recommended_items = models.ManyToManyField("self", blank=True)
     sale_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1054, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)

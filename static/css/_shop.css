@@ -250,7 +250,8 @@ button:focus:not(:focus-visible) {
 }
 
 .plant-needs h1,
-.top-tip-title {
+.top-tip-title,
+.recommendations h1 {
     font-family: var(--header);
     font-weight: 700;
 }
