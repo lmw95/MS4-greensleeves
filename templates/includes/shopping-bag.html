@@ -1,3 +1,5 @@
+{% load bag_tools %}
+
 <div class="offcanvas offcanvas-end shopping-bag" tabindex="-1" id="shopping-bag" aria-labelledby="shopping-bag">
     <div class="offcanvas-header h">
       <button type="button" class="btn-close text-reset shopping-bag-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -30,9 +32,9 @@
                             {% endif %}
                             <p class="my-2">
                                 {% if item.product.is_on_sale %}
-                                £{{  item.product.sale_price }}
+                                    £{{ item.product.sale_price | calc_subtotal:item.quantity }}
                                 {% else %}
-                                £{{ item.product.price }}
+                                    £{{ item.product.price | calc_subtotal:item.quantity }}
                                 {% endif %}
                             </p>
                             <p class="mt-0 mb-0">

@@ -259,8 +259,16 @@ button:focus:not(:focus-visible) {
     padding-left: 0;
 }
 
-.top-tip-content,
-.lightbulb {
-    color: var(--black);
-    background-color: var(--green);
+.item-about-left,
+.item-about-right {
+    height: 50vh !important;
 }
+
+.item-about-left {
+    filter: grayscale(100%);
+}
+
+.item-about-right {
+    background-color: var(--beige);
+}
+

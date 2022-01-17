@@ -101,3 +101,26 @@
     cursor: pointer;
 }
 
+.subtotals p {
+    font-family: var(--body-text) !important;
+    color: var(--black);
+}
+
+.subtotals h3 {
+    font-family: var(--header) !important;
+    color: var(--black);
+}
+
+.go-to-checkout {
+    border: var(--black) solid 2px;
+    border-radius: none;
+    transition: all 0.1s ease-in-out;
+    color: var(--black);
+    font-weight: 700;
+    width: 250px;
+}
+
+.go-to-checkout:hover {
+    background-color: var(--black);
+    color: var(--white);
+}

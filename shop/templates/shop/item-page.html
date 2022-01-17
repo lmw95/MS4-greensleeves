@@ -162,19 +162,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12 col-md-3 p-4 d-flex justify-content-center align-items-center top-tip-title">
-            <h1 class="fw-bold"> Top tip</h1>
+        <div class="col-sm-12 col-md-4 p-4 d-flex justify-content-center align-items-center top-tip-title">
+            <h1 class="fw-bold">Our recommendations</h1>
         </div>
-        <div class="col-1 d-flex justify-content-center align-items-center lightbulb">
-            <h1>
-                <i class="far fa-lightbulb"></i>
-            </h1>
-        </div>
-        <div class="col-sm-12 col-md-8 p-4 d-flex align-items-center top-tip-content">
-            <div class="top-tip-text">
-                <p class="fs-6 mb-0">{{ product.top_tip }}</p>
-            </div>
-        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-4 item-about-left" style="background:url({{ product.image.url }}) no-repeat center;"></div>
+        <div class="col-sm-12 col-md-8 d-flex justify-content-center align-items-center item-about-right"></div>
     </div>
     {% else %}
     {% endif %}
