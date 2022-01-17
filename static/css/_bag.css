@@ -1,7 +1,8 @@
 /*----------------- [Shopping bag preview] -----------------*/
 
 .view-bag-link,
-.shopping-bag-close {
+.shopping-bag-close,
+.back-to-shopping {
     border: var(--beige) solid 2px;
     border-radius: none;
     transition: all 0.1s ease-in-out;
@@ -10,7 +11,8 @@
 }
 
 .view-bag-link:hover,
-.shopping-bag-close:hover {
+.shopping-bag-close:hover,
+.back-to-shopping:hover {
     color: var(--white) !important;
     background-color: var(--beige);
 }

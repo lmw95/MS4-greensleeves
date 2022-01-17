@@ -23,6 +23,7 @@
             <p class="section-header fs-5 p-3 mb-0">Order details</p>
         </div>
         <div class="col-12 p-3">
+            {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless order-summary">
                     {% for item in bag_items %}
@@ -92,6 +93,13 @@
                     {% endfor %}
                 </table>
             </div>
+            {% else %}
+            <div class="container d-flex flex-column align-items-center">
+                <img src="/media/wallet.png" height=150 width=150 class="my-auto mx-auto">
+                <p class="mt-3 text-center fw-bold bag-empty fs-4">Nothing here yet!</p>
+                <a href="{% url 'shop' %}" class="btn text-reset back-to-shopping w-50 p-3 rounded-0 mt-4" target="_self">Continue shopping</a>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
