@@ -1,4 +1,5 @@
 {% load bag_tools %}
+{% load mathfilters %}
 
 <div class="offcanvas offcanvas-end shopping-bag" tabindex="-1" id="shopping-bag" aria-labelledby="shopping-bag">
     <div class="offcanvas-header h">
@@ -13,6 +14,16 @@
                 {% for item in bag_items %}
                     <tr class="order-summary-body">
                         <td class="pr-3 bag-item-img-row">
+                            {% if item.product.is_on_sale %}
+                                <div class="position-absolute discount-price-wrapper-sb">
+                                    <div class="discount-price-sb d-flex flex-column p-2">
+                                        {% with sale_discount=item.product.price|sub:item.product.sale_price %}
+                                        <p class="fw-bold my-auto mx-auto text-center small">{{ sale_discount|div:item.product.price|mul:100|floatformat:0 }}% off!</p>
+                                        {% endwith %}
+                                    </div>
+                                </div>
+                                {% else %}
+                                {% endif %}
                             <img src="{{ item.product.image.url }}" class="img-fluid rounded-2 bag-item-img">
                         </td>
                         <td class="px-3">

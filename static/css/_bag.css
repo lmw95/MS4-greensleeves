@@ -128,3 +128,16 @@
 .order-bottom {
     border-top: solid 2px var(--beige);
 }
+
+.discount-price-wrapper-sb {
+    margin: -10px 0 0 -10px;
+}
+
+.discount-price-sb {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--brown);
+    color: var(--white);
+    font-family: var(--header);
+}
