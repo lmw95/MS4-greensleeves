@@ -194,7 +194,7 @@ body {
 
 .discount-banner {
     background-color: var(--beige);
-    font-family: var(--header);
+    font-family: var(--brand);
     color: var(--white);
 }
 

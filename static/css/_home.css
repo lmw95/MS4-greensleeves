@@ -78,6 +78,10 @@ hr {
     width: 80%;
 }
 
+.why-text h2 {
+    font-family: var(--brand);
+}
+
 .about-us-link {
     border: var(--black) solid 2px;
     border-radius: none;
@@ -182,6 +186,10 @@ hr {
     background: none;
     background-color: var(--beige);
     padding: 1em;
+}
+
+.card {
+    border: 0;
 }
 
 .index-card {

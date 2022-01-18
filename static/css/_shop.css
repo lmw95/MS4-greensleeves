@@ -48,7 +48,8 @@
     margin-right: 5px;
 }
 
-.card-body h6 {
+.card-body h6,
+.card-title {
     font-family: var(--header);
 }
 

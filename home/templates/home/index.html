@@ -53,7 +53,7 @@
                         <div class="d-flex justify-content-center flex-column align-items-center">
                             <img src="media/agriculture.png" width="80" height="80" alt="Person caring for plants">
                             <div class="why-text">
-                                <h2 class="text-center fs-6 mt-3 fw-bold">Sustainability</h2>
+                                <h2 class="text-center fs-5 mt-3 fw-bold">Sustainability</h2>
                                 <p class="text-center mb-5">
                                     Our plants are sourced from local and ethical growers
                                 </p>
@@ -64,7 +64,7 @@
                         <div class="d-flex justify-content-center flex-column align-items-center">
                             <img src="media/delivery.png" width="80" height="80" alt="Plant in a box">
                             <div class="why-text">
-                                <h2 class="text-center fs-6 mt-3 fw-bold">Delivery</h2>
+                                <h2 class="text-center fs-5 mt-3 fw-bold">Delivery</h2>
                                 <p class="text-center mb-5">
                                     Orders are delivered straight to your door in 2-3 working days
                                 </p>
@@ -75,7 +75,7 @@
                         <div class="d-flex justify-content-center flex-column align-items-center">
                             <img src="media/guidance.png" width="80" height="80" alt="Person carrying plant">
                             <div class="why-text">
-                                <h2 class="text-center fs-6 mt-3 fw-bold">Guidance</h2>
+                                <h2 class="text-center fs-5 mt-3 fw-bold">Guidance</h2>
                                 <p class="text-center mb-5">
                                     Our team are always on hand to help with any plant-parenting questions
                                 </p>
@@ -86,7 +86,7 @@
                         <div class="d-flex justify-content-center flex-column align-items-center">
                             <img src="media/secure-shopping.png" width="80" height="80" alt="Credit card and padlock">
                             <div class="why-text">
-                                <h2 class="text-center fs-6 mt-3 fw-bold">Security</h2>
+                                <h2 class="text-center fs-5 mt-3 fw-bold">Security</h2>
                                 <p class="text-center mb-5">
                                     Shop and purchase with confidence that your information will be secure with us
                                 </p>
@@ -97,7 +97,7 @@
                         <div class="d-flex justify-content-center flex-column align-items-center">
                             <img src="media/pinky-promise.png" width="80" height="80" alt="Pinky swearing">
                             <div class="why-text">
-                                <h2 class="text-center fs-6 mt-3 fw-bold">Promise</h2>
+                                <h2 class="text-center fs-5 mt-3 fw-bold">Promise</h2>
                                 <p class="text-center mb-5">
                                     We will provide 100% refund if you are not happy with your order
                                 </p>
@@ -108,7 +108,7 @@
                         <div class="d-flex justify-content-center flex-column align-items-center">
                             <img src="media/hand.png" width="80" height="80" alt="Hand holding plant">
                             <div class="why-text">
-                                <h2 class="text-center fs-6 mt-3 fw-bold">Quality</h2>
+                                <h2 class="text-center fs-5 mt-3 fw-bold">Quality</h2>
                                 <p class="text-center mb-5">
                                     All our plants and gifts are given pre-shipping checks before delivery
                                 </p>
@@ -169,7 +169,7 @@
         </div>
         <div class="col-lg-8 seasonal-carousel p-4">
             <div class="carousel pb-4"
-                data-flickity='{ "draggable": false }'>
+                data-flickity='{ "draggable": true }'>
                 {% for item in seasonal_items %}
                 <div class="carousel-cell rounded-0">
                     <div class="card index-card plants">
@@ -179,7 +179,7 @@
                         <img class="card-img-top index-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
                         {% endif %}
                         <div class="card-body item-card">
-                            <h5 class="card-title">{{ item.friendly_name }}</h5>
+                            <h5 class="card-title fw-bold fs-3">{{ item.friendly_name }}</h5>
                             <p class="fw-bold">£{{ item.price }}</p>
                             <a href="{% url 'item_page' item.id %}" class="btn view-item p-3 rounded-0 w-100">View item</a>
                         </div>
