@@ -24,7 +24,7 @@
 
 .order-summary-checkout {
     border: 1px solid var(--beige);
-    background: linear-gradient(112deg, var(--white) 50%, var(--beige) 50%);
+    background: linear-gradient(-112deg, var(--white) 50%, var(--beige) 50%);
 }
 
 .order-summary-checkout:hover {
@@ -42,5 +42,21 @@
 .delivery-estimate-payment-options {
     color: var(--black);
     font-family: var(--body-text);
+}
+
+.submit-button button,
+.submit-button a {
+    border: var(--black) solid 2px;
+    border-radius: none;
+    transition: all 0.1s ease-in-out;
+    color: var(--black);
+    font-weight: 700;
+    width: 200px !important;
+}
+
+.submit-button button:hover,
+.submit-button a:hover {
+    background-color: var(--black);
+    color: var(--white);
 }
 

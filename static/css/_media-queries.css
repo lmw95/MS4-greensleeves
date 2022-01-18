@@ -32,6 +32,7 @@
     .carousel-cell {
         width: 100%;
     }
+
 }
 
 
@@ -73,6 +74,23 @@
         margin: 0;
     }
 
+    .payment-form-wrapper {
+        order: 1;
+    }
+
+    .submit-button a {
+        margin-bottom: 16px;
+    }
+
+    .submit-button a,
+    .submit-button button {
+        width: 90% !important;
+    }
+
+    .delivery-estimates-payment-options {
+        order: 1 !important;
+    }
+
 }
 
 
@@ -112,6 +130,18 @@
     .everyone-text p, 
     .everyone-text ul {
         font-size: 0.8em;
+    }
+
+    .delivery-estimates-payment-options,
+    .subtotals {
+        width: 100%;
+        text-align: center !important;
+        margin-top: 40px;
+    }
+
+    .subtotals button,
+    .subtotals a {
+        width: 100%;
     }
 
 }

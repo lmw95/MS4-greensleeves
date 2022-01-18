@@ -95,7 +95,7 @@
                 </table>
             </div>
             <div class="row mb-4 order-bottom">
-                <div class="col-sm-12 col-lg-6 p-3 delivery-estimates-payment-options">
+                <div class="col-sm-12 col-md-6 p-3 delivery-estimates-payment-options order-sm-1 order-md-0">
                     <div class="p-2">
                         <p class="fw-bold mb-1">Estimated delivery</p>
                         <p class="mb-1">
@@ -109,7 +109,7 @@
                         <p class="fw-bold mb-1">Accepted payments</p>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-6 subtotals text-end p-3">
+                <div class="col-sm-12 col-md-6 subtotals text-end p-3">
                     <p class="mb-1">Subtotal: £{{ total }}</p>
                     <p class="text-muted small mb-1">Delivery: £{{ delivery|floatformat:2 }}</p>
                     {% if free_delivery_delta > 0 %}
@@ -117,8 +117,9 @@
                             Spend <strong>£{{ free_delivery_delta }}</strong> more for free delivery!
                         </p>
                     {% endif %}
-                    <h3 class="fw-bold fs-4 mt-4">Total to pay: £{{ grand_total|floatformat:2 }}</h3>
-                    <a href="{% url 'checkout' %}" class="btn rounded-0 go-to-checkout p-3 text-decoration-none mt-3" target="_self">Checkout</a>
+                    <h3 class="fw-bold fs-4 mt-4 mb-3">Total to pay: £{{ grand_total|floatformat:2 }}</h3>
+                    <a href="{% url 'checkout' %}" class="btn rounded-0 go-to-checkout p-3 text-decoration-none mt-2" target="_self">Checkout</a>
+                    <a href="{% url 'shop' %}" class="btn rounded-0 go-to-checkout p-3 text-decoration-none mt-2" target="_self">Keep shopping</a>
                 </div>
             </div>
             {% else %}
