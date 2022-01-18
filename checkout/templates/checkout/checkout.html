@@ -42,14 +42,14 @@
                     {{ order_form.county | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
-                    <div class="form-check form-check-inline float-right mr-0">
+                    <div class="form-check form-check-inline float-right mr-0 p-0">
                         {% if user.is_authenticated %}
                             <label class="form-check-label" for="id-save-info">Save my information</label>
                             <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
                         {% else %}
                             <label class="form-check-label" for="id-save-info">
-                                <a href="">Create an account</a>
-                                <a href="">Login to save my information</a>
+                                <a href="" class="d-block mb-1 text-decoration-none small"><i class="fas fa-user-plus fa-sm"></i> Create an account</a>
+                                <a href="" class="text-decoration-none small"><i class="fas fa-sign-in-alt fa-sm"></i> Login to save my information</a>
                             </label>
                         {% endif %}
                     </div>

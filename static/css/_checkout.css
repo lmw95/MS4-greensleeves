@@ -23,6 +23,19 @@
     box-shadow: 0 0.3rem 0.3rem var(--beige);
 }
 
+.form-check-label i {
+    margin-right: 5px;
+    color: var(--green);
+}
+
+.form-check-label a {
+    color: var(--black);
+}
+
+.form-check-label a:hover {
+    font-weight: 700;
+}
+
 .order-summary-checkout {
     border: 1px solid var(--beige);
     background: linear-gradient(-112deg, var(--white) 50%, var(--beige) 50%);
@@ -76,8 +89,7 @@
     box-shadow: 0 0.3rem 0.3rem var(--beige);
 }
 
-.stripe-style-input::placeholder,
-.StripeElement::placeholder {
+.stripe-style-input::placeholder {
     opacity: 0.5 !important;
 }
 
