@@ -118,12 +118,13 @@ body {
 }
 
 .nav-link i {
-    color: var(--black);
+    color: var(--black) !important;
 }
 
 .menu-nav-container {
     background-color: var(--black-t);
     font-family: var(--header);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.1);
 }
 
 .menu-nav {
@@ -188,6 +189,10 @@ body {
 .mobile-nav {
     margin-bottom: 0;
     padding-left: 0 !important;
+}
+
+.mobile-nav .nav-link {
+    color: var(--black);
 }
 
 /*----------------- [Discount banner] -----------------*/

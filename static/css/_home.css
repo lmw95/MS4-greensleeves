@@ -20,13 +20,16 @@
     font-weight: 700;
 }
 
+.fa-leaf:before {
+    display: inline-block;
+    margin-left: -30px;
+    width: 25px;
+}
+
 .hero-left li {
     font-family: var(--body-text);
     font-weight: 400;
-}
-
-.hero-left i {
-    margin-right: 10px;
+    line-height: 30px;
 }
 
 .hero-left-links a {
@@ -100,7 +103,7 @@ hr {
 .everyone-image {
     background: url(/media/plants.jpg) no-repeat center;
     background-size: cover;
-    height: 100vh !important;
+    height: auto !important;
     padding: 0;
 }
 
@@ -113,10 +116,6 @@ hr {
 
 .everyone-text h1 {
     font-family: var(--header);
-}
-
-.everyone-text li i {
-    margin-right: 10px;
 }
 
 .everyone-links a {

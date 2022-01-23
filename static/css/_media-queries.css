@@ -99,6 +99,14 @@
     .hero-container {
         background: none;
     }
+
+    .hero-brand {
+        background: -webkit-linear-gradient(90deg, var(--green), transparent 70%);
+        z-index: 100;
+        color: var(--black) !important;
+        width: 100%;
+        padding-bottom: 50px;
+    }
     
     .hero-left {
         height: auto !important;
@@ -115,8 +123,13 @@
     }
 
     .hero-right {
-        background: url('/media/header-image-mob.jpg') no-repeat center;
+        background: url('/media/header-image-plants.jpg') no-repeat center;
         background-size: cover;
+        align-items: end !important;
+    }
+
+    .everyone-image {
+        height: 100vh !important;
     }
 
     .everyone-text {
@@ -168,10 +181,14 @@
         padding: 0.3em;
     }
 
-    .hero-brand {
-        z-index: 100;
-        background-color: var(--white);
-        color: var(--black) !important;
+    .menu-nav-container {
+        background: -webkit-linear-gradient(45deg, var(--black), transparent 90%) !important;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.1);
+    }
+
+    .menu-nav-link {
+        text-align: start;
+        font-weight: 700;
     }
 
     .nav-item {
@@ -199,9 +216,7 @@
 
     .hero-brand {
         z-index: 100;
-        backdrop-filter: blur(20px);
         color: var(--black) !important;
-        border: 2px solid var(--white);
     }
 
     .social-media-container {
@@ -209,7 +224,8 @@
     }
 
     .everyone-text {
-        padding: 0;
+        padding: 4.5em !important;
+        height: auto !important;
     }
 
     .everyone-text-container {
@@ -239,7 +255,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1050px) {
 
     .hero-left-text {
-        max-width: 80%;
+        max-width: 75%;
         font-size: 0.8em;
     }
 
