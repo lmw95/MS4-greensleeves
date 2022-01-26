@@ -238,13 +238,13 @@ Icons will be from [FontAwesome](https://fontawesome.com/) and [Flaticon](https:
 
 
 # Technologies
-## **Languages**
+### **Languages**
 * HTML
 * CSS
 * JavaScript
 * Python
 
-## **Libraries & frameworks**
+### **Libraries & frameworks**
 * jQuery
 * Django
 * Gunicorn
@@ -255,13 +255,13 @@ Icons will be from [FontAwesome](https://fontawesome.com/) and [Flaticon](https:
 * crispy-forms
 * Google Fonts
 
-## **Database, platforms & cloud storage**
+### **Database, platforms & cloud storage**
 * SQLite
 * Heroku Postgres
 * Amazon AWS S3
 * Heroku
 
-## **Validation**
+### **Validation**
 * W3C Markup Validation Service
 * W3C CSS Validator
 * WAVE Web Accessibility Evaluation Tool
@@ -270,7 +270,7 @@ Icons will be from [FontAwesome](https://fontawesome.com/) and [Flaticon](https:
 * Chrome DevTools
 * Google lighthouse
 
-## **Other tools**
+### **Other tools**
 * Flaticon
 * Stripe
 * Balsamiq
