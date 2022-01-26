@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bag_tools %}
+{% load mathfilters %}
+
+{% block extra_title %}| Checkout {% endblock %}
+
+{% block header_extra %}
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container order-success d-flex pb-5">
+    <div class="order-confirmation my-auto mx-auto p-4">
+        <div class="order-success-img d-flex justify-content-center p-3">
+            <img src="/media/confetti.png" alt="Confetti" height=100 width=100>
+        </div>
+        <h1 class="fw-bold text-center my-3">Order success!</h1>
+        <p class="text-center mb-1">Your order number is {{ order.order_number }}</p>
+        <p class="text-center text-muted small">A confirmation email will be sent to <span class="fw-bold">{{ order.email }}</span> shortly.</p>
+    </div>
+</div>
+{% endblock %}

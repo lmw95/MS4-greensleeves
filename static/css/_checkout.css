@@ -107,3 +107,13 @@
     font-size: 0.5em;
 }
 
+.order-success {
+    margin-top: 100px;
+    font-family: var(--body-text);
+}
+
+.order-success h1 {
+    font-family: var(--brand);
+    color: var(--green);
+}
+

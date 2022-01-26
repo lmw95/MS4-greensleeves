@@ -91,6 +91,10 @@
         order: 1 !important;
     }
 
+    .order-summary-img {
+        width: 100px !important;
+    }
+
 }
 
 
@@ -128,6 +132,10 @@
         align-items: end !important;
     }
 
+    .item-info {
+        margin-top: 0;
+    }
+
     .everyone-image {
         height: 100vh !important;
     }
@@ -161,6 +169,10 @@
 
 
 @media only screen and (max-width: 991px) {
+
+    .navbar {
+        padding-left: 10px !important;
+    }
 
     .header-container {
         padding-top: 0;

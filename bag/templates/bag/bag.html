@@ -110,7 +110,7 @@
                     <div class="p-2">
                         <p class="fw-bold mb-1">Estimated delivery</p>
                         <p class="mb-1">
-                            {% now "D d/m" %} - {{ 3|calc_estimated_delivery|date:"D d/m" }}
+                            {{ 2|calc_estimated_delivery|date:"D d/m" }} - {{ 3|calc_estimated_delivery|date:"D d/m" }}
                         </p>
                         <p class="text-muted small">
                             <em>We aim to deliver our orders in 2-3 working days</em>
