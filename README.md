@@ -235,3 +235,14 @@ The images used in the website will come from [Flaticon]() and are linked in the
 ***Iconography***
 
 Icons will be from [FontAwesome]() and [Flaticon]() and will be used to highlight certain bits of information or interactive elements like buttons
+
+
+# Credits
+
+**Code, media and content**
+
+[See all credits here]()
+
+**Acknowledgements**
+
+
