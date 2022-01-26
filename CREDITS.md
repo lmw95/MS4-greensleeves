@@ -54,8 +54,8 @@ https://unsplash.com/photos/x8ZStukS2PM)
 * [Video](https://www.pexels.com/video/nature-plant-pot-plants-4503294/)
 
 FAQS.HTML
-* [Leaf](https://www.flaticon.com/free-icon/leaf_2362779?term=leaf&page=1&position=72&page=1&position=72&related_id=2362779&origin=search)
 
+* [Leaf](https://www.flaticon.com/free-icon/leaf_2362779?term=leaf&page=1&position=72&page=1&position=72&related_id=2362779&origin=search)
 
 HOME.HTML
 

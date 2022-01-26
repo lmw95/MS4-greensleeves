@@ -234,7 +234,47 @@ The images used in the website will come from [Flaticon]() and are linked in the
 
 ***Iconography***
 
-Icons will be from [FontAwesome]() and [Flaticon]() and will be used to highlight certain bits of information or interactive elements like buttons
+Icons will be from [FontAwesome](https://fontawesome.com/) and [Flaticon](https://www.flaticon.com/) and will be used to highlight certain bits of information or interactive elements like buttons
+
+
+# Technologies
+## **Languages**
+* HTML
+* CSS
+* JavaScript
+* Python
+
+## **Libraries & frameworks**
+* jQuery
+* Django
+* Gunicorn
+* Jinja
+* Bootstrap5
+* FontAwesome
+* AnimateCSS
+* crispy-forms
+* Google Fonts
+
+## **Database, platforms & cloud storage**
+* SQLite
+* Heroku Postgres
+* Amazon AWS S3
+* Heroku
+
+## **Validation**
+* W3C Markup Validation Service
+* W3C CSS Validator
+* WAVE Web Accessibility Evaluation Tool
+* PEP8 online
+* JSHint
+* Chrome DevTools
+* Google lighthouse
+
+## **Other tools**
+* Flaticon
+* Stripe
+* Balsamiq
+* Dbdiagram.io
 
 
 # Credits
@@ -244,5 +284,5 @@ Icons will be from [FontAwesome]() and [Flaticon]() and will be used to highligh
 [See all credits here]()
 
 **Acknowledgements**
-
+* Inspiration for this site comes from other plant sites such as [Beards & Daisies](https://www.beardsanddaisies.co.uk/cart)
 
