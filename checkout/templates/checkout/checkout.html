@@ -26,7 +26,7 @@
             <p class="section-header fs-5 p-3 mb-0">Your order...</p>
         </div>
         <div class="col-sm-12 col-lg-6 p-3 pb-5 order-sm-1 order-lg-0 payment-form-wrapper">
-            <form action="" method="POST" id="payment-form" class="payment-form my-auto">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="payment-form my-auto">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small w-auto fw-bold fs-5">Contact details</legend>
