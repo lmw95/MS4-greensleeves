@@ -279,10 +279,10 @@ Icons will be from [FontAwesome](https://fontawesome.com/) and [Flaticon](https:
 
 # Credits
 
-**Code, media and content**
+***Code, media and content***
 
 [See all credits here]()
 
-**Acknowledgements**
+***Acknowledgements***
 * Inspiration for this site comes from other plant sites such as [Beards & Daisies](https://www.beardsanddaisies.co.uk/cart)
 
