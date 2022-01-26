@@ -8,7 +8,8 @@ def index(request):
     """A view to return index page
         Renders the relevant seasonal collection according to current date"""
 
-    current_date = datetime.date.today()
+    current_date = date(2022, 6, 13)
+    #current_date = datetime.date.today()
 
     collection_active = ""
     emotion = ""

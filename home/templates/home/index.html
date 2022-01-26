@@ -156,7 +156,12 @@
 </div>
 <div class="container-fluid seasonal-collection h-100">
     <div class="row">
-        <div class="col-lg-4 seasonal-text p-5 d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-center">
+        <div class="col-lg-4 seasonal-text p-5 d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-center 
+                    {% if collection_active == 'winter' %}winter-collection
+                    {% elif collection_active == 'valentines' %}valentines-collection
+                    {% elif collection_active == 'spring' %}spring-collection
+                    {% else %}summer-collection
+                    {% endif %}">
             <div class="col-12 col-md-6 col-lg-12 d-flex flex-column justify-content-center align-items-center">
                 <h1 class="text-center p-4">Seasonal gifts</h1>
                 <p class="text-center w-75">Browse our seasonal gifts this {{ collection_active }} that are bound to leave you feeling 

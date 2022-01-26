@@ -140,6 +140,30 @@ hr {
     font-family: var(--body-text);
 }
 
+.winter-collection {
+    background: url(/media/snowflake.png) no-repeat;
+    background-size: 100px 100px;
+    background-position: 10% 20%;
+}
+
+.valentines-collection {
+    background: url(/media/hearts.png) no-repeat;
+    background-size: 100px 100px;
+    background-position: 10% 20%;
+}
+
+.spring-collection{
+    background: url(/media/butterfly.png) no-repeat;
+    background-size: 150px 150px;
+    background-position: 10% 10%;
+}
+
+.summer-collection {
+    background: url(/media/sun.png) no-repeat;
+    background-size: 150px 150px;
+    background-position: 10% 10%;
+}
+
 .seasonal-text h1 {
     font-family: var(--header);
     font-weight: 700;

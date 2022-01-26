@@ -153,6 +153,11 @@
         font-size: 0.8em;
     }
 
+    .seasonal-text {
+        background-position: 10% 10%;
+        background-size: 200px 200px;
+    }
+
     .delivery-estimates-payment-options,
     .subtotals {
         width: 100%;
