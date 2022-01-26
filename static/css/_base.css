@@ -17,6 +17,8 @@ body {
 /*----------------- [Toasts] -----------------*/
 
 .message-container {
+    display: flex;
+    justify-content: end;
     position: fixed;
     top: 80px;
     right: 15px;
@@ -27,6 +29,7 @@ body {
     font-family: var(--body-text);
     color: var(--white);
     background-color: var(--black);
+    max-width: 95% !important;
 }
 
 .toast-header {

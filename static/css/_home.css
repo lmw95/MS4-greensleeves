@@ -20,7 +20,8 @@
     font-weight: 700;
 }
 
-.fa-leaf:before {
+.hero-left .fa-leaf:before,
+.everyone-text-container .fa-leaf:before {
     display: inline-block;
     margin-left: -30px;
     width: 25px;

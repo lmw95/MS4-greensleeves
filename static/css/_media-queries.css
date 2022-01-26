@@ -23,7 +23,7 @@
     .go-to-checkout {
         width: 100%;
     }
-
+    
 }
 
 
@@ -40,6 +40,23 @@
 
     .carousel-cell {
         width: 75%;
+    }
+
+}
+
+
+@media only screen and (max-width: 576px) {
+
+    .success-overlay img {
+        height: 125px !important;
+        width: 125px !important;
+    }
+
+    .success-overlay {
+        min-height: 800px;
+        max-height: 850px;
+        max-width: 75% !important;
+        min-width: 70% !important;
     }
 
 }
@@ -170,14 +187,26 @@
         width: 100%;
     }
 
+    .faqs {
+        width: 95% !important;
+    }
+
+    .success-overlay {
+        min-height: 800px;
+        max-height: 850px;
+        max-width: 70%;
+        min-width: 65%;
+    }
+
+    .success-overlay img {
+        height: 175px;
+        width: 175px;
+    }
+
 }
 
 
 @media only screen and (max-width: 991px) {
-
-    .navbar {
-        padding-left: 10px !important;
-    }
 
     .header-container {
         padding-top: 0;
@@ -251,6 +280,10 @@
 
     .plant-need-filters {
         margin-top: 30px;
+    }
+
+    .faqs {
+        width: 80%;
     }
 
 }
