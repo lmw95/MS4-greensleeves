@@ -126,7 +126,7 @@
     }
 
     .hero-brand {
-        background: -webkit-linear-gradient(90deg, var(--green), transparent 70%);
+        background: -webkit-linear-gradient(90deg, var(--green), transparent 100%);
         z-index: 100;
         color: var(--black) !important;
         width: 100%;
@@ -232,7 +232,7 @@
     }
 
     .menu-nav-container {
-        background: -webkit-linear-gradient(45deg, var(--black), transparent 90%) !important;
+        background: -webkit-linear-gradient(45deg, var(--black), transparent 100%) !important;
         box-shadow: 0 5px 10px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.1);
     }
 
