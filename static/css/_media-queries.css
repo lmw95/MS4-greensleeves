@@ -112,6 +112,10 @@
         width: 100px !important;
     }
 
+    .back-to-shop {
+        margin-top: 80px !important;
+    }
+
 }
 
 
@@ -192,15 +196,15 @@
     }
 
     .success-overlay {
-        min-height: 800px;
-        max-height: 850px;
+        min-height: 700px;
+        max-height: 750px;
         max-width: 70%;
         min-width: 65%;
     }
 
     .success-overlay img {
-        height: 175px;
-        width: 175px;
+        height: 165px;
+        width: 165px;
     }
 
 }
