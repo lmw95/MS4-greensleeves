@@ -1,6 +1,7 @@
 # Credits 
 
 ## **Code**
+[Loading plant bounce](https://css-tricks.com/making-css-animations-feel-natural/)
 
 
 ## **Media**

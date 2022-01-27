@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container checkout">
+<div class="container checkout" id="checkout-container">
     <div class="row">
         <div class="col checkout-title">
             <h1 class="text-center">Checkout</h1>
@@ -128,6 +128,11 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="loading-overlay" id="loading-overlay">
+    <div class="loading-icon">
+        <img src="/media/delivery-loading.png" alt="Plant in box" height=200 width=200>
     </div>
 </div>
 {% endblock %}
