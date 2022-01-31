@@ -225,7 +225,7 @@
             <div class="container p-3 shop-items">
                 <div class="row">
                     {% for product in products %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5" data-aos="fade-up">
                         <div class="card item-card border-0 h-100 {{ product.category }}">
                             {% if product.image %}
                             <a href="{% url 'item_page' product.id %}" target="_self">

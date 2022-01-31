@@ -86,7 +86,7 @@
         </div>
     </div>
     {% if product.is_plant %}
-    <div class="row plant-needs d-flex flex-column">
+    <div class="row plant-needs d-flex flex-column" data-aos="fade-up" data-aos-delay="600">
         <div class="col text-center mt-5 mb-3">
             <h1>About ~ {{ product.friendly_name }}</h1>
         </div>
@@ -161,12 +161,12 @@
             </ul>
         </div>
     </div>
-    <div class="row">
+    <div class="row" data-aos="fade-right" data-aos-delay="600">
         <div class="col-sm-12 p-4 top-tip-title">
             <h1 class="fw-bold">Our recommendations</h1>
         </div>
     </div>
-    <div class="row">
+    <div class="row" data-aos="fade-up" data-aos-delay="600">
         <div class="col-sm-12 col-md-4 item-about-left" style="background:url({{ product.image.url }}) no-repeat center;"></div>
         <div class="col-sm-12 col-md-8 d-flex justify-content-center align-items-center item-about-right"></div>
     </div>

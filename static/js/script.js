@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+
+    AOS.init();
    
     // Sort by functionality
     $('#sort-selector').change(function() {

@@ -40,13 +40,13 @@
 </div>
 {% include 'includes/discount.html' %}
 <div class="container-fluid why-greensleeves p-5">
-    <div class="row">
+    <div class="row" data-aos="fade-up" data-aos-delay="600">
         <div class="col-12 mb-4">
             <h1 class="text-center pt-5">Greensleeves provides</h1>
         </div>
     </div>
     <div class="p-4 why-greensleeves-answers">
-        <div class="row d-flex flex-column">
+        <div class="row d-flex flex-column" data-aos="fade-up" data-aos-delay="600"> 
             <div class="col">
                 <ul class="d-flex justify-content-around flex-wrap">
                     <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
@@ -118,7 +118,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-up" data-aos-delay="600">
             <div class="col-12 text-center">
                 <a href="{% url 'about_us' %}" target="_self" class="about-us-link text-decoration-none w-100 fw-bold p-3">More about us</a>
             </div>
@@ -127,8 +127,8 @@
 </div>
 <div class="container-fluid everyone-container">
     <div class="row h-100">
-        <div class="col-sm-12 col-md-6 h-100 everyone-image"></div>
-        <div class="col-sm-12 col-md-6 h-100 d-flex flex-column justify-content-center align-items-center everyone-text p-5">
+        <div class="col-sm-12 col-md-6 h-100 everyone-image" data-aos="fade-right" data-aos-delay="600"></div>
+        <div class="col-sm-12 col-md-6 h-100 d-flex flex-column justify-content-center align-items-center everyone-text p-5" data-aos="fade-left">
             <h1 class="text-center fw-bold">A plant for everyone</h1>
             <div class="p-4 mt-3 everyone-text-container">
                 <p class="fw-light">
@@ -161,7 +161,7 @@
                     {% elif collection_active == 'valentines' %}valentines-collection
                     {% elif collection_active == 'spring' %}spring-collection
                     {% else %}summer-collection
-                    {% endif %}">
+                    {% endif %}" data-aos="fade-up" data-aos-delay="600">
             <div class="col-12 col-md-6 col-lg-12 d-flex flex-column justify-content-center align-items-center">
                 <h1 class="text-center p-4">Seasonal gifts</h1>
                 <p class="text-center w-75">Browse our seasonal gifts this {{ collection_active }} that are bound to leave you feeling 
@@ -172,7 +172,7 @@
                 <a href="{% url 'shop' %}?seasonal_collection={{ collection_active }}" class="py-3 text-center text-decoration-none" target="_self">Browse collection</a>
             </div>
         </div>
-        <div class="col-lg-8 seasonal-carousel p-4">
+        <div class="col-lg-8 seasonal-carousel p-4" data-aos="fade-down" data-aos-delay="600">
             <div class="carousel pb-4"
                 data-flickity='{ "draggable": true }'>
                 {% for item in seasonal_items %}
@@ -197,7 +197,7 @@
 </div>
 {% include 'includes/discount.html' %}
 <div class="container-fluid testimonials">
-    <div class="row">
+    <div class="row" data-aos="fade-up" data-aos-delay="600">
         <div class="col-12 testimonials-text p-5 d-flex flex-column">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                 <h1 class="text-center p-2">What our customers say...</h1>
