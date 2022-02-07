@@ -199,6 +199,15 @@ body {
     color: var(--black);
 }
 
+.dropdown-menu {
+    font-family: var(--body-text);
+    text-align: center;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
 /*----------------- [Discount banner] -----------------*/
 
 .discount-banner {

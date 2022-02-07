@@ -1,40 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{% block head_title %}{% endblock %}</title>
-    {% block extra_head %}
-    {% endblock %}
-  </head>
-  <body>
-    {% block body %}
+{% extends 'base.html' %}
 
-    {% if messages %}
-    <div>
-      <strong>Messages:</strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
+{% block page_title %} | Login {% endblock %}
 
-    <div>
-      <strong>Menu:</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        {% endif %}
-      </ul>
+{% block header_extra %}
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
-    {% block content %}
-    {% endblock %}
-    {% endblock %}
-    {% block extra_body %}
-    {% endblock %}
-  </body>
-</html>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container allauth-form-container d-flex px-5 justify-content-center">
+  <div class="row w-100">
+    <div class="col-sm-12 col-lg-6 px-5 d-flex align-items-center">
+      <div class="log-in-form allauth-form-inner-content p-4">
+        {% block inner_content %}
+        {% endblock %}
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-6 px-5 d-flex flex-column">
+      <img src="/media/house-plants-mob.png" alt="Brand logo plants" height=170 width=170 class="mx-auto mt-auto">
+      <p class="navbar-brand mx-auto mb-auto mt-2">Greensleeves</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

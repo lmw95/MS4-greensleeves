@@ -1,0 +1,60 @@
+.allauth-form-container {
+    height: 100vh;
+    font-family: var(--body-text);
+    color: var(--black);
+}
+
+.allauth-form-container h1 {
+    font-family: var(--header);
+}
+
+.allauth-form-container a {
+    color: var(--black);
+}
+
+.log-in-form {
+    background: linear-gradient(-112deg, var(--white) 50%, var(--beige) 50%);
+}
+
+.allauth-form-container input {
+    background-color: var(--white) !important;
+    border-radius: 0 !important;
+    border: 1px solid var(--beige);
+    margin-top: 10px;
+}
+
+.allauth-form-container label {
+    margin-top: 10px;
+}
+
+.allauth-form-container .form-check {
+    margin: 10px 0;
+}
+
+.allauth-form-container button {
+    border: var(--black) solid 2px !important;
+    border-radius: 0 !important;
+    transition: all 0.1s ease-in-out !important;
+    color: var(--black) !important;
+    font-weight: 700 !important;
+    background-color: transparent;
+    padding: 1rem !important;
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+.allauth-form-container button:hover {
+    background-color: var(--black);
+    color: var(--white) !important;
+}
+
+.allauth-form-container input:focus {
+    outline: none;
+    border: 1px solid var(--beige);
+    box-shadow: 0 0.3rem 0.3rem var(--beige);
+}
+
+.allauth-form-container input::placeholder {
+    opacity: 0.5;
+}
