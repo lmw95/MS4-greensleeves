@@ -47,10 +47,11 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
+    $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
 
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
-    var csrfToken = $('input[name="csrfmiddlewaretoken').val();
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
@@ -86,7 +87,7 @@ form.addEventListener('submit', function(ev) {
                     postal_code: $.trim(form.postcode.value),
                     state: $.trim(form.county.value),
                 }
-            }
+            },
         }).then(function(result) {
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
@@ -104,8 +105,8 @@ form.addEventListener('submit', function(ev) {
                     form.submit();
                 }
             }
-        }).fail(function() {
-            location.reload();
         });
-    });
+    }).fail(function() {
+        location.reload();
+    })
 });
