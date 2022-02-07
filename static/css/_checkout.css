@@ -12,17 +12,27 @@
     font-family: var(--header);
 }
 
-.payment-form input {
+.payment-form input, 
+.lazyselect {
     margin-bottom: 15px;
-    padding: 0.5em;
+    padding: 0.5em !important;
     border: 1px solid var(--beige);
     border-radius: 0;
 }
 
-.payment-form input:focus {
+.payment-form input:focus,
+.lazyselect:focus {
     outline: none;
     border: 1px solid var(--beige);
     box-shadow: 0 0.3rem 0.3rem var(--beige);
+}
+
+.lazyselect {
+    color: var(--black);
+}
+
+.lazyselect:invalid {
+    color: #989999;
 }
 
 .form-check-label i {
