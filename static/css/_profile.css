@@ -1,0 +1,37 @@
+.profile {
+    font-family: var(--body-text);
+    color: var(--black);
+}
+
+.profile h5 {
+    font-family: var(--header);
+}
+
+.edit-profile,
+.reset-password,
+.delete-account {
+    border: var(--black) solid 2px;
+    border-radius: none;
+    transition: all 0.1s ease-in-out;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.edit-profile:hover,
+.reset-password:hover,
+.delete-account:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.user-info,
+.account-settings,
+.wishlist,
+.orders {
+    border: 2px solid var(--green-t);
+}
+
+.wishlist-list,
+.orders-list {
+    background-color: var(--green);
+}

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-def profile():
+def profile(request):
     """Displays user's profile"""
     context = {}
     

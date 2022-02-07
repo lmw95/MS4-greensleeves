@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bag_tools %}
+{% load mathfilters %}
+
+{% block extra_title %}| Your Account {% endblock %}
+
+{% block header_extra %}
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container profile p-5 mt-5">
+    <div class="row d-flex justify-content-between">
+        <div class="col-sm-12 col-lg-4">
+            <!--User info-->
+            <div class="row d-flex flex-column user-info px-3 py-5">
+                <div class="col mb-5">
+                    <h5 class="fw-bold text-center">My profile</h5>
+                </div>
+                <div class="col mb-2">
+                    <p class="fw-bold mb-0">Name</p>
+                    <p>[user's name]</p>
+                </div>
+                <div class="col mb-2">
+                    <p class="fw-bold mb-0">Email</p>
+                    <p>[user's email]</p>
+                </div>
+                <div class="col mb-2">
+                    <p class="fw-bold mb-0">Phone number</p>
+                    <p>[user's phone number]</p>
+                </div>
+                <div class="col mb-2">
+                    <p class="fw-bold mb-0">Delivery address</p>
+                    <p>[user's delivery address]</p>
+                </div>
+                <div class="col mb-4">
+                    <p class="fw-bold mb-0">Payment information</p>
+                    <p>[user's payment info]</p>
+                </div>
+                <div class="col mt-4 d-flex">
+                    <a href="" class="btn mx-auto p-3 edit-profile rounded-0 w-50">Edit</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-7 d-flex user-other-info">
+            <div class="row w-100 d-flex flex-column justify-content-between">
+                <!--Wishlist-->
+                <div class="col-12 p-4 wishlist mb-2">
+                    <h5 class="fw-bold">My wishlist</h5>
+                    <div class="p-5 flex flex-row text-center mt-4 wishlist-list">
+
+                    </div>
+                </div>
+                <!--Orders-->
+                <div class="col-12 p-4 orders mb-2">
+                    <h5 class="fw-bold">My orders</h5>
+                    <div class="p-5 flex flex-row text-center mt-4 orders-list">
+
+                    </div>
+                </div>
+                <!--Orders-->
+                <div class="col-12 p-4 account-settings">
+                    <h5 class="fw-bold">Account settings</h5>
+                    <div class="p-4 flex flex-row text-center mt-4">
+                        <a href="" class="btn mx-auto p-3 reset-password rounded-0">Reset password</a>
+                        <a href="" class="btn mx-auto p-3 delete-account rounded-0">Delete account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

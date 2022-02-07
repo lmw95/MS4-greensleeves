@@ -59,6 +59,12 @@
         min-width: 70% !important;
     }
 
+    .reset-password,
+    .delete-account {
+        margin: 5px;
+        width: 100%;
+    }
+
 }
 
 
@@ -289,6 +295,12 @@
 
     .faqs {
         width: 80%;
+    }
+
+    .user-other-info {
+        margin-top: 30px;
+        padding: 0;
+        justify-content: center;
     }
 
 }
