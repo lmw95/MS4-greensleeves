@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'faqs',
     'about',
     'checkout',
+    'profiles',
 ]
 
 MIDDLEWARE = [
