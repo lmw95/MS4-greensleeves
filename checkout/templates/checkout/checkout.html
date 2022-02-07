@@ -58,6 +58,7 @@
                     <legend class="fieldset-label small w-auto fw-bold fs-5">Payment information</legend>
                     <div id="card-element"></div>
                     <div class="text-danger mt-3" id="card-errors" role="alert"></div>
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="submit-button text-center">
                     <a href="{% url 'view_bag' %}" class="btn rounded-0 p-3">
