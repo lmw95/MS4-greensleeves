@@ -16,7 +16,10 @@
     background: linear-gradient(-112deg, var(--white) 50%, var(--beige) 50%);
 }
 
-.allauth-form-container input {
+.details-modal input,
+.details-modal select,
+.allauth-form-container input
+.profile-input {
     background-color: var(--white) !important;
     border-radius: 0 !important;
     border: 1px solid var(--beige);
@@ -31,7 +34,8 @@
     margin: 10px 0;
 }
 
-.allauth-form-container button {
+.allauth-form-container button,
+.update-profile-details {
     border: var(--black) solid 2px !important;
     border-radius: 0 !important;
     transition: all 0.1s ease-in-out !important;
@@ -44,7 +48,8 @@
 
 }
 
-.allauth-form-container button:hover {
+.allauth-form-container button:hover,
+.update-profile-details:hover {
     background-color: var(--black);
     color: var(--white) !important;
 }
@@ -55,6 +60,11 @@
     box-shadow: 0 0.3rem 0.3rem var(--beige);
 }
 
-.allauth-form-container input::placeholder {
+.allauth-form-container input::placeholder,
+.details-modal input::placeholder {
     opacity: 0.5;
+}
+
+.details-modal {
+    font-family: var(--body-text);
 }
