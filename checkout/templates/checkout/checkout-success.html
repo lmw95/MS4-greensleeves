@@ -180,6 +180,12 @@
             <a href="{% url 'shop' %}" target="_self" class="mx-auto btn back-to-shop p-3 text-decoration-none rounded-0 mt-5">
                 Back to shopping
             </a>
+            {% if from_profile %}
+            <a href="{% url 'profile' %}" target="_self" class="mx-auto btn back-to-shop p-3 text-decoration-none rounded-0 mt-5">
+                My profile
+            </a>
+            {% else %}
+            {% endif %}
         </div>
     </div>
 </div>

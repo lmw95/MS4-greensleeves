@@ -35,3 +35,12 @@
 .orders-list {
     background-color: var(--green);
 }
+
+.orders-list {
+    overflow-y: auto;
+    max-height: 316px;
+}
+
+.orders-list th {
+    vertical-align: middle;
+}

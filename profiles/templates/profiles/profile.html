@@ -48,15 +48,52 @@
                 <!--Wishlist-->
                 <div class="col-12 p-4 wishlist mb-2">
                     <h5 class="fw-bold">My wishlist</h5>
-                    <div class="p-5 flex flex-row text-center mt-4 wishlist-list">
+                    <div class="p-3 flex flex-row text-center mt-4 wishlist-list">
 
                     </div>
                 </div>
                 <!--Orders-->
                 <div class="col-12 p-4 orders mb-2">
                     <h5 class="fw-bold">My orders</h5>
-                    <div class="p-5 flex flex-row text-center mt-4 orders-list">
-                        {{ orders }}
+                    <div class="p-3 flex flex-row text-center mt-4 orders-list">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>Order number</th>
+                                        <th>Date</th>
+                                        <th>Items</th>
+                                        <th>Order total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for order in orders %}
+                                        <tr>
+                                            <td>
+                                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                                                    <p class="small">{{ order.order_number|truncatechars:8 }}</p>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <p class="small">{{ order.date }}</p>
+                                            </td>
+                                            <td>
+                                                <ul class="list-unstyled">
+                                                {% for item in order.lineitems.all %}
+                                                    <li>
+                                                        <p class="small">{{ item.product.name }} x{{ item.quantity }}</p>
+                                                    </li>
+                                                {% endfor %}
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <p class="small">£{{ order.grand_total }}</p>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <!--Orders-->
