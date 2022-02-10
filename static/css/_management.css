@@ -1,0 +1,33 @@
+
+
+.management-form input,
+.management-form select,
+.management-form .form-control {
+    margin-top: 10px !important;
+    font-family: var(--body-text);
+}
+
+.management-form label {
+    margin-top: 10px;
+    font-family: var(--body-text);
+    font-weight: 700;
+}
+
+.management-form button,
+.management-form a {
+    border: var(--black) solid 2px !important;
+    border-radius: 0 !important;
+    transition: all 0.1s ease-in-out !important;
+    color: var(--black) !important;
+    font-weight: 700 !important;
+    background-color: transparent;
+    padding: 1rem !important;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.management-form button:hover,
+.management-form a:hover {
+    background-color: var(--black);
+    color: var(--white) !important;
+}
