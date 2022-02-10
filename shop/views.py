@@ -132,9 +132,9 @@ def add_item(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_item'))
+            return redirect(reverse('item_page', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -145,3 +145,34 @@ def add_item(request):
     }
 
     return render(request, 'shop/add-item.html', context)
+
+
+def edit_item(request, product_id):
+    """ Edits a product"""
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Item updated!')
+            return redirect(reverse('item_page', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure form is valid.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, 'shop/edit-item.html', context)
+
+
+def delete_item(request, product_id):
+    """Deletes an item"""
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Item deleted')
+    return redirect(reverse('shop'))

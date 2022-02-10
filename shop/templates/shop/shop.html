@@ -219,6 +219,14 @@
         </div>
     </div>
     {% else %}
+    <div class="row mt-5">
+        <div class="col">
+            <div class="container d-flex justify-content-center align-items-center results-num">
+                <p class="fw-bold">No results found!</p>
+                <hr class="underline mt-5">
+            </div>
+        </div>
+    </div>
     {% endif %}
     <div class="row mt-5">
         <div class="col">
@@ -280,6 +288,12 @@
                                         <a href="{% url 'item_page' product.id %}" class="btn view-item p-3 rounded-0 w-100">View item</a>
                                         {% else %}
                                         <a href="{% url 'item_page' product.id %}" class="btn view-item-accessory p-3 rounded-0 w-100">View item</a>
+                                        {% endif %}
+                                        {% if request.user.is_superuser %}
+                                            <small class="d-flex p-2">
+                                                <a href="{% url 'edit_item' product.id %}">Edit</a> | 
+                                                <a href="{% url 'delete_item' product.id %}" class="text-danger">Delete</a>
+                                            </small>
                                         {% endif %}
                                     </div>
                                 </div>

@@ -201,7 +201,6 @@ body {
 
 .dropdown-menu {
     font-family: var(--body-text);
-    text-align: center;
 }
 
 .dropdown-toggle::after {
