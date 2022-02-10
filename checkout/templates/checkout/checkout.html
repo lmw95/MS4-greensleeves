@@ -96,7 +96,11 @@
                                 </div>
                                 {% else %}
                                 {% endif %}
+                                {% if item.product.image %}
                                 <img src="{{ item.product.image.url }}" class="img-fluid rounded" height=120 width=90>
+                                {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid rounded" height=120 width=90>
+                                {% endif %}
                             </div>
                             <div class="col text-start">
                                 <a href="{% url 'item_page' item.product.id %}" target="_self" class="text-decoration-none">

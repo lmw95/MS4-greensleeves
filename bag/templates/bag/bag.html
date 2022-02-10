@@ -41,7 +41,11 @@
                                 </div>
                                 {% else %}
                                 {% endif %}
+                                {% if item.product.image %}
                                 <img src="{{ item.product.image.url }}" class="img-fluid rounded-2 bag-item-img">
+                                {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" class="img-fluid rounded-2 bag-item-img">
+                                {% endif %}
                             </td>
                             <td class="px-3">
                                 <p class="mt-0 mb-0 fw-bold">
