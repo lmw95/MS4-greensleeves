@@ -127,15 +127,11 @@ WSGI_APPLICATION = 'greensleeves.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
-   # 'default': {
-      #  'ENGINE': 'django.db.backends.sqlite3',
-      #  'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-   # }
-#}
-
 DATABASES = {
-    'default': dj_database_url.parse('postgres://ekcsuyfctlzxmj:10332dfae5973c9e7a4b48e0b18ceb0bc944ae2453eed5074cf2a398ecac47a2@ec2-54-220-166-184.eu-west-1.compute.amazonaws.com:5432/dcr7a1qmq59sci')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 
