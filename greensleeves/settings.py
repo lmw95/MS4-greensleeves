@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['lmw95-ms4-greensleeves.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['ms4-greensleeves.herokuapp.com', 'localhost']
 
 
 # Application definition
