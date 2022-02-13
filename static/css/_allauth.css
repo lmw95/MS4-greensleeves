@@ -4,6 +4,10 @@
     color: var(--black);
 }
 
+.allauth-form-inner-content {
+    width: 100%;
+}
+
 .allauth-form-container h1 {
     font-family: var(--header);
 }
@@ -57,7 +61,7 @@
 .allauth-form-container input:focus {
     outline: none;
     border: 1px solid var(--beige);
-    box-shadow: 0 0.3rem 0.3rem var(--beige);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.1);
 }
 
 .allauth-form-container input::placeholder,
