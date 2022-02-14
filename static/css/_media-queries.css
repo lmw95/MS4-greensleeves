@@ -159,7 +159,7 @@
     }
 
     .hero-right {
-        background: url(/media/header.jpg) no-repeat right;
+        background: url(/media/header.jpg) no-repeat center;
         background-size: cover;
     }
 
@@ -215,6 +215,10 @@
     .success-overlay img {
         height: 165px;
         width: 165px;
+    }
+
+    .item-about-left {
+        height: 50vh;
     }
 
 }

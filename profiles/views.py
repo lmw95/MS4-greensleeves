@@ -28,6 +28,7 @@ def profile(request):
 
     else:
         form = UserProfileForm(instance=profile)
+        
     orders = profile.orders.all()
 
     context = {
@@ -46,6 +47,7 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """Displays user's order history"""
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (

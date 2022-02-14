@@ -38,7 +38,7 @@
 
 .orders-list {
     overflow-y: auto;
-    max-height: 316px;
+    max-height: 400px;
 }
 
 .orders-list th {

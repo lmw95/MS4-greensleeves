@@ -174,13 +174,39 @@
         {% else %}
         <div class="col-sm-12 col-md-4 item-about-left" style="background:url(/media/noimage.png) no-repeat center;"></div>
         {% endif %}
-        <div class="col-sm-12 col-md-8 d-flex justify-content-center align-items-center item-about-right">
-            {{ product.tip_water }}
-            {{ product.tip_humidity }}
-            {{ product.tip_growth }}
-            {{ product.tip_temperature }}
-            {{ product.tip_light }}
-            {{ product.tip_ease }}
+        <div class="col-sm-12 col-md-8 d-flex align-items-center item-about-right p-4">
+            <ul class="list-unstyled d-flex flex-column justify-content-evenly">
+                <li class="need need-water">
+                    <p class="mb-0">
+                        {{ product.tip_water }}
+                    </p>
+                </li>
+                <li class="need need-humidity">
+                    <p class="mb-0">
+                        {{ product.tip_humidity }}
+                    </p>
+                </li>
+                <li class="need need-growth">
+                    <p class="mb-0">
+                        {{ product.tip_growth }}
+                    </p>
+                </li>
+                <li class="need need-temperature">
+                    <p class="mb-0">
+                        {{ product.tip_temperature }}
+                    </p>
+                </li>
+                <li class="need need-light">
+                    <p class="mb-0">
+                        {{ product.tip_light }}
+                    </p>
+                </li>
+                <li class="need need-ease">
+                    <p class="mb-0">
+                        {{ product.tip_ease }}
+                    </p>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="row">

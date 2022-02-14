@@ -24,19 +24,39 @@
                 </div>
                 <div class="col mb-2">
                     <p class="fw-bold mb-0">Name</p>
-                    <p>{{ profile }}</p>
+                    <p>{{ profile|title }}</p>
                 </div>
                 <div class="col mb-2">
                     <p class="fw-bold mb-0">Phone number</p>
+                    {% if phone_number %}
                     <p>{{ phone_number }}</p>
+                    {% else %}
+                    <p class="small">None provided</p>
+                    {% endif %}
                 </div>
                 <div class="col mb-2">
                     <p class="fw-bold mb-0">Delivery address</p>
+                    {% if line1 %}
                     <p class="mb-0">{{ line1 }}</p>
+                    {% else %}
+                    {% endif %}
+                    {% if line2 %}
                     <p class="mb-0">{{ line2 }}</p>
+                    {% else %}
+                    {% endif %}
+                    {% if town %}
                     <p class="mb-0">{{ town }}</p>
+                    {% else %}
+                    {% endif %}
+                    {% if postcode %}
                     <p class="mb-0">{{ postcode }}</p>
+                    {% else %}
+                    {% endif %}
+                    {% if country %}
                     <p>{{ country }}</p>
+                    {% else %}
+                    <p class="small">None provided</p>
+                    {% endif %}
                 </div>
                 <div class="col mt-4 d-flex">
                     <a href="#infoModal" class="modal-toggle btn mx-auto p-3 edit-profile rounded-0 w-100" data-bs-toggle="modal" data-bs-target="#infoModal">Edit</a>
@@ -45,19 +65,12 @@
         </div>
         <div class="col-sm-12 col-lg-7 d-flex user-other-info">
             <div class="row w-100 d-flex flex-column justify-content-between">
-                <!--Wishlist-->
-                <div class="col-12 p-4 wishlist mb-2">
-                    <h5 class="fw-bold">My wishlist</h5>
-                    <div class="p-3 flex flex-row text-center mt-4 wishlist-list">
-
-                    </div>
-                </div>
                 <!--Orders-->
                 <div class="col-12 p-4 orders mb-2">
                     <h5 class="fw-bold">My orders</h5>
                     <div class="p-3 flex flex-row text-center mt-4 orders-list">
                         <div class="table-responsive">
-                            <table class="table table-sm table-borderless">
+                            <table class="table table-sm table-borderless mb-0">
                                 <thead>
                                     <tr>
                                         <th>Order number</th>
@@ -67,6 +80,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {% if orders %}
                                     {% for order in orders %}
                                         <tr>
                                             <td>
@@ -91,6 +105,13 @@
                                             </td>
                                         </tr>
                                     {% endfor %}
+                                    {% else %}
+                                        <tr>
+                                            <td>
+                                                <p class="small mb-0 p-4">No orders</p>
+                                            </td>
+                                        </tr>
+                                    {% endif %}
                                 </tbody>
                             </table>
                         </div>

@@ -261,11 +261,6 @@ button:focus:not(:focus-visible) {
     padding-left: 0;
 }
 
-.item-about-left,
-.item-about-right {
-    height: 50vh !important;
-}
-
 .item-about-left {
     filter: grayscale(100%);
 }
