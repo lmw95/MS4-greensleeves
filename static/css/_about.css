@@ -114,6 +114,9 @@ video {
 .statement-box p:hover {
     cursor: pointer;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
 }
 
 .environment {
