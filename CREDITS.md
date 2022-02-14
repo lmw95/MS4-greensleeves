@@ -38,7 +38,7 @@ HOME.HTML
 * [Sun](https://www.flaticon.com/free-icon/sun_869869?term=sun&page=1&position=5&page=1&position=5&related_id=869869&origin=search)
 
 DISCOUNT.HTML
-* [Truck](https://www.flaticon.com/free-icon/delivery-truck_3142390?related_id=3142364&origin=search)
+* [Truck](https://www.flaticon.com/free-icon/delivery_709790?term=delivery%20truck&page=1&position=1&page=1&position=1&related_id=709790&origin=search)
 
 SHOPPING-BAG.HTML
 * [Empty box](https://www.flaticon.com/premium-icon/wallet_1992132)

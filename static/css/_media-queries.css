@@ -276,7 +276,7 @@
 
     .hero-brand {
         z-index: 100;
-        color: var(--black) !important;
+        color: var(--white) !important;
     }
 
     .social-media-container {
@@ -335,10 +335,6 @@
     .hero-left-text {
         max-width: 75%;
         font-size: 0.8em;
-    }
-
-    .hero-right .navbar-brand {
-        color: var(--black) !important;
     }
 
 }
