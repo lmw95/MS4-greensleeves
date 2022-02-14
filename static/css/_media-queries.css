@@ -145,8 +145,8 @@
     }
     
     .hero-left {
+        background-color: var(--green-t);
         height: auto !important;
-        background-color: var(--green);
         padding: 2em;
     }
 
@@ -159,9 +159,8 @@
     }
 
     .hero-right {
-        background: url('/media/header.jpg') no-repeat center;
+        background: url(/media/header.jpg) no-repeat right;
         background-size: cover;
-        align-items: center !important;
     }
 
     .item-info {
@@ -222,10 +221,6 @@
 
 
 @media only screen and (max-width: 991px) {
-
-    .header-container {
-        padding-top: 0;
-    }
 
     .navbar-toggler {
         float: left;

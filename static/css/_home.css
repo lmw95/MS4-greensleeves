@@ -1,31 +1,17 @@
 /*----------------- [Hero image] -----------------*/
 
-.hero-brand {
-    margin-right: 0;
+.hero-container {
+    background: url('/media/header.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .hero-left {
-    background-color: var(--green-t);
     height: 100vh !important;
-    color: var(--black);
 }
 
 .hero-left h1 {
     font-family: var(--header);
     font-weight: 700;
-}
-
-.hero-left .fa-leaf:before,
-.everyone-text-container .fa-leaf:before {
-    display: inline-block;
-    margin-left: -30px;
-    width: 25px;
-}
-
-.hero-left li {
-    font-family: var(--body-text);
-    font-weight: 400;
-    line-height: 30px;
 }
 
 .hero-left-links a {
@@ -42,8 +28,6 @@
 }
 
 .hero-right {
-    background: url('/media/header.jpg') no-repeat center;
-    background-size: cover;
     padding: 0;
     height: 100vh !important;
 }
@@ -114,6 +98,12 @@ hr {
 
 .everyone-text h1 {
     font-family: var(--header);
+}
+
+.everyone-text-container .fa-leaf:before {
+    display: inline-block;
+    margin-left: -30px;
+    width: 25px;
 }
 
 .everyone-links a {

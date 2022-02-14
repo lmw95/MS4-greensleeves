@@ -15,14 +15,12 @@
 <div class="container-fluid hero-container">
     <div class="row h-100">
         <div class="col-sm-12 col-md-6 h-100 d-flex justify-content-center align-items-center order-sm-0 order-md-0 order-last hero-left">
-            <div class="hero-left-text animated fadeInLeft">
-                <h1 class="mb-3">For the love of <span>things that grow</span></h1>      
-                <ul class="list-unstyled mb-5">
-                    <li><i class="fas fa-leaf"></i> Discover our diverse range of indoor plants</li>
-                    <li><i class="fas fa-leaf"></i> Learn how to care for your new family member</li>
-                    <li><i class="fas fa-leaf"></i> Browse for accessories to care for your budding nursery</li>
-                    <li><i class="fas fa-leaf"></i> Find the perfect gift for a loved one</li>
-                </ul>
+            <div class="hero-left-text animated fadeInLeft p-0">
+                <a href="{% url 'home' %}" class="navbar-brand hero-brand text-center fs-1 mr-0 d-block d-md-none d-lg-none" target="_self">
+                    <img src="/media/house-plants-mob.png" alt="Greensleeves logo" width="40" height="40" class="d-inline-block align-text-center">
+                    Greensleeves
+                </a>
+                <h1 class="mb-3">For the love of things that grow</h1>      
                 <div class="d-grid gap-2 hero-left-links pb-4">
                     <a href="{% url 'shop' %}?category=plants" class="py-3 text-center text-decoration-none" target="_self">Browse plants</a>
                     <a href="{% url 'shop' %}?category=accessories" class="py-3 text-center text-decoration-none" target="_self">Browse accessories</a>
@@ -30,11 +28,6 @@
             </div>
         </div>
         <div class="col-sm-12 col-md-6 h-100 order-md-1 order-first hero-right d-flex justify-content-center align-items-center">
-            <hr class="d-lg-none"> 
-            <a href="{% url 'home' %}" class="navbar-brand hero-brand text-center fs-1 p-4 mr-0 d-block d-lg-none rounded-3 animated slideInUp" target="_self">
-                <img src="/media/house-plants-mob.png" alt="Greensleeves logo" width="70" height="70" class="d-inline-block align-text-center">
-                Greensleeves
-            </a>
         </div>
     </div>
 </div>
