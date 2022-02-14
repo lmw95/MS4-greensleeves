@@ -1,10 +1,5 @@
 /*----------------- [Hero image] -----------------*/
 
-.hero-container {
-    background: url('/media/header-image-plants.jpg') no-repeat center;
-    background-size: cover;
-}
-
 .hero-brand {
     margin-right: 0;
 }
@@ -47,6 +42,8 @@
 }
 
 .hero-right {
+    background: url('/media/header.jpg') no-repeat center;
+    background-size: cover;
     padding: 0;
     height: 100vh !important;
 }
@@ -109,8 +106,8 @@ hr {
 }
 
 .everyone-text {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--green-t);
+    color: var(--black);
     font-family: var(--body-text);
     height: 100vh !important;
 }
@@ -120,17 +117,16 @@ hr {
 }
 
 .everyone-links a {
-    border: var(--white) solid 2px;
+    border: var(--black) solid 2px;
     border-radius: none;
     transition: all 0.1s ease-in-out;
-    color: var(--white);
+    color: var(--black);
     font-weight: 700;
-    font-family: var(--body-text);
 }
 
 .everyone-links a:hover {
-    background-color: var(--white);
-    color: var(--black);
+    background-color: var(--black);
+    color: var(--white);
 }
 
 /*----------------- [Seasonal collection] -----------------*/

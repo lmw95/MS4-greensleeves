@@ -137,9 +137,8 @@
     }
 
     .hero-brand {
-        background: -webkit-linear-gradient(90deg, var(--green), transparent 100%);
         z-index: 100;
-        color: var(--black) !important;
+        color: var(--white) !important;
         width: 100%;
         padding-bottom: 50px;
         bottom: 0;
@@ -160,9 +159,9 @@
     }
 
     .hero-right {
-        background: url('/media/header-image-plants.jpg') no-repeat center;
+        background: url('/media/header.jpg') no-repeat center;
         background-size: cover;
-        align-items: end !important;
+        align-items: center !important;
     }
 
     .item-info {
@@ -244,7 +243,6 @@
     }
 
     .menu-nav-container {
-        background: -webkit-linear-gradient(45deg, var(--black), transparent 100%) !important;
         box-shadow: 0 5px 10px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.1);
     }
 

@@ -14,12 +14,16 @@
 
 ***Icons***
 
+BASE.HTML
+* [Brand logo](https://www.flaticon.com/free-icon/gardening_1973668?related_id=1973668&origin=search)
+
 ITEM-PAGE.HTML
 * [Plant growth](https://www.flaticon.com/premium-icon/growth_2194860?term=plants&related_id=2194860)
 * [Humidity](https://www.flaticon.com/premium-icon/humidity_1585362?)
 [Watering](https://www.flaticon.com/free-icon/watering-can_2853225?term=watering%20can&page=1&position=17&page=1&position=17&related_id=2853225&origin=search)
 * [Light](https://www.flaticon.com/premium-icon/cloudy-day_3222797?term=cloudy&page=1&position=9&page=1&position=9&related_id=3222797&origin=search)
 * [Ease of care](https://www.flaticon.com/premium-icon/hand_3131301?term=plant%20love&page=1&position=60&page=1&position=60&related_id=3131301&origin=search)
+* [Temperature](https://www.flaticon.com/free-icon/thermometer_1843544?term=temperature&page=1&position=7&page=1&position=7&related_id=1843544&origin=search)
 
 HOME.HTML
 * [Sustainability](https://www.flaticon.com/free-icon/agriculture_1772243?term=gardening&page=2&position=37&page=2&position=37&related_id=1772243&origin=search)
@@ -32,7 +36,6 @@ HOME.HTML
 * [Hearts](https://www.flaticon.com/free-icon/hearts_1405110?term=love%20hearts&page=1&position=27&page=1&position=27&related_id=1405110&origin=search)
 * [Butterflies](https://www.flaticon.com/premium-icon/butterfly_2716942)
 * [Sun](https://www.flaticon.com/free-icon/sun_869869?term=sun&page=1&position=5&page=1&position=5&related_id=869869&origin=search)
-
 
 DISCOUNT.HTML
 * [Truck](https://www.flaticon.com/free-icon/delivery-truck_3142390?related_id=3142364&origin=search)
@@ -50,8 +53,7 @@ ABOUT.HTML
 https://unsplash.com/photos/o41CLC24-SE)
 * [Ethics](https://unsplash.com/photos/WYGhTLym344)
 * [Everyone](https://unsplash.com/photos/qhQigi52kXw)
-* [Evergreen](
-https://unsplash.com/photos/x8ZStukS2PM)
+* [Evergreen](https://unsplash.com/photos/x8ZStukS2PM)
 * [Video](https://www.pexels.com/video/nature-plant-pot-plants-4503294/)
 
 FAQS.HTML

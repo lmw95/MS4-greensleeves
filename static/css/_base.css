@@ -6,12 +6,12 @@ html {
 }
 
 .header-container {
-    padding-top: 110px;
-    background-color: var(--white);
+    padding-top: 70.3px;
+    background-color: var(--black);
 }
 
 body {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 70.3px);
     overflow-x: hidden;
 }
 
@@ -102,7 +102,7 @@ body {
 /*----------------- [Navigation] -----------------*/
 
 .navbar-container {
-    background-color: var(--white);
+    background-color: var(--black);
 }
 
 .navbar {
@@ -110,7 +110,7 @@ body {
 }
 
 .navbar-brand {
-    color: var(--black);
+    color: var(--white);
     font-weight: 500;
     letter-spacing: 2px;
     font-family: var(--brand);
@@ -118,21 +118,22 @@ body {
 }
 
 .navbar-brand:hover {
-    color: var(--black);
+    color: var(--white);
 }
 
-.nav-link i {
-    color: var(--black) !important;
+.nav-link i,
+.fa-search {
+    color: var(--white) !important;
 }
 
 .menu-nav-container {
-    background-color: var(--black-t);
-    font-family: var(--header);
+    background-color: var(--black);
+    backdrop-filter: blur(7px);
+    font-family: var(--body-text);
     box-shadow: 0 5px 10px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.1);
 }
 
 .menu-nav {
-    font-family: var(--body-text);
     height: 50px;
     box-shadow: 0 10px 15px 0 rgb(0 0 0 / 10%);
 }
@@ -148,12 +149,14 @@ body {
 }
 
 .menu-search {
-    border: none;
-    background-color: var(--white);
+    border: 0;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .menu-search:focus {
-    background-color: var(--white);
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .form-control::placeholder {
@@ -200,6 +203,7 @@ body {
 }
 
 .dropdown-menu {
+    background-color: var(--green);
     font-family: var(--body-text);
 }
 
@@ -227,7 +231,7 @@ body {
 
 footer {
     background-color: var(--black);
-    color: var(--grey);
+    color: var(--white);
     font-family: var(--body-text);
     z-index: 10;
 }
@@ -251,29 +255,11 @@ footer ul {
 }
 
 .social-media-icon i {
-    color: var(--grey);
-    filter: brightness(150%);
+    color: var(--green);
     transition: all 0.1s ease-in-out;
 }
 
 .social-media-icon i:hover {
     color: var(--white);
     transform: scale(1.2);
-}
-
-.footer-bottom {
-    background-color: var(--grey);
-    font-family: var(--body-text);
-}
-
-.footer-bottom p {
-    filter: brightness(200%);
-    margin: 0;
-    font-size: 0.8em;
-}
-
-.github-icon {
-    margin-right: 5px;
-    color: var(--black) !important;
-    filter: brightness(-100%);
 }
