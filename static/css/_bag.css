@@ -54,6 +54,7 @@
 
 .section-header {
     font-family: var(--header);
+    color: var(--white);
     font-weight: 700;
     background-color: var(--green);
 }

@@ -17,6 +17,15 @@
     <div class="row">
         <div class="col-sm-12 col-md-6 item-left d-flex justify-content-center align-items-center order-sm-0 order-md-0 order-last py-5">
             <div class="item-info">
+                {% if product.is_plant %}
+                <span class="navbar-brand text-center">
+                    <img src="/media/brand-logo-plant.png" alt="" width="40" height="60" class="mb-4 d-inline-block align-text-center">
+                </span>
+                {% else %}
+                <span class="navbar-brand text-center">
+                    <img src="/media/brand-logo-spade.png" alt="" width="35" height="60" class="mb-4 d-inline-block align-text-center">
+                </span>
+                {% endif %}
                 <h1>{{ product.friendly_name }}</h1>
                 {% if product.is_in_seasonal_collection %}
                 <a href="{% url 'shop' %}?seasonal_collection={{ product.seasonal_collection }}" target="_self" class="text-decoration-none text-uppercase">
@@ -30,7 +39,7 @@
                     <p class="fw-bold fs-4 d-inline sale-price">NOW £{{ product.sale_price }}</p>
                 </div>
                 {% else %}
-                <p class="mb-1 fs-4">£{{ product.price }}</p>
+                <p class="mb-1 fs-4 fw-bold">£{{ product.price }}</p>
                 {% endif %}
                 {% if product.height %}
                     <p class="mt-1">{{ product.height }}</p>
@@ -44,7 +53,7 @@
                     {% csrf_token %}
                     <div class="row">
                         <div class="col-12 mt-4">
-                            <p>Quantity</p>
+                            <p class="fw-bold">Quantity</p>
                             <div class="form-group quantity w-50 bag-quantity">
                                 <div class="input-group input-group-{{ product.id }}">
                                     <div class="input-group-prepend">
@@ -165,7 +174,14 @@
         {% else %}
         <div class="col-sm-12 col-md-4 item-about-left" style="background:url(/media/noimage.png) no-repeat center;"></div>
         {% endif %}
-        <div class="col-sm-12 col-md-8 d-flex justify-content-center align-items-center item-about-right"></div>
+        <div class="col-sm-12 col-md-8 d-flex justify-content-center align-items-center item-about-right">
+            {{ product.tip_water }}
+            {{ product.tip_humidity }}
+            {{ product.tip_growth }}
+            {{ product.tip_temperature }}
+            {{ product.tip_light }}
+            {{ product.tip_ease }}
+        </div>
     </div>
     <div class="row">
         <div class="col-12 recommendations p-4">

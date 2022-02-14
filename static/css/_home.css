@@ -211,16 +211,15 @@ hr {
     height: 330px;
 }
 
-.view-item,
-.view-item-accessory {
+.view-item {
     background-color: var(--black);
     color: var(--white) !important;
     transition: all 0.1s ease-in-out;
 }
 
 .view-item:hover {
-    background-color: var(--beige);
-    color: var(--black) !important;
+    filter: brightness(150%);
+    color: var(--white) !important;
 }
 
 .view-item-accessory:hover {

@@ -73,8 +73,8 @@
                             </div>
                         </div>
                     </a>
-                    <div class="dropdown-menu border-0 rounded-0" aria-labelledby="user-options">
-                        <a href="{% url 'home' %}" class="dropdown-item navbar-brand mb-2">Greensleeves</a>
+                    <div class="dropdown-menu base-dropdown border-0 rounded-0" aria-labelledby="user-options">
+                        <a href="{% url 'home' %}" class="dropdown-item navbar-brand mb-2 text-center">Greensleeves</a>
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_item' %}" class="dropdown-item">Product Management</a>

@@ -202,7 +202,7 @@ body {
     color: var(--black);
 }
 
-.dropdown-menu {
+.base-dropdown {
     background-color: var(--green);
     font-family: var(--body-text);
 }

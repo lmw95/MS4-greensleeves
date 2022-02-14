@@ -23,7 +23,11 @@
     </div>
     <div class="row">
         <div class="col-12 p-3">
-            <p class="section-header fs-5 p-3 mb-0">Your order...</p>
+            <p class="section-header fs-5 p-3 mb-0 d-flex justify-content-between align-items-center">Your order...
+                <span class="navbar-brand text-center d-flex align-items-center">
+                    <img src="/media/brand-logo.png" alt="Spade and plant" width="40" height="40" class="d-inline-block align-text-center">
+                </span>
+            </p>
         </div>
         <div class="col-sm-12 col-lg-6 p-3 pb-5 order-sm-1 order-lg-0 payment-form-wrapper">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="payment-form my-auto">

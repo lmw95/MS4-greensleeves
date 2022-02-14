@@ -26,6 +26,9 @@
             <div class="container search-filters p-3">
                 <div class="row">
                     <div class="col">
+                        <span class="navbar-brand text-center">
+                            <img src="/media/brand-logo.png" alt="" width="40" height="40" class="mb-3 d-inline-block align-text-center">
+                        </span>
                         <h6 class="fw-bold fs-3">Filter your search...</h6>
                     </div>
                 </div>
@@ -67,95 +70,107 @@
                     <div class="col-sm-12 col-lg-8 plant-need-filters">
                         <div class="row">
                             <div class="col-sm-12 col-lg-4 mb-3">
-                                <p class="mb-2 bc">Watering:</p>
-                                <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterWater" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {% if not water_need %}
-                                    Choose an option...
-                                    {% else %}
-                                    {{ water_need.0|capfirst }}
-                                    {% endif %}
-                                </button>
-                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterWater">
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?water_need=always thirsty">Always thirsty</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?water_need=light watering">Light watering</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?water_need=water only when dry">Water only when dry</a></li>
-                                </ul>
+                                <div class="dropdown">
+                                    <p class="mb-2 bc">Watering:</p>
+                                    <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterWater" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {% if not water_need %}
+                                        Choose an option...
+                                        {% else %}
+                                        {{ water_need.0|capfirst }}
+                                        {% endif %}
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0 w-100" aria-labelledby="searchFilterWater">
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?water_need=always thirsty">Always thirsty</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?water_need=light watering">Light watering</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?water_need=water only when dry">Water only when dry</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Light:</p>
-                                <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {% if not light_need %}
-                                    Choose an option...
-                                    {% else %}
-                                    {{ light_need.0|capfirst }}
-                                    {% endif %}
-                                </button>
-                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?light_need=loves bright light">Loves bright light</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?light_need=loves a bit of both">Loves a bit of both</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?light_need=loves the shade">Loves the shade</a></li>
-                                </ul>
+                                <div class="dropdown">
+                                    <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {% if not light_need %}
+                                        Choose an option...
+                                        {% else %}
+                                        {{ light_need.0|capfirst }}
+                                        {% endif %}
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0 w-100" aria-labelledby="searchFilterType">
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?light_need=loves bright light">Loves bright light</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?light_need=loves a bit of both">Loves a bit of both</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?light_need=loves the shade">Loves the shade</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Temperature:</p>
-                                <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {% if not temp_need %}
-                                    Choose an option...
-                                    {% else %}
-                                    {{ temp_need.0|capfirst }}
-                                    {% endif %}
-                                </button>
-                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep cool">Keep cool</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep at room temperature">Keep at room temperature</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep warm">Keep warm</a></li>
-                                </ul>
+                                <div class="dropdown">
+                                    <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {% if not temp_need %}
+                                        Choose an option...
+                                        {% else %}
+                                        {{ temp_need.0|capfirst }}
+                                        {% endif %}
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0 w-100" aria-labelledby="searchFilterType">
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep cool">Keep cool</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep at room temperature">Keep at room temperature</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?temp_need=keep warm">Keep warm</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Humidity:</p>
-                                <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {% if not humidity_need %}
-                                    Choose an option...
-                                    {% else %}
-                                    {{ humidity_need.0|capfirst }}
-                                    {% endif %}
-                                </button>
-                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?humidity_need=prefers dry air">Prefers dry air</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?humidity_need=likes a little moisture">Likes a little moisture</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?humidity_need=prefers humidity">Prefers humidity</a></li>
-                                </ul>
+                                <div class="dropdown">
+                                    <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {% if not humidity_need %}
+                                        Choose an option...
+                                        {% else %}
+                                        {{ humidity_need.0|capfirst }}
+                                        {% endif %}
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0 w-100" aria-labelledby="searchFilterType">
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?humidity_need=prefers dry air">Prefers dry air</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?humidity_need=likes a little moisture">Likes a little moisture</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?humidity_need=prefers humidity">Prefers humidity</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Growth rate:</p>
-                                <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {% if not growth_need %}
-                                    Choose an option...
-                                    {% else %}
-                                    {{ growth_need.0|capfirst }}
-                                    {% endif %}
-                                </button>
-                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?growth_need=fast grower">Fast grower</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?growth_need=takes its time">Takes its time</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?growth_need=lifelong friend">Lifelong friend</a></li>
-                                </ul>
+                                <div class="dropdown">
+                                    <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {% if not growth_need %}
+                                        Choose an option...
+                                        {% else %}
+                                        {{ growth_need.0|capfirst }}
+                                        {% endif %}
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0 w-100" aria-labelledby="searchFilterType">
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?growth_need=fast grower">Fast grower</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?growth_need=takes its time">Takes its time</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?growth_need=lifelong friend">Lifelong friend</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-sm-12 col-lg-4 mb-3">
                                 <p class="mb-2 bc">Ease of care:</p>
-                                <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle ease-of-care" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {% if not ease_of_care %}
-                                    Choose an option...
-                                    {% else %}
-                                    {{ ease_of_care.0|capfirst }}
-                                    {% endif %}
-                                </button>
-                                <ul class="dropdown-menu rounded-0" aria-labelledby="searchFilterType">
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=practically unkillable">Practically unkillable</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=easy to care for">Easy to care for</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=needs a bit of love">Needs a bit of love</a></li>
-                                    <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=can be a diva">Can be a diva</a></li>
-                                </ul>
+                                <div class="dropdown">
+                                    <button class="w-100 text-start btn dropdown-toggle rounded-0 collection-toggle ease-of-care" type="button" id="searchFilterType" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {% if not ease_of_care %}
+                                        Choose an option...
+                                        {% else %}
+                                        {{ ease_of_care.0|capfirst }}
+                                        {% endif %}
+                                    </button>
+                                    <ul class="dropdown-menu rounded-0 w-100" aria-labelledby="searchFilterType">
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=practically unkillable">Practically unkillable</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=easy to care for">Easy to care for</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=needs a bit of love">Needs a bit of love</a></li>
+                                        <li><a class="dropdown-item collection-option" href="{% url 'shop' %}?ease_of_care=can be a diva">Can be a diva</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -284,11 +299,7 @@
                                 </div>
                                 <div class="row mt-1">
                                     <div class="col add-to-bag">
-                                        {% if product.is_plant %}
                                         <a href="{% url 'item_page' product.id %}" class="btn view-item p-3 rounded-0 w-100">View item</a>
-                                        {% else %}
-                                        <a href="{% url 'item_page' product.id %}" class="btn view-item-accessory p-3 rounded-0 w-100">View item</a>
-                                        {% endif %}
                                         {% if request.user.is_superuser %}
                                             <small class="d-flex p-2">
                                                 <a href="{% url 'edit_item' product.id %}">Edit</a> | 
