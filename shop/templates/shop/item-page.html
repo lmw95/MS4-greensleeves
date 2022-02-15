@@ -95,12 +95,12 @@
         </div>
         {% if product.image.url %}
         <div class="col-sm-12 col-md-6 item-right order-md-1 order-first" 
-            style="background: url(/media/{{product.image.url}}) no-repeat top;
+            style="background: url({{product.image.url}}) no-repeat top;
             background-size: cover;">
         </div>
         {% else %}
         <div class="col-sm-12 col-md-6 item-right order-md-1 order-first" 
-            style="background: url(/media/noimage.png) no-repeat center;
+            style="background: url(../images/noimage.png) no-repeat center;
             background-size: cover;">
         </div>
         {% endif %}

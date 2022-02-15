@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEVELOPMENT', '')
 
 
 ALLOWED_HOSTS = ['ms4-greensleeves.herokuapp.com', 'localhost']
@@ -227,5 +227,5 @@ else:
     EMAIL_USE_TLS = 'True'
     EMAIL_POST = 587
     EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS', '')
-    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER', '')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
