@@ -313,6 +313,10 @@
         padding: 0 !important;
     }
 
+    .overlay-wrapper {
+        position: absolute !important;
+    }
+
 }
 
 

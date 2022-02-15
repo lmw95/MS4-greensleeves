@@ -5,7 +5,7 @@
 }
 
 .about-left {
-    height: 100vh;
+    height: auto;
     background-color: var(--beige);
     color: var(--black) !important;
 }
@@ -144,6 +144,7 @@ video {
     z-index: 10;
     color: var(--white);
     font-family: var(--body-text);
+    position: fixed;
 }
 
 .overlay-wrapper h1 {
