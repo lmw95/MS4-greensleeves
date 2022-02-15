@@ -12,4 +12,12 @@
 {% endblock %}
 
 {% block content %}
+<div class="container d-flex justify-content-center align-items-center blogs-container">
+    {% for post in posts %}
+        {{ post.title }}
+        {{ post.date_added }}
+        {{ post.intro }}
+        <a href="{% url 'blog_page' post.slug %}">Read more</a>
+    {% endfor %}
+</div>
 {% endblock %}

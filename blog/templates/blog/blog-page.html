@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}| Read Blog Post {% endblock %}
+
+{% block header_extra %}
+<div class="header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center blogs-container flex-column p-5">
+    {{ post.image }}
+    {{ post.title }}
+    {{ post.date_added }}
+    {{ post.body }}
+
+    <hr>
+
+    {% if post.comments.all %}
+        {% for comment in comments %}
+            {{ comment.name }}
+            {{ comment.date_added }}
+            {{ comment.body }}
+        {% endfor %}
+    {% else %}
+    <p>No comments yet</p>
+    {% endif %}
+
+    <p>Add comment</p>
+
+    <form method="POST" action=".">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
