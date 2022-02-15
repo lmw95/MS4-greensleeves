@@ -174,8 +174,8 @@
                 {% for item in seasonal_items %}
                 <div class="carousel-cell rounded-0">
                     <div class="card index-card plants">
-                        {% if item.image %}
-                        <img class="card-img-top index-img" src="/media/{{ item.image.url }}" alt="Image of {{ item.name }}">
+                        {% if item.image.url %}
+                        <img class="card-img-top index-img" src="{{ item.image.url }}" alt="Image of {{ item.name }}">
                         {% else %}
                         <img class="card-img-top index-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
                         {% endif %}
