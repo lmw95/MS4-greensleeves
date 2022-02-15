@@ -28,9 +28,9 @@
     <div class="row w-100 d-flex flex-row mb-4 mt-5 blog">
         <div class="col-sm-12 col-md-6 col-lg-4 p-0">
             {% if post.image.url %}
-            <img src="{{ post.image.url }}" class="card-img-top">
+            <img src="{{ post.image.url }}" class="card-img-top blog-image">
             {% else %}
-            <img src="{{ MEDIA_ROOT }}noimage.png" class="card=img-top">
+            <img src="{{ MEDIA_ROOT }}noimage.png" class="card=img-top blog-image">
             {% endif %}
         </div>
         <div class="col d-flex flex-column blog-info p-0">

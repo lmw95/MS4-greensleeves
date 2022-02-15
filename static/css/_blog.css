@@ -1,4 +1,4 @@
-.card-img-top {
+.blog-image {
     max-height: 200px;
     min-height: 200px;
 }
@@ -28,6 +28,10 @@
 }
 
 .blog-btn {
+    color: var(--green);
+}
+
+.blog-btn:hover {
     color: var(--green);
 }
 

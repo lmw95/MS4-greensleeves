@@ -180,7 +180,7 @@
                         <img class="card-img-top index-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
                         {% endif %}
                         <div class="card-body item-card">
-                            <h5 class="card-title fw-bold fs-3">{{ item.friendly_name }}</h5>
+                            <h5 class="card-title fw-bold fs-4 text-truncate">{{ item.friendly_name }}</h5>
                             <p class="fw-bold">£{{ item.price }}</p>
                             <a href="{% url 'item_page' item.id %}" class="btn view-item p-3 rounded-0 w-100">View item</a>
                         </div>

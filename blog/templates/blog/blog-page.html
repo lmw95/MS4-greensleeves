@@ -23,12 +23,15 @@
                     <h1 class="pt-3 mb-0 blog-body-title fw-bold">
                         {{ post.title }}
                     </h1>
-                    <p class="pb-3 date-added">
+                    <p class="date-added">
                         {{ post.date_added }}
                     </p>
+                    <a href="{% url 'blog' %}" target="_self" class="blog-btn pb-3 fw-bold">
+                        Back to blogs
+                    </a>
                 </div>
                 <div class="col-12 py-3">
-                    <p class="fs-5">
+                    <p>
                         {{ post.body }}
                     </p>
                 </div>
