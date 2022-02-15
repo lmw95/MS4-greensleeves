@@ -1,6 +1,6 @@
 # MS4 - Greensleeves
 
-![](/lmw95/MS4-greensleeves/raw/main/documentation/design/responsive.png)
+![](/documentation/design/responsive.png)
 
 Greensleeves is an e-Commerce site specialising in the sale of various indoor plants and accessories, and was created for educational purposes as the 4th milestine project for the Code Institute's Full Stack Software Development Diploma. 
 
