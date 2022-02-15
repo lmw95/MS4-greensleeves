@@ -347,6 +347,10 @@
         width: 33% !important;
     }
 
+    .item-page-cell {
+        width: 25% !important;
+    }
+
 }
 
 

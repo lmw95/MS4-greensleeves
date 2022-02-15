@@ -86,11 +86,6 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
-                <div class="d-grid gap-2 item-left-links pb-4">
-                    <button type="submit" class="py-3 px-2 text-center text-decoration-none fw-bold" target="_self">
-                        Add to wishlist<i class="far fa-heart float-end fa-lg align-text-center"></i>
-                    </button>
-                </div>
             </div>
         </div>
         {% if product.image.url %}
@@ -215,12 +210,32 @@
                 You may also like...
             </h1>
         </div>
-        <div class="col-12 text-center p-4">
-            {% if recommended_items.count > 0 %}
-                {% for item in recommended_items %}
-                <p>{{ item }}</p>
-                {% endfor %}
-            {% endif %}
+        <div class="col-12 p-4">
+            <div class="carousel pb-4"
+                data-flickity='{ "draggable": true }'>
+                {% if recommended_items.count > 0 %}
+                    {% for item in recommended_items %}
+                    <div class="carousel-cell item-page-cell rounded-0">
+                        <div class="card index-card plants">
+                            {% if item.image.url %}
+                            <img class="card-img-top index-img" src="{{ item.image.url }}" alt="Image of {{ item.name }}">
+                            {% else %}
+                            <img class="card-img-top index-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+                            {% endif %}
+                            <div class="card-body item-card">
+                                <h5 class="card-title fw-bold fs-3">{{ item.friendly_name }}</h5>
+                                <p class="fw-bold">£{{ item.price }}</p>
+                                <a href="{% url 'item_page' item.id %}" class="btn view-item p-3 rounded-0 w-100">View item</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                <a href="{% url 'shop' %}">
+                    Shop for items
+                </a>
+                {% endif %}
+            </div>
         </div>
     </div>
     {% else %}
