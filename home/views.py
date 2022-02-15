@@ -19,10 +19,10 @@ def index(request):
     winter_collection = w_end - w_start
 
     val_start = date(2022, 2, 1)
-    val_end = date(2022, 2, 15)
+    val_end = date(2022, 2, 14)
     valentines_collection = val_end - val_start
 
-    spr_start = date(2022, 2, 16)
+    spr_start = date(2022, 2, 15)
     spr_end = date(2022, 5, 31)
     spring_collection = spr_end - spr_start
 

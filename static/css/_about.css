@@ -120,26 +120,22 @@ video {
 }
 
 .environment {
-    /*background-color: var(--black);*/
-    background: url(/media/environment.jpg) no-repeat center;
+    background: url(../images/environment.jpg) no-repeat center;
     background-size: cover;
 }
 
 .ethics {
-    /*background-color: var(--brown);*/
-    background: url(/media/ethics.jpg) no-repeat center;
+    background: url(../images/ethics.jpg) no-repeat center;
     background-size: cover;
 }
 
 .everyone {
-    /*background-color: var(--green);*/
-    background: url(/media/everyone.jpg) no-repeat center;
+    background: url(../images/everyone.jpg) no-repeat center;
     background-size: cover;
 }
 
 .evergreen {
-    /*background-color: var(--beige);*/
-    background: url(/media/evergreen.jpg) no-repeat center;
+    background: url(../images/evergreen.jpg) no-repeat center;
     background-size: cover;
 }
 

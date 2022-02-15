@@ -159,7 +159,7 @@
     }
 
     .hero-right {
-        background: url(/media/header.jpg) no-repeat center;
+        background: url(../images/header.jpg) no-repeat center;
         background-size: cover;
     }
 

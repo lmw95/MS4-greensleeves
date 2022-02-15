@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col">
                         <span class="navbar-brand text-center">
-                            <img src="/media/brand-logo.png" alt="" width="40" height="40" class="mb-3 d-inline-block align-text-center">
+                            <img src="{% static 'images/brand-logo.png' %}" alt="Spade and plant" width="40" height="40" class="mb-3 d-inline-block align-text-center">
                         </span>
                         <h6 class="fw-bold fs-3">Filter your search...</h6>
                     </div>
@@ -262,7 +262,7 @@
                                 </div>
                                 {% else %}
                                 {% endif %}
-                                <img class="card-img-top shop-item-img" src="/media/{{ product.image }}" alt="Image of {{ product.name }}">
+                                <img class="card-img-top shop-item-img" src="{{ product.image.url }}" alt="Image of {{ product.name }}">
                             </a>
                             {% else %}
                             <a href="{% url 'item_page' product.id %}" target="_self">
@@ -282,7 +282,7 @@
                             </div>
                             <div class="card-footer bg-transparent border-0 pb-3">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-12">
                                         <p class="fw-light text-uppercase mb-0">{{ product.category }}</p>
                                         {% if product.is_on_sale %}
                                         <p class="fw-bold old-price"><s>£{{ product.price }}</s></p>
@@ -292,9 +292,6 @@
                                         {% else %}
                                         <p class="fw-bold">£{{ product.price }}</p>
                                         {% endif %}
-                                    </div>
-                                    <div class="col-6 d-flex flex-column justify-content-center text-end favourite">
-                                        <i class="far fa-heart fa-lg"></i>
                                     </div>
                                 </div>
                                 <div class="row mt-1">
@@ -314,7 +311,7 @@
                     {% endfor %}
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <img src="/media/calathea.png" height=80 width=80 class="mb-2">
+                    <img src="{% static 'images/calathea.png' %}" alt="Calathea" height=80 width=80 class="mb-2">
                 </div>
             </div>
         </div>
