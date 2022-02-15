@@ -40,6 +40,10 @@
     .go-to-checkout {
         width: 100%;
     }
+
+    .blogs-container {
+        padding: 0.8rem !important;
+    }
     
 }
 
@@ -238,6 +242,10 @@
         height: 50vh;
     }
 
+    .blog-info {
+        padding: 16px 10px !important;
+    }
+
 }
 
 
@@ -332,6 +340,10 @@
 
     .overlay-wrapper {
         position: absolute !important;
+    }
+
+    .blog-page-intro {
+        width: 100% !important;
     }
 
 }

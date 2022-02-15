@@ -1,4 +1,68 @@
-.blogs-container {
-    height: 100vh;
+.card-img-top {
+    max-height: 200px;
+    min-height: 200px;
 }
 
+.blogs-container {
+    color: var(--black);
+    font-family: var(--body-text);
+}
+
+.blog-page-title {
+    margin-top: 35px;
+}
+
+.blog h1,
+.blog-body-title,
+.date-added,
+.comments-title {
+    color: var(--black);
+    font-family: var(--header);
+}
+
+.blog-hr {
+    border-top: 1px solid var(--green);
+    position: relative;
+    opacity: 0.5;
+    height: 1px;
+}
+
+.blog-btn {
+    color: var(--green);
+}
+
+.quote-marks {
+    font-size: 2em;
+    color: var(--green);
+    font-family: var(--header);
+    margin: 0 10px;
+    opacity: 0.5;
+    font-weight: 900;
+}
+
+.blog-info {
+    padding: 0 16px !important;
+}
+
+.blog {
+    box-shadow: 0 5px 10px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.1);
+}
+
+.blog-image-main {
+    width: 100%;
+}
+
+.blog-form input,
+.blog-form textarea {
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.1);
+    border: 0;
+    outline: 0;
+    padding: 10px;
+}
+
+.blog-form button {
+    background-color: transparent;
+    border: 2px solid var(--black);
+}

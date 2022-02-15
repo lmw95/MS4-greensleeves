@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% block extra_title %}| Read Blog Post {% endblock %}
@@ -13,30 +14,68 @@
 
 {% block content %}
 <div class="container d-flex justify-content-center align-items-center blogs-container flex-column p-5">
-    {{ post.image }}
-    {{ post.title }}
-    {{ post.date_added }}
-    {{ post.body }}
-
-    <hr>
-
-    {% if post.comments.all %}
-        {% for comment in comments %}
-            {{ comment.name }}
-            {{ comment.date_added }}
-            {{ comment.body }}
-        {% endfor %}
-    {% else %}
-    <p>No comments yet</p>
-    {% endif %}
-
-    <p>Add comment</p>
-
-    <form method="POST" action=".">
-        {% csrf_token %}
-
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
+    
+    <div class="container my-5 blog-body ">
+        <div class="container">
+            <img src="{{ post.image.url }}" class="blog-image-main img-fluid">
+            <div class="row">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="pt-3 mb-0 blog-body-title fw-bold">
+                        {{ post.title }}
+                    </h1>
+                    <p class="pb-3 date-added">
+                        {{ post.date_added }}
+                    </p>
+                </div>
+                <div class="col-12 py-3">
+                    <p class="fs-5">
+                        {{ post.body }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-4">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col py-4">
+                    <h1 class="comments-title fs-4 fw-bold">Comments</h1>
+                </div>
+            </div>
+            {% if post.comments.all %}
+                {% for comment in comments %}
+                <div class="row">
+                    <div class="col-12 comment-name">
+                        <p class="fw-bold">{{ comment.name }}</p>
+                        <p>{{ comment.date_added }}</p>
+                    </div>
+                    <div class="col-12 comment-body">
+                        {{ comment.body }}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <p>No comments yet</p>
+            {% endif %}
+            <hr class="blog-hr">
+        </div>
+    </div>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>Add comment</p>
+                </div>
+                <div class="col-12">
+                    <form method="POST" action="." class="blog-form">
+                        {% csrf_token %}
+                
+                        {{ form.as_p }}
+                        <button type="submit" class="p-3 w-50">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
