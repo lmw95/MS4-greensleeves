@@ -5,7 +5,7 @@
 }
 
 .about-left {
-    height: auto;
+    height: 100vh;
     background-color: var(--beige);
     color: var(--black) !important;
 }
