@@ -43,14 +43,14 @@
                 </div>
             </div>
             {% if post.comments.all %}
-                {% for comment in comments %}
+                {% for comment in post.comments.all %}
                 <div class="row">
                     <div class="col-12 comment-name">
-                        <p class="fw-bold">{{ comment.name }}</p>
-                        <p>{{ comment.date_added }}</p>
+                        <p class="fw-bold fs-5 mb-0">{{ comment.name }}</p>
+                        <p class="small">{{ comment.date_added }}</p>
                     </div>
-                    <div class="col-12 comment-body">
-                        {{ comment.body }}
+                    <div class="col-12 mb-3">
+                        <p class="small comment-body">{{ comment.body }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -63,15 +63,15 @@
     <div class="container">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <p>Add comment</p>
+                <div class="col-12 mb-4">
+                    <p class="fw-bold">Add comment</p>
                 </div>
                 <div class="col-12">
-                    <form method="POST" action="." class="blog-form">
+                    <form method="POST" action="{% url 'blog_page' post.slug %}" class="blog-form">
                         {% csrf_token %}
                 
                         {{ form.as_p }}
-                        <button type="submit" class="p-3 w-50">Submit</button>
+                        <button type="submit" class="p-3 w-25 mt-3">Submit</button>
                     </form>
                 </div>
             </div>

@@ -42,7 +42,7 @@
     }
 
     .blogs-container {
-        padding: 0.8rem !important;
+        padding: 1.1rem !important;
     }
     
 }
@@ -52,6 +52,10 @@
 
     .carousel-cell {
         width: 100%;
+    }
+
+    .blog-form button {
+        width: 100% !important;
     }
 
 }

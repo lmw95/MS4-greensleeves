@@ -65,4 +65,19 @@
 .blog-form button {
     background-color: transparent;
     border: 2px solid var(--black);
+    transition: all 0.2s ease-in-out;
+}
+
+.blog-form button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.comment-body::before {
+    content: "\f4ad";
+    display: inline-block;
+    margin-left: -30px;
+    width: 25px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
 }
