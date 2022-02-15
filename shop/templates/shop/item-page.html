@@ -19,11 +19,11 @@
             <div class="item-info">
                 {% if product.is_plant %}
                 <span class="navbar-brand text-center">
-                    <img src="/media/brand-logo-plant.png" alt="" width="40" height="60" class="mb-4 d-inline-block align-text-center">
+                    <img src="{% static 'images/brand-logo-plant.png' %}" alt="Plant" width="40" height="60" class="mb-4 d-inline-block align-text-center">
                 </span>
                 {% else %}
                 <span class="navbar-brand text-center">
-                    <img src="/media/brand-logo-spade.png" alt="" width="35" height="60" class="mb-4 d-inline-block align-text-center">
+                    <img src="{% static 'images/brand-logo-spade.png' %}" alt="Spade" width="35" height="65" class="mb-4 d-inline-block align-text-center">
                 </span>
                 {% endif %}
                 <h1>{{ product.friendly_name }}</h1>
@@ -93,9 +93,9 @@
                 </div>
             </div>
         </div>
-        {% if product.image %}
+        {% if product.image.url %}
         <div class="col-sm-12 col-md-6 item-right order-md-1 order-first" 
-            style="background: url(/media/{{product.image}}) no-repeat top;
+            style="background: url(/media/{{product.image.url}}) no-repeat top;
             background-size: cover;">
         </div>
         {% else %}
@@ -114,7 +114,7 @@
             <ul class="d-flex justify-content-around flex-wrap plant-needs-container">
                 <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
                     <div class="d-flex justify-content-center flex-column align-items-center">
-                        <img src="/media/watering-can.png" width="80" height="80" alt="Person caring for plants">
+                        <img src="{% static 'images/watering-can.png' %}" width="80" height="80" alt="Watering can">
                         <div class="why-text">
                             <h2 class="text-center fs-5 mt-3 fw-bold">{{ product.water_need|capfirst }}</h2>
                         </div>
@@ -122,7 +122,7 @@
                 </li>
                 <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
                     <div class="d-flex justify-content-center flex-column align-items-center">
-                        <img src="/media/humidity.png" width="80" height="80" alt="Person caring for plants">
+                        <img src="{% static 'images/humidity.png' %}" width="80" height="80" alt="Humidity percentage">
                         <div class="why-text">
                             <h2 class="text-center fs-5 mt-3 fw-bold">{{ product.humidity_need|capfirst }}</h2>
                         </div>
@@ -130,7 +130,7 @@
                 </li>
                 <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
                     <div class="d-flex justify-content-center flex-column align-items-center">
-                        <img src="/media/growth.png" width="80" height="80" alt="Person caring for plants">
+                        <img src="{% static 'images/growth.png' %}" width="80" height="80" alt="Plant growth">
                         <div class="why-text">
                             <h2 class="text-center fs-5 mt-3 fw-bold">{{ product.growth_need|capfirst }}</h2>
                         </div>
@@ -138,7 +138,7 @@
                 </li>
                 <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
                     <div class="d-flex justify-content-center flex-column align-items-center">
-                        <img src="/media/thermometer.png" width="80" height="80" alt="Person caring for plants">
+                        <img src="{% static 'images/thermometer.png' %}" width="80" height="80" alt="Thermometer">
                         <div class="why-text">
                             <h2 class="text-center fs-5 mt-3 fw-bold">{{ product.temp_need|capfirst }}</h2>
                         </div>
@@ -146,7 +146,7 @@
                 </li>
                 <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
                     <div class="d-flex justify-content-center flex-column align-items-center">
-                        <img src="/media/cloudy-day.png" width="80" height="80" alt="Person caring for plants">
+                        <img src="{% static 'images/cloudy-day.png' %}" width="80" height="80" alt="Clouds and sun">
                         <div class="why-text">
                             <h2 class="text-center fs-5 mt-3 fw-bold">{{ product.light_need|capfirst }}</h2>
                         </div>
@@ -154,7 +154,7 @@
                 </li>
                 <li class="d-inline col-12 col-md-6 col-lg-4 p-3">
                     <div class="d-flex justify-content-center flex-column align-items-center">
-                        <img src="/media/hand-brown.png" width="80" height="80" alt="Person caring for plants">
+                        <img src="{% static 'images/hand-brown.png' %}" width="80" height="80" alt="Hand holding plant">
                         <div class="why-text">
                             <h2 class="text-center fs-5 mt-3 fw-bold">{{ product.ease_of_care|capfirst }}</h2>
                         </div>
@@ -169,7 +169,7 @@
         </div>
     </div>
     <div class="row" data-aos="fade-up" data-aos-delay="600">
-        {% if product.image %}
+        {% if product.image.url %}
         <div class="col-sm-12 col-md-4 item-about-left" style="background:url({{ product.image.url }}) no-repeat center;"></div>
         {% else %}
         <div class="col-sm-12 col-md-4 item-about-left" style="background:url(/media/noimage.png) no-repeat center;"></div>
