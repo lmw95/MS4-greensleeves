@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from blog.models import Post
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from profiles.models import UserProfile
 from .forms import CommentForm
 
@@ -15,6 +17,7 @@ def blog(request):
     return render(request, 'blog/blog.html', context)
 
 
+@login_required
 def blog_page(request, slug):
     """Renders blog page details"""
     post = Post.objects.get(slug=slug)
@@ -28,6 +31,7 @@ def blog_page(request, slug):
             comment.user_profile = user_profile
             comment.save()
 
+            messages.success(request, 'Your comment was posted!')
             return redirect('blog_page', slug=post.slug)
     
     else:

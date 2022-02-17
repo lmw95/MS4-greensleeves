@@ -194,18 +194,55 @@
 {% include 'includes/discount.html' %}
 <div class="container-fluid testimonials">
     <div class="row" data-aos="fade-up" data-aos-delay="600">
-        <div class="col-12 testimonials-text p-5 d-flex flex-column">
+        <div class="col-12 testimonials-text p-4 d-flex flex-column">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                <h1 class="text-center p-2">What our customers say...</h1>
+                <h1 class="text-center p-4">What our customers say...</h1>
             </div>
-            <div class="col-12 testimonials-carousel p-4 d-flex justify-content-center align-items-center">
-                [testimonials carousel]
+            <div class="col-12 testimonials-carousel p-4">
+
+                <div class="carousel pb-4"
+                    data-flickity='{ "draggable": true }'>
+                    <div class="carousel-cell rounded-0">
+                        <div class="card index-card review">
+                            <div class="card-body item-card d-flex justify-content-between flex-column">
+                                <div class="d-flex justify-content-center review-ratings">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <hr class="blog-hr">
+                                <div class="d-flex flex-column justify-content-around">
+                                    <p class="fw-bold review-summary">
+                                        <span class="quote-marks">"</span>
+                                        <i>
+                                        [review summary]
+                                        </i>
+                                        <span class="quote-marks">"</span>
+                                    </p>
+                                    <p class="review-body text-truncate">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    
+                                    </p>
+                                    <p class="fw-bold mb-0">
+                                       - [user name]
+                                    </p>
+                                    <p class="small">[review date]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     <div class="row" data-aos="fade-up" data-aos-delay="800">
         <div class="col-12 p-4 d-flex justify-content-center">
             <a href="{% url 'all_reviews' %}" class="btn see-reviews p-3 rounded-0 px-5 fw-bold">See all reviews</a>
+            {% if user.is_authenticated %}
+            <a href="" class="btn see-reviews p-3 roiunded-0 px-5 fw-bold">Leave a review</a>
+            {% else %}
+            <a href="{% url 'account_login' %}" class="btn see-reviews p-3 rounded-0 px-5 fw-bold">Log in to leave a review</a>
+            {% endif %}
         </div>
     </div>
 </div>

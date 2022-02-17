@@ -245,9 +245,28 @@ hr {
     border: 2px solid var(--black);
     transition: all 0.1s ease-in-out;
     font-family: var(--body-text);
+    margin: 5px;
 }
 
 .see-reviews:hover {
     background-color: var(--black);
     color: var(--white);
+}
+
+.testimonials-carousel .flickity-viewport {
+    height: 300px !important;
+}
+
+.review {
+    max-height: 300px;
+    min-height: 300px;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+}
+
+.review-summary {
+    min-width: 100%;
+}
+
+.review-ratings i {
+    color: var(-green);
 }

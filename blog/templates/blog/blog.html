@@ -38,7 +38,11 @@
                 <p class="small date-added">{{ post.date_added | date:"d M-Y | h:i" }}</p>
                 <p class="text-truncate"><span class="quote-marks">"</span>{{  post.intro }}<span class="quote-marks">"</span></p>
                 <div class="d-flex align-items-end mt-auto px-2 py-3">
+                    {% if user.is_authenticated %}
                     <a href="{% url 'blog_page' post.slug %}" class="blog-btn fw-bold">Read more >></a>
+                    {% else %}
+                    <a href="{% url 'blog_page' post.slug %}" class="blog-btn fw-bold">Log in to read more >></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
