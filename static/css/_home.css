@@ -270,7 +270,7 @@ hr {
 }
 
 .review-ratings i {
-    color: var(-green);
+    color: var(-green) !important;
 }
 
 .reviews {
@@ -280,4 +280,21 @@ hr {
 
 .reviews h1 {
     font-family: var(--header);
+}
+
+.read-more-review {
+    color: var(--green);
+}
+
+.read-more-review:hover {
+    cursor: pointer;
+}
+
+.scroll {
+    overflow-y: scroll !important;
+    max-height: 200px;
+}
+
+.tall-card {
+    height: auto !important;
 }

@@ -104,4 +104,20 @@ $( document ).ready(function() {
         }
       });
 
+    // Toggles review to full width
+    $('#review-1').click(function() {
+        $(this).toggleClass('text-truncate');
+        $(this).toggleClass('scroll');
+    });
+
+    $('#review-2').click(function() {
+        $(this).toggleClass('text-truncate');
+        $(this).toggleClass('scroll');
+    });
+
+    $('#review-3').click(function() {
+        $(this).toggleClass('text-truncate');
+        $(this).toggleClass('scroll');
+    });
+
 });
