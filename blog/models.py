@@ -1,5 +1,5 @@
 from django.db import models
-
+from profiles.models import UserProfile
 
 class Post(models.Model):
     """Creates instance of a post"""
@@ -17,8 +17,8 @@ class Post(models.Model):
 class Comment(models.Model):
     """Creates instance of comment"""
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
-    name = models.CharField(max_length=255)
-    body = models.TextField()
+    user_profile = models.ForeignKey(UserProfile, null=False, blank=False, on_delete=models.CASCADE, related_name="comments")
+    comment = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:

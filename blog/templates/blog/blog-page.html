@@ -20,7 +20,7 @@
             <img src="{{ post.image.url }}" class="blog-image-main img-fluid">
             <div class="row">
                 <div class="col-12 d-flex flex-column">
-                    <h1 class="pt-3 mb-0 blog-body-title fw-bold">
+                    <h1 class="pt-3 mb-1 blog-body-title fw-bold">
                         {{ post.title }}
                     </h1>
                     <p class="date-added">
@@ -49,11 +49,11 @@
                 {% for comment in post.comments.all %}
                 <div class="row">
                     <div class="col-12 comment-name">
-                        <p class="fw-bold fs-5 mb-0">{{ comment.name }}</p>
+                        <p class="fw-bold fs-5 mb-0">{{ comment.user_profile.user.username }}</p>
                         <p class="small">{{ comment.date_added }}</p>
                     </div>
                     <div class="col-12 mb-3">
-                        <p class="small comment-body">{{ comment.body }}</p>
+                        <p class="small comment-body">{{ comment.comment }}</p>
                     </div>
                 </div>
                 {% endfor %}
