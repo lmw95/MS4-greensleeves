@@ -265,8 +265,19 @@ hr {
 
 .review-summary {
     min-width: 100%;
+    font-family: var(--header);
+    font-weight: 900;
 }
 
 .review-ratings i {
     color: var(-green);
+}
+
+.reviews {
+    font-family: var(--body-text);
+    color: var(--black);
+}
+
+.reviews h1 {
+    font-family: var(--header);
 }

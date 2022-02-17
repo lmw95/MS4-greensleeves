@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from blog.models import Post
+from blog.models import Post, Comment
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from profiles.models import UserProfile
@@ -8,7 +8,7 @@ from .forms import CommentForm
 # Create your views here.
 def blog(request):
     """Renders the blog page"""
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('date_added')
 
     context = {
         'posts': posts,
