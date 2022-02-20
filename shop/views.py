@@ -82,9 +82,7 @@ def shop(request):
                 return redirect(reverse('shop'))
             
             queries = Q(name__icontains=query) | Q(
-                item_description__icontains=query) | Q(
                 seasonal_collection__icontains=query) | Q(
-                top_tip__icontains=query) | Q(
                 water_need__icontains=query) | Q(
                 humidity_need__icontains=query) | Q(
                 growth_need__icontains=query) | Q(
