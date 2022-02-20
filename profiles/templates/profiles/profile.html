@@ -14,11 +14,11 @@
 {% endblock %}
 
 {% block content %}
-<div class="container profile p-5 mt-5">
+<div class="container profile p-5 my-5">
     <div class="row d-flex justify-content-between">
         <div class="col-sm-12 col-lg-4">
             <!--User info-->
-            <div class="row d-flex flex-column user-info px-3 py-5">
+            <div class="row d-flex flex-column user-info px-3 py-5 h-100">
                 <div class="col mb-5">
                     <h5 class="fw-bold text-center">My profile</h5>
                 </div>
@@ -64,11 +64,11 @@
             </div>
         </div>
         <div class="col-sm-12 col-lg-7 d-flex user-other-info">
-            <div class="row w-100 d-flex flex-column justify-content-between">
+            <div class="row w-100 d-flex flex-column">
                 <!--Orders-->
-                <div class="col-12 p-4 orders mb-2">
+                <div class="col-12 p-4 orders mb-2 h-100">
                     <h5 class="fw-bold">My orders</h5>
-                    <div class="p-3 flex flex-row text-center mt-4 orders-list">
+                    <div class="p-3 flex flex-row text-center mt-4 orders-list h-100">
                         <div class="table-responsive">
                             <table class="table table-sm table-borderless mb-0">
                                 <thead>
@@ -117,17 +117,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 p-4 account-settings">
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-6 d-flex">
-                            <a href="#updateAccount" class="mx-auto btn p-3 modal-toggle edit-profile rounded-0" data-bs-toggle="modal" data-bs-target="#updateAccount">Update account</a>
-                        </div>
-                        <div class="col-sm-12 col-lg-6 d-flex">
-                            <a href="#deleteAccount" class="mx-auto btn p-3 text-danger modal-toggle rounded-0" data-bs-toggle="modal" data-bs-target="#deleteAccount">Delete my account</a>
-                        </div>
-                    </div>
-                </div>
             </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-between">
+        <div class="col-12 p-4">
+            <a href="#deleteAccount" class="mx-auto btn p-3 text-danger modal-toggle rounded-0" data-bs-toggle="modal" data-bs-target="#deleteAccount">Delete my account</a>
         </div>
     </div>
 </div>
@@ -145,6 +140,23 @@
                 {{ form|crispy }}
                 <button type="submit" class="btn update-profile-details">Update</button>
             </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal details-modal fade" id="deleteAccount" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="infoModalLabel">Delete your account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body py-4">
+            <p>Are you sure you want to delete your account, {{ request.user }}?</p>
+            <div class="d-flex justify-content-center">
+                <a href="{% url 'delete_account' user.id %}" class="text-danger">Yes, delete my account</a>
+            </div>
         </div>
       </div>
     </div>

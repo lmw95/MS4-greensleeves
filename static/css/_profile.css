@@ -2,6 +2,9 @@
     font-family: var(--body-text);
     color: var(--black);
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .profile h5 {
@@ -30,7 +33,8 @@
 .orders-list {
     overflow-y: auto;
     background-color: var(--green);
-    max-height: 300px;
+    max-height: 80%;
+    min-height: 80%;
 }
 
 .orders-list th {
