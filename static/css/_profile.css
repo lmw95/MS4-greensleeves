@@ -11,7 +11,7 @@
     font-family: var(--header);
 }
 
-.edit-profile {
+.edit-profile, .shop-for-items {
     border: var(--black) solid 2px;
     border-radius: none;
     transition: all 0.1s ease-in-out;
@@ -19,7 +19,7 @@
     font-weight: 700;
 }
 
-.edit-profile:hover {
+.edit-profile:hover, .shop-for-items:hover {
     background-color: var(--black);
     color: var(--white);
 }
