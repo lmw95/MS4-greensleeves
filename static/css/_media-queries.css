@@ -350,6 +350,10 @@
         width: 100% !important;
     }
 
+    .profile {
+        height: 100vh !important;
+    }
+
 }
 
 

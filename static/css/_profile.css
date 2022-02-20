@@ -1,6 +1,7 @@
 .profile {
     font-family: var(--body-text);
     color: var(--black);
+    height: 100vh;
 }
 
 .profile h5 {

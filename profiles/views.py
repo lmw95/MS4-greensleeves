@@ -61,3 +61,16 @@ def order_history(request, order_number):
     }
 
     return render(request, 'checkout/checkout_success.html', context)
+
+
+@login_required
+def delete_account(request, user):
+    user = request.user
+    if request.user != user:
+        messages.error(request, 'Sorry, this is not your profile.')
+        return redirect(reverse('home'))
+    else:
+        user.delete()
+        messages.success(request, 'Your profile was deleted. You will now be '
+                         'redirected to the homepage.')
+        return redirect(reverse('home'))
