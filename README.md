@@ -26,18 +26,18 @@ Greensleeves was created for educational purposes as the 4th milestine project f
 [The live site can be found here.](https://ms4-greensleeves.herokuapp.com/)
 
 # Table of contents
-* UX
-* Features
-* Technologies
-* Testing
-* Deployment
-* Credits
+* [UX](https://github.com/lmw95/MS4-greensleeves#ux)
+* [Features](https://github.com/lmw95/MS4-greensleeves#user-stories)
+* [Technologies](https://github.com/lmw95/MS4-greensleeves#technologies)
+* [Testing](https://github.com/lmw95/MS4-greensleeves#testing)
+* [Deployment](https://github.com/lmw95/MS4-greensleeves#deployment)
+* [Credits](https://github.com/lmw95/MS4-greensleeves#credits)
 
 ## **UX**
 
 **Design**
 
-This website was built on Bootstrap 5 and makes use of Bootstrap's built in classes, components (such as navbar, buttons and modals) and grid layout. The design provides a clean and minimal palette with icons and eye-catching images to guide the user through the site, allowing the majority of the colour of the site to come from the products. The minimal design ensures the pages do not become cluttered, and is easy to navigate and remain as intuitive as possible. To new users, the purpose of the site becomes clear on initial visit, with the slogan 'for the love of things that grow', the hero image and the immediate links to the products acting as reinforcement. The text is simple and clean, using an old-timey serif font to portray a sense of timelessness (like gardening and plantcare) to appeal to all ages, with the logo of the site in cursive to stand out from the rest of the site and provide a fun edge.
+This website was built using [Bootstrap 5]() and makes use of Bootstrap's built in classes, components (such as navbar, buttons and modals) and grid layout. The design provides a clean and minimal palette with icons and eye-catching images (from [FontAwesome](), [Flaticon](), [Unplash]() and [Pexels]()) to guide the user through the site, allowing the majority of the colour of the site to come from the products. The minimal design ensures the pages do not become cluttered, and is easy to navigate and remain as intuitive as possible. To new users, the purpose of the site becomes clear on initial visit, with the slogan 'for the love of things that grow', the hero image and the immediate links to the products acting as reinforcement. The text is simple and clean, using an old-timey serif font to portray a sense of timelessness (like gardening and plantcare) to appeal to all ages, with the logo of the site in cursive to stand out from the rest of the site and provide a fun edge.
 
 The products are displayed as 4 items per x-large, 3 items per large, 2 per medium and 1 per small/x-small screen. Every page is designed to be responsive and will respond depending on the contents of the page (eg. shrinking text, changing margins/padding, flexbox changes, etc). Any data concerning user data, such as order history or order summary, is stored in a table for easy viewing. 
 
@@ -49,43 +49,19 @@ Forms on the website utilise the django-crispy-forms package for maximum respons
 
 **User stories**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## **Strategy**
-
-***Site owner goals***
+*Site owner goals*
 * To increase customer base to include younger demographics
 * To spread awareness of proper plant care amongst new plant owners through simple
 * To offer tools to new plant parents with the aim of translating interest into sales 
 * To spread the joy of plant ownership
 
-***User goals***
+*User goals*
 * To access the website across multiple devices
 * To discover new plants and tools
 * To learn about proper plant care
 * To buy plants and accessories from a trusted source
 
----
-
-## **User stories**
-
-***Site user***
+*Site user*
 * As a site user, I want to be able to browse the selection of plants and accessories so I can decide whether I want to make a purchase
 * As a site user, I want to be able to easily navigate the site so I can get to the specifc section that I need
 * As a site user, I want the website to be responsive so that I can access it on a variety of devices
@@ -93,12 +69,11 @@ Forms on the website utilise the django-crispy-forms package for maximum respons
 * As a site user, I want to see suggested accessories on each plant page so that I know which tools I need should I buy this plant
 * As a site user, I want to be able to contact the site owner should I have any questions
 * As a site user, I want to be made aware of any deals or shipping discounts available
-* As a site user, I want to be able to see the most popular plants on the site
 * As a site user, I want to be able to read reviews of others that have used the site
 * As a site user, I want to be able to visit the site's social media so that I can keep up with any deals or lates events
 * As a site user, I want to be able to register with an account, so that I can see my past orders
 
-***Shopper***
+*Shopper*
 * As a shopper, I want to see prices of the plants and accessories so I can judge whether I can afford them
 * As a shopper, I want to be able to filter search results or all items (for example by price, ease of care, plant type or plant origins etc.) so that I can quickly narrow down my search
 * As a shopper, I want to be able to see all items or search for items and have my results displayed to me
@@ -110,117 +85,20 @@ Forms on the website utilise the django-crispy-forms package for maximum respons
 * As a shopper, I want to receive confirmation of my order so that I can have a proof of purchase
 * As a shopper, I want to be able to notify whether my items are a gift and the ability to write a personalised message 
 
-***Account holder***
+*Account holder*
 * As an account holder, I want to be able to log in and out safely
 * As an account holder, I want to be able to edit my profile so that I can update my personal information
-* As an account holder, I want to be able to reset my password if I forget it
 * As an account holder, I want to delete my account so that my personal information are removed from the website
 * As an account holder, I want to be able to favourite items so that I may come back to them at a later date
-* As an account holder, I want to be able to leave a review of the website so that I can notify other users of my experience
+* As an account holder, I want to be able to view exclusive blog posts and leave comments as feedback
 
-***Administration***
+*Administration*
 * As site admin, I want to add, edit and delete an item and its contents so that the website stays up to date and accurate
 * As site admin, I want to be able to add related products so that I can encourage multiple sales
 * As site admin, I want to be able to edit most of the content of the website, so that I can keep my website up to date
-* As site admin, I want to manage orders from the console so I can know I have dispatched orders
+* As site admin, I want to manage orders from the console so I can keep up to date with them
 
----
-
-## **Scope**
-***Functional requirements***
-* Content
-    * Responsive design 
-    * Collapsable menu
-* User authentication
-    * User can register securely
-    * User can log in / log out
-    * User can edit profile information
-    * User can view profile
-    * User can delete profile
-* Search & shop
-    * See all items
-    * Sort items by various filters 
-    * Search website with search bar
-    * Display search details
-    * Paginate site items
-* Shopping bag & checkout
-    * Display shopping bag notification
-    * Add / delete item
-    * View shopping bag
-    * Update quantities
-    * Add / edit delivery information
-    * Add gift option
-    * Add gift option message
-    * Enter payment details
-    * Process & complete payment
-    * Show order in user's account
-* Feeback
-    * Feedback on user authentication
-    * Email to verify user email
-    * Email for order confirmation
-    * Email for order dispatch
-    * Feedback for deleted user
-* Contact & interaction
-    * User can leave reviews
-    * Display testimonials
-    * Contact site owner
-    * Links to social media
-* Site administration
-    * Add / edit / delete items
-    * Add / edit / delete filters
-    * Link items to filter categories
-    * Display items 
-    * Update all site content
-* Inventory
-    * Add stock quantities
-    * Adjust stock quantities after orders
-* Error handling
-    * Handle errors 403, 404, 500
-
-***Non-functional requirements***  
-* Interactive components
-* Navigatable and minimal design
-* Aesthetically pleasing display of items and content
-
-***Content rquirements***
-* Details about company
-* Information regarding plant care
-* Information regarding accessories
-* Images of plants and accessories
-* Forms where user input is needed
-* Attractive layout to guide users through site
-* Icons for interactive elements and sub-sections
-
-***Limitations***
-* The site owner is in the process of learning Python and Django which may limit the features available on the website
-* There is a time limit which may place constraints on certain elements which will need to be planned carefully
-
----
-
-## **Structure**
-***Architecture***
-
-![](documentation/structure/information-architecture.png)
-
-***Organisation***
-* Header: Collapsable navbar with brand logo and navigation links
-* Homepage: Hero image, information about the company, suggested plants, company reviews and offers on delivery etc.
-* Profile: Registered users can see delivery info, preferred payment info, favourited items "for later"
-* About: Company info, statements and history
-* Plants: All the available plants to buy
-* Accessories: All the available accessories to buy
-* Product page: Information about the selected product
-* Shopping bag: User's items to buy
-* Contact us: Get in touch with company
-* Footer: Social media links and statements
-
-***Database structure***
-
-[to be added]
-
---- 
-
-## **Skeleton**
+**Wireframes**
 
 ![](documentation/wireframes/homepage.png)
 
@@ -238,39 +116,22 @@ Forms on the website utilise the django-crispy-forms package for maximum respons
 * [Statements](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/wireframes/statements.png)
 * [Policies](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/wireframes/policies.png)
 
----
+## **Features**
 
-## **Surface**
-The overall design of the website will be minimal with splashes of colour coming from the icons and certain sections of each page.
+* A responsive fixed navbar which allows the user to browse the shop by providing links to all places in the site, and the links to both the user profile and shopping cart. The menu is responsive and is accessible by a burger menu on screens smaller than 991px. 
+* A search bar where the user can type any search term and be redirected to the search results returned based on that query, with the user's search term reinforced as text at the top of the page. If no products are found, the results page will display the message 'no items found'.
+* Two call to action buttons in the center-left of the hero image, which takes the user directly to the shop - from there they can use the shop's filters to their needs.
+* A shop page that displays all products. These can either be rendered from a query search or by using the shop filters at the top of the page. This will also display the filter, query and the number of results found. After filtering the user can then further sort the results by A-Z or price. Each item will display the item image, name, collection (if any), price and a link to view the item.
+* 
 
-***Colour*** 
-
-The colour palette will feature mostly 'Earthy' and muted colours, keeping in tone with the website's products. I chose the colours below using [Coolors]().
-
-![](documentation/design/palette.png)
-
-***Imagery***
-
-The images used in the website will come from [Flaticon]() and are linked in the Credits section. All images will be relevant to the content they are used in conjunction with, and will be used sparingly throughout the site. 
-
-***Typography***
-* [Pacifico](https://fonts.google.com/specimen/Pacifico?category=Handwriting#standard-styles) will be used for the brand logo only
-* [Prata](https://fonts.google.com/specimen/Prata?category=Serif) will be used for headers
-* [Be Vietnam Pro](https://fonts.google.com/specimen/Be+Vietnam+Pro?category=Sans+Serif&preview.text=%C2%A315.00&preview.text_type=custom) will be used as the body text
-
-***Iconography***
-
-Icons will be from [FontAwesome](https://fontawesome.com/) and [Flaticon](https://www.flaticon.com/) and will be used to highlight certain bits of information or interactive elements like buttons
-
-
-# Technologies
-### **Languages**
+## **Technologies**
+**Languages**
 * HTML
 * CSS
 * JavaScript
 * Python
 
-### **Libraries & frameworks**
+**Libraries & frameworks**
 * jQuery
 * Django
 * Gunicorn
@@ -281,13 +142,13 @@ Icons will be from [FontAwesome](https://fontawesome.com/) and [Flaticon](https:
 * crispy-forms
 * Google Fonts
 
-### **Database, platforms & cloud storage**
+**Database, platforms & cloud storage**
 * SQLite
 * Heroku Postgres
 * Amazon AWS S3
 * Heroku
 
-### **Validation**
+**Validation**
 * W3C Markup Validation Service
 * W3C CSS Validator
 * WAVE Web Accessibility Evaluation Tool
@@ -296,7 +157,7 @@ Icons will be from [FontAwesome](https://fontawesome.com/) and [Flaticon](https:
 * Chrome DevTools
 * Google lighthouse
 
-### **Other tools**
+**Other tools**
 * Flaticon
 * Stripe
 * Balsamiq
