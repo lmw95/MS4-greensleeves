@@ -354,6 +354,10 @@
         height: 100vh !important;
     }
 
+    .contact-container {
+        height: auto !important;
+    }
+
 }
 
 

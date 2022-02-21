@@ -6,3 +6,26 @@
 .contact-container h1 {
     font-family: var(--header);
 }
+
+.contact-form input {
+    font-family: var(--body-text);
+    margin-bottom: 15px;
+    padding: 0.5em !important;
+    border: 1px solid var(--beige);
+    border-radius: 0;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border: 1px solid var(--beige);
+    box-shadow: 0 0.3rem 0.3rem var(--beige);
+}
+
+.contact-form .btn {
+    border: 2px solid var(--black);
+}
+
+.contact-form .btn:hover {
+    background-color: var(--black);
+    color: var(--white) !important;
+}

@@ -12,11 +12,23 @@
 {% endblock %}
 
 {% block content %}
-<div class="container vh-100 d-flex">
-    <div class="container-fluid contact-container m-auto d-flex h-100">
+<div class="container contact-container vh-100 d-flex">
+    <div class="container-fluid m-auto d-flex flex-column h-100">
         <div class="row w-100">
             <div class="col-12 pt-3">
                 <h1 class="fw-bold mt-5 p-5 text-center">Get in touch</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pb-5">
+                <p class="fw-bold">Simply fill out the form below - we aim to respond in 2-3 working days.</p>
+                <form action="{% url 'contact' %}" method="POST" id="contact-form" class="contact-form">
+                    {% csrf_token %}
+                    {{ contact_form|crispy }}
+                    <button type="submit" class="btn submit-btn p-3 rounded-0 fw-bold mt-4 w-100" data-action="submit">
+                        Submit
+                    </button>
+                </form>
             </div>
         </div>
     </div>
