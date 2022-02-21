@@ -1,0 +1,8 @@
+.contact-container {
+    font-family: var(--body-text);
+    color: var(--black);
+}
+
+.contact-container h1 {
+    font-family: var(--header);
+}
