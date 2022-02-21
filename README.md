@@ -181,7 +181,7 @@ Forms on the website utilise the django-crispy-forms package for maximum respons
 * [AnimateCSS](https://animate.style/)
 * [Google Fonts](https://fonts.google.com/)
 * [Stripe](https://stripe.com/gb)
-* [JSON](https://en.wikipedia.org/wiki/JSON#:~:text=JSON%20(JavaScript%20Object%20Notation%2C%20pronounced,(or%20other%20serializable%20values).)
+* [JSON](https://www.json.org/json-en.html)
 * [Pillow](https://pillow.readthedocs.io/en/stable/)
 
 **Database, platforms & cloud storage**
