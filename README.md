@@ -116,60 +116,119 @@ Forms on the website utilise the django-crispy-forms package for maximum respons
 * [Statements](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/wireframes/statements.png)
 * [Policies](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/wireframes/policies.png)
 
+[Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
+
 ## **Features**
+
+*Guests*
 
 * A responsive fixed navbar which allows the user to browse the shop by providing links to all places in the site, and the links to both the user profile and shopping cart. The menu is responsive and is accessible by a burger menu on screens smaller than 991px. 
 * A search bar where the user can type any search term and be redirected to the search results returned based on that query, with the user's search term reinforced as text at the top of the page. If no products are found, the results page will display the message 'no items found'.
 * Two call to action buttons in the center-left of the hero image, which takes the user directly to the shop - from there they can use the shop's filters to their needs.
 * A shop page that displays all products. These can either be rendered from a query search or by using the shop filters at the top of the page. This will also display the filter, query and the number of results found. After filtering the user can then further sort the results by A-Z or price. Each item will display the item image, name, collection (if any), price and a link to view the item.
-* 
+* An item page for every item providing information on the item, such as plant care needs and recommended items. The user can add the item to their cart from this page, thereby giving the user a chance to gain information on the product before purchasing and if it will be right for them (this shop has a strict policy about plant waste and tries to discourage impulse buying)
+* A button to take the user to the top of the page.
+* A real-time cart item total that can be clicked on to open the shopping bag offcanvas to display the users items.
+* A shopping bag offcanvas and a 'bag' page that lists all the items in the user's cart and keeps a running subtotal, and calculates the total, delivery, grand total, and how much more the user can spend to get free delivery. The user can also update the quantity of an item in their cart on the bag page, or remove it from their cart entirely.
+* A checkout page where the user enter their billing and shipping information, and check out securely using Stripe
+* A footer that displays social media icons, copyright info and 'Contact Us' text, that takes the user back to the contact page
+* A blog page which displays the blogs and articles provided by the Greensleeves staff, which is exlusive to logged-in members only. On these pages, the user can also leave comments. If the user is not logged-in/authenticated, they will be redirected to the log-in page if they follow the link on the blog preview.
+* Pop-up toasts providing user feedback depending on the action taken, such as adding items to their cart or successfully checking out
+* An automatic redirect to the login page using the @login_required decorator if the user attempts to access a URL that only logged in users can see
+* An automatic redirect to the home page if the user attempts to access a URL that they are not authorised to view
+* Validation errors that appear in red if a field in a form is not filled out correctly
+* A 404 page that is rendered if the user enters an invalid URL
+
+*Members*
+* A profile page where the user can view and update their account details and their order history, and delete their account
+* A form & modal for updating the user's account details
+* Full access to blog posts and the ability to leave comments on the blogs
+
+*Admin*
+* Ability to add blog posts through admin/superuser console
+* An admin panel page where the administrator can manage the site
+* The ability to add, edit or delete items from the shop
+
+*Features left to implement*
+* The ability for logged-in users to leave reviews
+* Functionality that filters out swearing/slurs/offensive language in user comments, potentially utlising [profanity-filter](https://pypi.org/project/profanity-filter/) and give admin the ability to delete user comments due to inappropriate language
+* A newsletter functionality (subscribe)
+* Admin can manage stock levels
+* Pagination for shop items results
+* Users can add items to a wishlist
+
+[Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
 
 ## **Technologies**
 **Languages**
-* HTML
-* CSS
-* JavaScript
-* Python
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-**Libraries & frameworks**
-* jQuery
-* Django
-* Gunicorn
-* Jinja
-* Bootstrap5
-* FontAwesome
-* AnimateCSS
-* crispy-forms
-* Google Fonts
+**Libraries, frameworks, packages & extensions**
+* [jQuery](https://jquery.com/)
+* [Django](https://www.djangoproject.com/)
+    * django-allauth
+    * crispy-forms
+    * django-countries
+    * django-storages
+    * dj-stripe
+    * django-mathfilters
+* [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+* [Bootstrap5](https://getbootstrap.com/)
+* [FontAwesome](https://fontawesome.com/)
+* [AnimateCSS](https://animate.style/)
+* [Google Fonts](https://fonts.google.com/)
+* [Stripe](https://stripe.com/gb)
+* [JSON](https://en.wikipedia.org/wiki/JSON#:~:text=JSON%20(JavaScript%20Object%20Notation%2C%20pronounced,(or%20other%20serializable%20values).)
+* [Pillow](https://pillow.readthedocs.io/en/stable/)
 
 **Database, platforms & cloud storage**
-* SQLite
-* Heroku Postgres
-* Amazon AWS S3
-* Heroku
+* [Postgres](https://www.postgresql.org/)
+    * dj-database-url
+    * psycopg2-binary
+* [AWS (Amazon Web Services)](https://aws.amazon.com/)
+    * Boto3
+* [Heroku](https://www.heroku.com/)
+    * Gunicorn
+    * Heroku Postgres
 
 **Validation**
-* W3C Markup Validation Service
-* W3C CSS Validator
-* WAVE Web Accessibility Evaluation Tool
-* PEP8 online
-* JSHint
+* [W3C Markup Validation Service](https://validator.w3.org/)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/)
+* [PEP8 online](http://pep8online.com/)
+* [JSHint](https://jshint.com/)
 * Chrome DevTools
 * Google lighthouse
 
 **Other tools**
-* Flaticon
-* Stripe
-* Balsamiq
-* Dbdiagram.io
+* [Flaticon](https://www.flaticon.com/)
+* [Balsamiq](https://balsamiq.com/)
+* [Gitpod](https://www.gitpod.io/)
+* [Github](https://github.com/)
+* [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
+* [Temp Mail](https://temp-mail.org/)
+* [Gmail](https://mail.google.com/)
 
+[Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
 
-# Credits
+## **Testing**
+
+To see testing, please see [TESTING.md](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md)
+
+[Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
+
+## **Credits**
 
 ***Code, media and content***
 
-[See all credits here]()
+To see credits, please see [CREDITS.md](https://github.com/lmw95/MS4-greensleeves/blob/main/CREDITS.md)
 
 ***Acknowledgements***
 * Inspiration for this site comes from other plant sites such as [Beards & Daisies](https://www.beardsanddaisies.co.uk/cart)
+* Thank you to everyone who has supported me throughout this project, including my mentor, fellow students and as always, StackOverflow
+
+[Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
 
