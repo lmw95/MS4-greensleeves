@@ -26,46 +26,48 @@ Greensleeves was created for educational purposes as the 4th milestine project f
 [The live site can be found here.](https://ms4-greensleeves.herokuapp.com/)
 
 # Table of contents
-* UK
-    * Strategy
-    * User stories
-    * Scope
-    * Structure
-    * Skeleton
-    * Surface
+* UX
 * Features
-    * Existing features
-    * Features for future implementation
 * Technologies
-    * Languages
-    * Libraries & frameworks
-    * Database
-    * Validation
-    * Other tools
 * Testing
-    * Code validation
-    * Testing user stories
-    * Manual testing
-    * Automated testing
-    * Responsiveness
-    * Accessibility
-    * Compatability
-    * Lighthouse reports
-    * Bugs, major errors & fixes
 * Deployment
 * Credits
-    * Code
-    * Media
-    * Content
-    * Acknowledgements
 
-# **UX**
+## **UX**
+
+**Design**
+
+This website was built on Bootstrap 5 and makes use of Bootstrap's built in classes, components (such as navbar, buttons and modals) and grid layout. The design provides a clean and minimal palette with icons and eye-catching images to guide the user through the site, allowing the majority of the colour of the site to come from the products. The minimal design ensures the pages do not become cluttered, and is easy to navigate and remain as intuitive as possible. To new users, the purpose of the site becomes clear on initial visit, with the slogan 'for the love of things that grow', the hero image and the immediate links to the products acting as reinforcement. The text is simple and clean, using an old-timey serif font to portray a sense of timelessness (like gardening and plantcare) to appeal to all ages, with the logo of the site in cursive to stand out from the rest of the site and provide a fun edge.
+
+The products are displayed as 4 items per x-large, 3 items per large, 2 per medium and 1 per small/x-small screen. Every page is designed to be responsive and will respond depending on the contents of the page (eg. shrinking text, changing margins/padding, flexbox changes, etc). Any data concerning user data, such as order history or order summary, is stored in a table for easy viewing. 
+
+User feedback appears as a toast message in the top-right corner of the screen, the message dependant on the user action. These toasts are colour coded according to the nature of the message, such as red for danger when a user action has failed or green for success when a user action has been successful. All messages are dismissable by the small 'x' in the corner. The same is true for the user's basket, which displays how many items are in their basket, but clicking on the cart icon will display a side offcanvas with a summary of the user's basket contents with a link to visit checkout or keep shopping. 
+
+All deleted actions will have defensive programming in place, to prevent the user from deleting some of their data by accident. This allows the user to click cancel if so. The confirmation to delete, along with all other delete functionality, is marked red to indicate that the user will be deleting data, or be in the process of deleting data, by clicking this link. However, this does not include a user deleting an item from their basket, which will be done as soon as the user clicks the bin icon, as asking the user to confirm deletion on every action could slow down the user journey. 
+
+Forms on the website utilise the django-crispy-forms package for maximum responsiveness. Those that also require card payment use Stripe Elements for authorisation and payment processing.
+
+**User stories**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## **Strategy**
-***Introduction***
-
-The rise of indoor plant sales, particularly amongst those between 18 and 30, has shot up almost 500% in recent years. Once thougth of as an 'old people's hobby', this increase in young people who are adopting the label of 'proud plant parents' is driving the demand for easy guidance to proper plant care and the availability of good quality plants to buy online.
-
-Greensleeves offers a diverse range of high quality and well cared-for indoor plants at reasonable prices for the target demographic, along with various plant accessories such as pots, spray bottles, watering cans, propagation sets, plant food and more.
 
 ***Site owner goals***
 * To increase customer base to include younger demographics
