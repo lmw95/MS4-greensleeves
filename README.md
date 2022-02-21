@@ -2,7 +2,28 @@
 
 ![](/documentation/design/responsive.png)
 
-Greensleeves is an e-Commerce site specialising in the sale of various indoor plants and accessories, and was created for educational purposes as the 4th milestine project for the Code Institute's Full Stack Software Development Diploma. 
+Welcome to Greensleeves. This full-stack Django e-commerce application provides users a selection of indoor plants and accessories alongside providing members advice on plant care and the opportunity to ask questions in the admin-managed Plant Care Club blog. The site provides plant-lovers the oppurtunity to explore the wide variety of indoor plants ranging in care level and needs, from beginner plant-parents to more experienced greenfingers. 
+
+The website provides the following purpose:
+
+* Sell a variety of products for all experience levels
+* Provide information on adequate care for the user's plant of choice
+* Allow members to dive deeper into the plant world by providing access to blogs, opinion pieces and leave comments
+
+Anyone can purchase an item from the site without registering for an account, but users will need to create an account to save their information should they wish to purchase again, read blog posts and leave comments. Admin (superuser) can also conduct these activities, as well as adding, editing and deleting items from the store and creating blog posts. This, therefore, creates two types of users: 
+
+* **Guest**: can purchase any item from the store and submit a contact request with no account needed
+* **Member**: can save personal details such as shipping address and view past orders, view blog posts and leave comments
+* **Admin**: can do all of the above, plus add, edit or remove items from the store, post blog articles and leave comments, and access the admin/management console
+
+This app would be of interest to:
+
+* Beginner plant owners who want to learn how to care for plants
+* Experienced plant owners who want to expand their collection
+
+Greensleeves was created for educational purposes as the 4th milestine project for the Code Institute's Full Stack Software Development Diploma. 
+
+[The live site can be found here.](https://ms4-greensleeves.herokuapp.com/)
 
 # Table of contents
 * UK
