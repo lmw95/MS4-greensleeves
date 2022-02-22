@@ -59,26 +59,6 @@ $( document ).ready(function() {
         $('.about-link .link-active').removeClass('link-active');
     });
 
-    // Toggle matching statement text for overlay
-    $('.toggle-statement').click(function() {
-        var toggle = $(this).attr('id').split('toggle')[1];
-        var attributes = $('.overlay-wrapper').map(function() {
-            return $(this).attr('id').split('statement')[1];
-            }).get();
-
-        for (let i = 0; i < attributes.length; i++) {
-            if (attributes[i] == toggle) {
-                var statement = attributes.find(element => element == toggle);
-            }  
-        }
-
-        var statementId = `statement${statement}`;
-        if (toggle == statement) {
-            $(`#${statementId}`).removeClass('d-none').addClass('animated slideInUp displayed');
-        }
-
-    });
-
     // Takes user back to statements
     $('.back-to-statements').click(function() {
         $('.displayed').addClass('d-none').removeClass('animated slideInUp displayed');

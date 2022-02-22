@@ -1,44 +1,110 @@
+{% load static %}
+
 <div class="d-none statement-section" id="statements">
-    <!--
-    <i class="far fa-arrow-alt-circle-left fa-2x back-to-about"></i>-->
-    <!---->
-    <div class="row overlay-wrapper h-100 w-100 m-0 p-0 d-none" id="statementEnvironment">
-        <div class="col-12 mt-3">
-            <i class="far fa-arrow-alt-circle-left mb-4 fa-lg back-to-statements px-3 px-3"></i>
-            <h1 class="position-absolute px-3 pb-3 mt-5">Environment</h1>
+   
+    <div class="modal statement-modal fade" id="environmentModal" tabindex="-1" aria-labelledby="environmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold fs-4" id="environmentModalLabel">Environment</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 d-flex flex-column">
+                <p>Here at Greensleeves, we are dedicated to creating a greener world without costing the Earth (figuratively and literally).
+                   We are dedicated to following our No Net Initiative, reaching the following goals:</p>
+                <ul class="mb-4">
+                    <li>For our supply chain and organisation to have zero-net impact on the climate</li>
+                    <li>To reduce our carbon emissions by 40% by 2030</li>
+                    <li>Use fully electric delivery vans by 2040</li>
+                </ul>
+                <img src="{% static 'images/calathea.png' %}" height=80 width=80 class="m-auto">
+            </div>
+          </div>
         </div>
     </div>
-    <div class="row overlay-wrapper h-100 w-100 m-0 p-0 d-none" id="statementEthics">
-        <div class="col-12">
-            <i class="far fa-arrow-alt-circle-left mb-4 fa-lg back-to-statements px-3 px-3"></i>
-            <h1 class="position-absolute px-3 pb-3 mt-5">Ethics</h1>
+
+    <div class="modal statement-modal fade" id="ethicsModal" tabindex="-1" aria-labelledby="ethicsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="ethicsModalLabel">Ethics</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 d-flex flex-column">
+                <p>With the backing of science, it us a responsibility of all businesses to ensure their practices
+                   are in line with current ethical consumerism and environmental impace guidelines. We have ensured
+                   we meet these standards by:
+                </p>
+                   <ul>
+                       <li>Ensuring our growers do as little damage to native wildlife as possible</li>
+                       <li>Ensuring accessibility in our staffing practices</li>
+                       <li>Ensuring our exotic plants are being sourced responsibily from our trading partners</li>
+                   </ul>
+                <img src="{% static 'images/calathea.png' %}" height=80 width=80 class="m-auto">
+            </div>
+          </div>
         </div>
     </div>
-    <div class="row overlay-wrapper h-100 w-100 m-0 p-0 d-none" id="statementEveryone">
-        <div class="col-12">
-            <i class="far fa-arrow-alt-circle-left mb-4 fa-lg back-to-statements px-3 px-3"></i>
-            <h1 class="position-absolute px-3 pb-3 mt-5">Everyone</h1>
+
+    <div class="modal statement-modal fade" id="everyoneModal" tabindex="-1" aria-labelledby="everyoneModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="everyoneModalLabel">Everyone</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 d-flex flex-column">
+                <p>It is one of Greensleeves firm beliefs that plant-parenthood is a joy to be shared. We encourage 
+                    carers from all walks of life and backgrounds to get involved as there should be no barries to 
+                    enjoying greenery in the home. We:
+                </p>
+                   <ul>
+                       <li>Encourage buyers to carefully choose plants within their experience level - we cater from complete beginner to experienced carers</li>
+                       <li>Provide accessibility ramps for disabled buyers in our store</li>
+                       <li>Ensure that our website meets accessibility standards</li>
+                   </ul>
+                <img src="{% static 'images/calathea.png' %}" height=80 width=80 class="m-auto">
+            </div>
+          </div>
         </div>
     </div>
-    <div class="row overlay-wrapper h-100 w-100 m-0 p-0 d-none" id="statementEvergreen">
-        <div class="col-12">
-            <i class="far fa-arrow-alt-circle-left mb-4 fa-lg back-to-statements px-3 px-3"></i>
-            <h1 class="position-absolute px-3 pb-3 mt-5">Evergreen</h1>
+
+    <div class="modal statement-modal details-modal fade" id="evergreenModal" tabindex="-1" aria-labelledby="evergreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="evergreenModalLabel">Evergreen</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 d-flex flex-column">
+                <p>There is nothing more disappointing that unboxing your new plant baby and finding it crawling with mealy bugs, 
+                    dead leaves and broken stems. At Greensleeves, we want our customers to recieve the highest quality plants possible by:
+                </p>
+                   <ul>
+                       <li>Conducting thorough checks on our plants before they leave our nurseries and greenhouses</li>
+                       <li>Ensure your orders are packed securely and safely on our delivery vans</li>
+                       <li>Offer full refunds on any damaged plants</li>
+                   </ul>
+                <img src="{% static 'images/calathea.png' %}" height=80 width=80 class="m-auto">
+            </div>
+          </div>
         </div>
     </div>
+
+
     <!---->
     <div class="row statement-container">
-        <div class="col-sm-12 col-md-6 statement-box d-flex justify-content-center align-items-center environment p-0">
-            <p class="toggle-statement m-0" id="toggleEnvironment">Environment</p>
+        <div class="col-sm-12 col-md-6 statement-box d-flex environment p-0 modal-trigger" data-bs-toggle="modal" data-bs-target="#environmentModal">
+            <p class="toggle-statement m-auto">Environment</p>
         </div>
-        <div class="col-sm-12 col-md-6 statement-box d-flex justify-content-center align-items-center ethics p-0 animation-delay-1">
-            <p class="toggle-statement m-0" id="toggleEthics">Ethics</p>
+        <div class="col-sm-12 col-md-6 statement-box d-flex ethics p-0 animation-delay-1 modal-trigger" data-bs-toggle="modal" data-bs-target="#ethicsModal">
+            <p class="toggle-statement m-auto">Ethics</p>
         </div>
-        <div class="col-sm-12 col-md-6 statement-box d-flex justify-content-center align-items-center everyone p-0 animation-delay-2">
-            <p class="toggle-statement m-0" id="toggleEveryone">Everyone</p>
+        <div class="col-sm-12 col-md-6 statement-box d-flex everyone p-0 animation-delay-2 modal-trigger" data-bs-toggle="modal" data-bs-target="#everyoneModal">
+            <p class="toggle-statement m-auto">Everyone</p>
         </div>
-        <div class="col-sm-12 col-md-6 statement-box d-flex justify-content-center align-items-center evergreen p-0 animation-delay-3">
-            <p class="toggle-statement m-0" id="toggleEvergreen">Evergreen</p>
+        <div class="col-sm-12 col-md-6 statement-box d-flex evergreen p-0 animation-delay-3 modal-trigger" data-bs-toggle="modal" data-bs-target="#evergreenModal">
+            <p class="toggle-statement m-auto">Evergreen</p>
         </div>
     </div>
 </div>

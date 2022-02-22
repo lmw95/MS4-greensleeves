@@ -69,20 +69,6 @@ video {
     object-fit: cover;
 }
 
-/*
-.back-to-about {
-    position: absolute;
-    margin: 48vh 0 0 555px;
-    color: var(--white);
-    z-index: 10;
-    transition: all 0.1s ease-in-out;
-}
-
-.back-to-about:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}*/
-
 /*----------------- [Statements] -----------------*/
 
 .statement-section {
@@ -139,16 +125,14 @@ video {
     background-size: cover;
 }
 
-.overlay-wrapper {
-    background-color: var(--black);
-    z-index: 10;
-    color: var(--white);
-    font-family: var(--body-text);
-    position: fixed;
+.statement-modal .modal-content {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+    font-family: var(--body-text) !important;
 }
 
-.overlay-wrapper h1 {
-    font-family: var(--header);
+.statement-modal .modal-header {
+    border-bottom: 0 !important;
 }
 
 .back-to-statements {
