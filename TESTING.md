@@ -17,6 +17,11 @@ Find the testing for MS4 - Greensleeves
 
 **JSHint - JavaScript**
 
+1st round testing revealed no errors for script.js and stripe-js-elements.js
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/js-errors-script.png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/js-errors-stripe.png)
+
 **W3C CSS Validator - CSS**
 
 1st round testing - the following errors were found:

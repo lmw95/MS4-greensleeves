@@ -9,8 +9,8 @@ $( document ).ready(function() {
 
         var selectedVal = selector.val();
         if(selectedVal != 'reset') {
-            var sort = selectedVal.split("_")[0]
-            console.log(sort)
+            var sort = selectedVal.split("_")[0];
+            console.log(sort);
             var direction = selectedVal.split("_")[1];
 
             currentUrl.searchParams.set('sort', sort);
@@ -27,7 +27,7 @@ $( document ).ready(function() {
 
     // Takes user to top of page
     $('.to-top-link').click(function(e) {
-        window.scrollTo(0,0)
+        window.scrollTo(0,0);
     });
 
     // Toggle About section buttons
@@ -65,16 +65,16 @@ $( document ).ready(function() {
     });
 
     // Triggers Boostrap tool tips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
+    return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 
     // Changes countryfield colour
     let countrySelected = $('#id_default_country').val();
       if (!countrySelected) {
           $('#id_default_country').css('color', '#989999');
-      };
+      }
       $('#id_default_country').change(function() {
         countrySelected = $(this).val();
         if(!countrySelected) {
@@ -84,7 +84,7 @@ $( document ).ready(function() {
         }
       });
 
-    // Toggles review to full width
+    // Truncates text on reviews to full size
     $('#review-1').click(function() {
         $(this).toggleClass('text-truncate');
         $(this).toggleClass('scroll');

@@ -270,7 +270,7 @@ hr {
 }
 
 .review-ratings i {
-    color: var(-green) !important;
+    color: var(--green) !important;
 }
 
 .reviews {
