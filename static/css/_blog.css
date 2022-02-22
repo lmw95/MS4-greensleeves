@@ -36,10 +36,10 @@
 }
 
 .quote-marks {
-    font-size: 2em;
+    font-size: 1em;
     color: var(--green);
     font-family: var(--header);
-    margin: 0 10px;
+    margin: 0 5px;
     opacity: 0.5;
     font-weight: 900;
 }

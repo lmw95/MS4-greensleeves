@@ -39,15 +39,6 @@
     box-shadow: none;
 }
 
-.accordion-button::after {
-    background-image: url(/media/leaf.png);
-    background-size: 1.4rem;
-}
-
-.accordion-button:not(.collapsed)::after {
-    background-image: url(/media/leaf.png);
-}
-
 .accordion-button:not(.collapsed) {
     color: var(--black);
 }

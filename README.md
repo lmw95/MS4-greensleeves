@@ -25,6 +25,11 @@ Greensleeves was created for educational purposes as the 4th milestine project f
 
 [The live site can be found here.](https://ms4-greensleeves.herokuapp.com/)
 
+To make a test payment, you may use the following card number:
+
+***(PLEASE NOTE: This is an educational site so do not use real card numbers!)***
+
+
 # Table of contents
 * [UX](https://github.com/lmw95/MS4-greensleeves#ux)
 * [Features](https://github.com/lmw95/MS4-greensleeves#user-stories)

@@ -1,7 +1,7 @@
 /*----------------- [Hero image] -----------------*/
 
 .hero-container {
-    background: url('../images/header.jpg') no-repeat center;
+    background: url(../images/header.jpg) no-repeat center;
     background-size: cover;
 }
 
