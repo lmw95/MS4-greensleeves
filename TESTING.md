@@ -112,4 +112,7 @@ The application proved itself highly compatible with all browsers and performanc
 
 6) As a site user, I want to be able to contact the site owner should I have any questions
 
-![]()
+7) As a site user, I want to be made aware of any deals or shipping discounts available
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-7.png)
+
