@@ -1,0 +1,15 @@
+Dear {{ contact_request.name }},
+
+Thank you very much for getting in touch with us. You are receiving this e-mail as confirmation that we have received your request and we will endeavour to respond to you within 2-3 working days.
+
+Here are the details of your contact request:
+
+Name: {{ contact_request.name }}
+E-mail address: {{ contact_request.email_address }}
+Subejct: {{ contact_request.subject }}
+Message: {{ contact_request.message }}
+
+Please don't hestitate to get in touch in the meantime if you have any further questions.
+
+Kind regards,
+The Greensleeves Team
