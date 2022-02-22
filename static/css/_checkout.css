@@ -73,7 +73,7 @@
 .submit-button button,
 .submit-button a {
     border: var(--black) solid 2px;
-    border-radius: none;
+    border-radius: 0;
     transition: all 0.1s ease-in-out;
     color: var(--black);
     font-weight: 700;

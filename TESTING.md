@@ -19,10 +19,18 @@ Find the testing for MS4 - Greensleeves
 
 **W3C CSS Validator - CSS**
 
+1st round testing - the following errors were found:
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/css-errors.png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/css-errors-2.png)
+
+* The 69 errors were from the AOS library, which the developer could not amend
+* After the other css errors were fixed, no more errors were shown
+
 **W3C Markup Validator - HTML**
 
 1st round testing - the following errors were found:
 
-![](https://github.com/lmw95/MS4-greensleeves/documentation/testing/markup-errors.png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/markup-errors.png)
 
-* After fixing these errors, no errors appeared in the validator
+* After fixing these errors, no errors were shown
