@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from shop.models import Product
 
 
 class UserProfile(models.Model):
