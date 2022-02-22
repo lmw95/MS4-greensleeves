@@ -174,19 +174,6 @@ body {
 
 .toggle-icon {
     color: var(--white);
-    animation: wiggle 3s infinite;
-}
-
-@keyframes wiggle {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(20deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
 }
 
 .mobile-icon {

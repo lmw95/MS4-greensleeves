@@ -42,7 +42,7 @@ To make a test payment, you may use the following card number:
 
 **Design**
 
-This website was built using [Bootstrap 5]() and makes use of Bootstrap's built in classes, components (such as navbar, buttons and modals) and grid layout. The design provides a clean and minimal palette with icons and eye-catching images (from [FontAwesome](), [Flaticon](), [Unplash]() and [Pexels]()) to guide the user through the site, allowing the majority of the colour of the site to come from the products. The minimal design ensures the pages do not become cluttered, and is easy to navigate and remain as intuitive as possible. To new users, the purpose of the site becomes clear on initial visit, with the slogan 'for the love of things that grow', the hero image and the immediate links to the products acting as reinforcement. The text is simple and clean, using an old-timey serif font to portray a sense of timelessness (like gardening and plantcare) to appeal to all ages, with the logo of the site in cursive to stand out from the rest of the site and provide a fun edge.
+This website was built using Bootstrap 5 and makes use of Bootstrap's built in classes, components (such as navbar, buttons and modals) and grid layout. The design provides a clean and minimal palette with icons and eye-catching images (from FontAwesome, Flaticon, Unplash and Pexels) to guide the user through the site, allowing the majority of the colour of the site to come from the products. The minimal design ensures the pages do not become cluttered, and is easy to navigate and remain as intuitive as possible. To new users, the purpose of the site becomes clear on initial visit, with the slogan 'for the love of things that grow', the hero image and the immediate links to the products acting as reinforcement. The text is simple and clean, using an old-timey serif font to portray a sense of timelessness (like gardening and plantcare) to appeal to all ages, with the logo of the site in cursive to stand out from the rest of the site and provide a fun edge.
 
 The products are displayed as 4 items per x-large, 3 items per large, 2 per medium and 1 per small/x-small screen. Every page is designed to be responsive and will respond depending on the contents of the page (eg. shrinking text, changing margins/padding, flexbox changes, etc). Any data concerning user data, such as order history or order summary, is stored in a table for easy viewing. 
 
@@ -233,7 +233,7 @@ To see credits, please see [CREDITS.md](https://github.com/lmw95/MS4-greensleeve
 
 ***Acknowledgements***
 * Inspiration for this site comes from other plant sites such as [Beards & Daisies](https://www.beardsanddaisies.co.uk/cart)
-* Thank you to everyone who has supported me throughout this project, including my mentor, fellow students and as always, StackOverflow
+* Thank you to everyone who has supported me throughout this diploma, including my mentor, fellow students and as always, StackOverflow
 
 [Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
 

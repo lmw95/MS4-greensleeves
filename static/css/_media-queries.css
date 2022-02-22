@@ -2,14 +2,38 @@
 
     .mobile-nav-wrapper {
         width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
     }
 
     .mobile-nav {
+        display: flex !important;
+        width: 100% !important;
         justify-content: space-evenly !important;
     }
 
     .list-inline-item {
         margin: 0 !important
+    }
+
+    .navbar {
+        justify-content: center !important;
+    }
+
+    .blogs-container {
+        margin-top: 50px important;
+    }
+
+    .blog-body {
+        margin-top: 100px !important;
+    }
+
+    .navbar-toggler {
+        padding-bottom: 0 !important;
+    }
+
+    .menu-nav-container {
+        padding-top: 0 !important;
     }
 
 }
@@ -19,6 +43,14 @@
 
     .discount-banner img {
         margin-right: 20px;
+    }
+
+    .nav-link i {
+        font-size: 1em;
+    }
+
+    .hero-left {
+        padding: 0.2rem !important;
     }
     
 }
@@ -43,6 +75,10 @@
 
     .blogs-container {
         padding: 1.1rem !important;
+    }
+
+    .bag-quantity {
+        width: 100% !important;
     }
     
 }
@@ -179,7 +215,7 @@
     
     .hero-left {
         background-color: var(--green-t);
-        height: auto !important;
+        height: 50vh !important;
         padding: 2em;
     }
 
@@ -194,6 +230,7 @@
     .hero-right {
         background: url(../images/header.jpg) no-repeat center;
         background-size: cover;
+        height: 50vh !important;
     }
 
     .item-info {

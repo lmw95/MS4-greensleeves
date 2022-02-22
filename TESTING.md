@@ -5,7 +5,7 @@ Find the testing for MS4 - Greensleeves
 [Back to README](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
 
 # Table of Contents
-* [Validation]()
+* [Validation](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#validation)
 * [Responsiveness]()
 * [Browser compatability]()
 * [Testing user stories]()
@@ -22,6 +22,7 @@ Find the testing for MS4 - Greensleeves
 ![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/python-errors-3.png)
 ![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/python-errors-4.png)
 
+* I fixed all similar errors throughout the project and removed whitespaces, made lines shorter and ensured correct spacing
 
 **JSHint - JavaScript**
 
@@ -47,3 +48,12 @@ Find the testing for MS4 - Greensleeves
 ![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/markup-errors.png)
 
 * After fixing these errors, no errors were shown
+
+## **Responsiveness**
+
+The website was tested in Google Chrome using the Viewport Resizer extension, Chrome DevTools and the Responsive Design Checker.
+
+The website's layout was tested pixel by pixel and on all popular mobile and tablet devices. The design is consistently responsive at all screen sizes and there is no change in the appearance or performance of interactive features.
+
+No issues, major or minor, were found.
+
