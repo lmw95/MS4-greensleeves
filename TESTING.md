@@ -7,8 +7,8 @@ Find the testing for MS4 - Greensleeves
 # Table of Contents
 * [Validation](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#validation)
 * [Responsiveness](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#responsiveness)
-* [Browser compatability]()
-* [Testing user stories]()
+* [Browser compatability](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#browser-compatability)
+* [Testing user stories](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#testing-user-stories)
 * [Ongoing issues and bugs]()
 
 ## **Validation**
@@ -66,3 +66,50 @@ After:
 ![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/responsive-fix.png)
 
 ## **Browser compatability**
+
+The application was tested in the following browsers:
+
+Google Chrome
+Microsoft Edge
+Opera
+Safari
+
+The application proved itself highly compatible with all browsers and performance was consistent across all.
+
+## **Testing user stories**
+
+1) As a site user, I want to be able to browse the selection of plants and accessories so I can decide whether I want to make a purchase
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-1.png)
+
+* Verdit: PASS
+
+2) As a site user, I want to be able to easily navigate the site so I can get to the specifc section that I need
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-2.png)
+
+* Verdict: PASS
+
+3) As a site user, I want the website to be responsive so that I can access it on a variety of devices
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-3(1).png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-3(2).png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-3(3).png)
+
+* Verdict: PASS
+
+4) As a site user, I want to see information about the plants (sucb as ease of care, humidity, watering, light, air purifying, etc.) so that I can assess whether this plant is for me
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-4.png)
+
+* Verdict: PASS
+
+5) As a site user, I want to see suggested accessories on each plant page so that I know which tools I need should I buy this plant
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-5.png)
+
+* Verdict: PASS
+
+6) As a site user, I want to be able to contact the site owner should I have any questions
+
+![]()

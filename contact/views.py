@@ -18,10 +18,10 @@ def contact(request):
             contact_request.save()
             user_email = contact_request.email_address
             subject = render_to_string(
-                'contact/confirmation_emails/contact_confirmation_email_subject.txt',
+                'contact/confirmation_emails/contact_confirmation_subject.txt',
                 {'contact_request': contact_request})
             body = render_to_string(
-                'contact/confirmation_emails/contact_confirmation_email_body.txt',
+                'contact/confirmation_emails/contact_confirmation_body.txt',
                 {'contact_request': contact_request, 'contact_email': settings.DEFAULT_FROM_EMAIL})
             send_mail(
                 subject,

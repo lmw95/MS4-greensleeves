@@ -175,6 +175,13 @@
                 <div class="carousel-cell rounded-0">
                     <div class="card index-card plants">
                         {% if item.image.url %}
+                            {% if item.is_on_sale %}
+                                <div class="position-absolute discount-price-wrapper">
+                                    <div class="discount-price d-flex flex-column p-3">
+                                        <p class="fw-bold my-auto mx-auto text-center fs-5">Sale!</p>
+                                    </div>
+                                </div>
+                            {% endif %}
                         <img class="card-img-top index-img" src="{{ item.image.url }}" alt="Image of {{ item.name }}">
                         {% else %}
                         <img class="card-img-top index-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
