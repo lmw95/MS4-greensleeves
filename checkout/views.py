@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -13,9 +14,10 @@ from bag.contexts import bag_contents
 import stripe
 import json
 
-# Create your views here.
+
 @require_POST
 def cache_checkout_data(request):
+    """Caches Stipe data on checkout"""
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -27,11 +29,13 @@ def cache_checkout_data(request):
         return HttpResponse(status=200)
 
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be taken at this time')
+        messages.error(
+            request, 'Sorry, your payment cannot be taken at this time')
         return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
+    """Allows user to checkout"""
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -76,7 +80,9 @@ def checkout(request):
             return redirect(reverse('checkout_success', args=[order.order_number]))
 
         else:
-            messages.error(request('There is an error with your form. Please double check your details!'))
+            messages.error(
+                request, 'There is an error with your form. \
+                    Please double check your details!')
 
     else:
         bag = request.session.get('bag', {})
@@ -124,6 +130,7 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
+    """Renders checkout success page on successful order"""
     save_info = request.session.get('save-info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -144,7 +151,6 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-
 
     messages.success(request, f'Order complete! \
         Your order number is {order_number}.')

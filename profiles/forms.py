@@ -3,10 +3,12 @@ from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    """Creates instance of profile update form"""
     class Meta:
+        """Renders user profile model"""
         model = UserProfile
         exclude = ('user',)
-    
+
     def __init__(self, *args, **kwargs):
         """Add placeholders and classes, remove auto-generated labels
            and set auto-focus on first field"""

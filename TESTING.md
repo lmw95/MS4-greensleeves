@@ -15,6 +15,14 @@ Find the testing for MS4 - Greensleeves
 
 **PEP8 - Python**
 
+1st round testing revealed the following errors:
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/python-errors.png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/python-errors-2.png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/python-errors-3.png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/python-errors-4.png)
+
+
 **JSHint - JavaScript**
 
 1st round testing revealed no errors for script.js and stripe-js-elements.js

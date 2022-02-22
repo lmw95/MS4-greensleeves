@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 import datetime
 from datetime import date
 from shop.models import Product
 
-# Create your views here.
+
 def index(request):
     """A view to return index page
         Renders the relevant seasonal collection according to current date"""
@@ -43,7 +43,8 @@ def index(request):
         collection_active = "valentines"
         emotion = "like falling in love"
 
-    seasonal_items = Product.objects.filter(seasonal_collection=collection_active)
+    seasonal_items = Product.objects.filter(
+        seasonal_collection=collection_active)
 
     context = {
          'collection_active': collection_active,

@@ -10,6 +10,7 @@ from profiles.models import UserProfile
 import json
 import time
 
+
 class StripeWH_Handler:
     """Handles Stripe webhooks"""
 
@@ -39,7 +40,6 @@ class StripeWH_Handler:
             content=f'Unhandled webhook recieved: {event["type"]}',
             status=200)
 
-
     def handle_payment_intent_succeeded(self, event):
         """Handles the payment_intent.succeed webhook from Stipe"""
         intent = event.data.object
@@ -67,7 +67,6 @@ class StripeWH_Handler:
                 profile.default_postcode__iexact=shipping_details.address.postal_code
                 profile.default_country__iexact=shipping_details.address.country
                 profile.save()
-
 
         order_exists = False
         attempt = 1

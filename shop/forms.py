@@ -3,8 +3,9 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-
+    """Ceates instance of product form"""
     class Meta:
+        """Renders form fields"""
         model = Product
         fields = '__all__'
 

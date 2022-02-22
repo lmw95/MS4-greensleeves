@@ -3,8 +3,9 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from shop.models import Product
 
-def bag_contents(request):
 
+def bag_contents(request):
+    """Renders all possible contexts of bag"""
     bag_items = []
     total = 0
     product_count = 0

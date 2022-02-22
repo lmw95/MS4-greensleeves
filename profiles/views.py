@@ -5,7 +5,7 @@ from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
 
-# Create your views here.
+
 @login_required
 def profile(request):
     """Displays user's profile"""
@@ -24,11 +24,12 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed, please make sure form is valid')
+            messages.error(
+                request, 'Update failed, please make sure form is valid')
 
     else:
         form = UserProfileForm(instance=profile)
-        
+
     orders = profile.orders.all()
 
     context = {
@@ -42,7 +43,7 @@ def profile(request):
         'postcode': postcode,
         'country': country,
     }
-    
+
     return render(request, 'profiles/profile.html', context)
 
 
@@ -65,6 +66,7 @@ def order_history(request, order_number):
 
 @login_required
 def delete_account(request, user):
+    """Deletes user's account"""
     user = request.user
     if request.user != user:
         messages.error(request, 'Sorry, this is not your profile.')
