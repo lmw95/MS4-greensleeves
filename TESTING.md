@@ -6,7 +6,7 @@ Find the testing for MS4 - Greensleeves
 
 # Table of Contents
 * [Validation](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#validation)
-* [Responsiveness]()
+* [Responsiveness](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#responsiveness)
 * [Browser compatability]()
 * [Testing user stories]()
 * [Ongoing issues and bugs]()
@@ -55,5 +55,14 @@ The website was tested in Google Chrome using the Viewport Resizer extension, Ch
 
 The website's layout was tested pixel by pixel and on all popular mobile and tablet devices. The design is consistently responsive at all screen sizes and there is no change in the appearance or performance of interactive features.
 
-No issues, major or minor, were found.
+There were, however, some issues with layout and aesthetics for screens smaller than 300px, notably the Galaxy Fold. As it is important to keep websites up-to-date with the latest devices, I amended the site to improve the layout on these screens.
 
+Before:
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/responsive-errors.png)
+
+After:
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/responsive-fix.png)
+
+## **Browser compatability**
