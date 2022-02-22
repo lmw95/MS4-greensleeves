@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}- page 404 {% endblock %}
+
+{% block content %}
+<div class="container error-container vh-100 p-4">
+    <div class="row h-100 mt-5">
+        <div class="col-12 d-flex flex-column justify-content-center">
+            <h2 class="fs-1 fw-bold text-center mb-3">Uh-oh, page not found!</h2>
+            <div class="text-center">
+                <img class="img-fluid" src="{% static 'images/calathea.png' %}" alt="Calathea" width="200"
+                    height="200">
+            </div>
+            <p class="fs-3 fw-bold text-center pt-4 mb-1">You seem a bit lost.</p>
+            <p class="fs-3 fw-bold text-center py-4">Not to worry, we'll get you out of here!</p>
+            <div class="text-center">
+                <a class="btn fw-bold bg-black text-white py-3 px-5 text-uppercase" href="{% url 'home' %}">Go home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

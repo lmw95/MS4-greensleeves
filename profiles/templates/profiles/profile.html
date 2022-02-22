@@ -84,9 +84,7 @@
                                     {% for order in orders %}
                                         <tr>
                                             <td>
-                                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
-                                                    <p class="small">{{ order.order_number|truncatechars:8 }}</p>
-                                                </a>
+                                                <p class="small">{{ order.order_number|truncatechars:8 }}</p>
                                             </td>
                                             <td>
                                                 <p class="small">{{ order.date }}</p>

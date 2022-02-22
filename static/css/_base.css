@@ -263,3 +263,9 @@ footer ul {
     color: var(--white);
     transform: scale(1.2);
 }
+
+/*----------------- [Errors] -----------------*/
+.error-container {
+    font-family: var(--body-text);
+    color: var(--black);
+}
