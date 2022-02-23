@@ -72,9 +72,9 @@ Forms on the website utilise the django-crispy-forms package for maximum respons
 * As a site user, I want the website to be responsive so that I can access it on a variety of devices
 * As a site user, I want to see information about the plants (sucb as ease of care, humidity, watering, light, air purifying, etc.) so that I can assess whether this plant is for me
 * As a site user, I want to see suggested accessories on each plant page so that I know which tools I need should I buy this plant
-* As a site user, I want to be able to contact the site owner should I have any questions
+* As a site user, I want to be able to contact the sito buy more than one
+* As a shopper, I want to be able to instantly see how many items are in my 'shopping bag' without needing to enter ite owner should I have any questions
 * As a site user, I want to be made aware of any deals or shipping discounts available
-* As a site user, I want to be able to read reviews of others that have used the site
 * As a site user, I want to be able to visit the site's social media so that I can keep up with any deals or lates events
 * As a site user, I want to be able to register with an account, so that I can see my past orders
 
@@ -82,8 +82,7 @@ Forms on the website utilise the django-crispy-forms package for maximum respons
 * As a shopper, I want to see prices of the plants and accessories so I can judge whether I can afford them
 * As a shopper, I want to be able to filter search results or all items (for example by price, ease of care, plant type or plant origins etc.) so that I can quickly narrow down my search
 * As a shopper, I want to be able to see all items or search for items and have my results displayed to me
-* As a shopper, I want to be able to select quantity of items in case I want to buy more than one
-* As a shopper, I want to be able to instantly see how many items are in my 'shopping bag' without needing to enter it
+* As a shopper, I want to be able to select quantity of items in case I want t
 * As a shopper, I want to be able to see my 'shopping bag' so I can see what I'm planning to buy
 * As a shopper, I want to be able to see the total of my 'shopping bag' 
 * As a shopper, I want to enter payment information in a safe and secure way so that I can checkout quickly with confidence my details will be protected
