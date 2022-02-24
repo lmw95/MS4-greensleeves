@@ -224,6 +224,12 @@ To see testing, please see [TESTING.md](https://github.com/lmw95/MS4-greensleeve
 
 [Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
 
+## **Deployment**
+
+To see deployment, please see [DEPLOYMENT.md](https://github.com/lmw95/MS4-greensleeves/blob/main/DEPLOYMENT.md)
+
+[Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
+
 ## **Credits**
 
 ***Code, media and content***

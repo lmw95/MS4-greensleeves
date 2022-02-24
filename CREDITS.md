@@ -1,8 +1,15 @@
 # Credits 
 
 ## **Code**
-[Loading plant bounce](https://css-tricks.com/making-css-animations-feel-natural/)
+The shop, cart and checkout applications and the main bulk of the code for this project are based heavily on the materials provided in the Boutique Ado project in the Full Stack Frameworks with Django module, delivered by Chris Z. (ckz8780). Much of the software written for these applications draws on this project's source code and follows a similar structure, while some chunks such as the webhooks and JavaScript logic for handling secure payments are directly lifted. Credit should be given to Chris where this is the case.
 
+The website uses a number of components from Bootstrap, such as the navbar, cards, classes and buttons. 
+
+The site's icons also come from Font Awesome and Flaticon which are linked below.
+
+The images mostly came from Unsplash and Pexels, and are all linked below.
+
+The plant-based facts all come from information gleamed from Google searches.
 
 ## **Media**
 
@@ -14,18 +21,13 @@
 
 ***Icons***
 
-BASE.HTML
 * [Brand logo](https://www.flaticon.com/free-icon/gardening_1973668?related_id=1973668&origin=search)
-
-ITEM-PAGE.HTML
 * [Plant growth](https://www.flaticon.com/premium-icon/growth_2194860?term=plants&related_id=2194860)
 * [Humidity](https://www.flaticon.com/premium-icon/humidity_1585362?)
 [Watering](https://www.flaticon.com/free-icon/watering-can_2853225?term=watering%20can&page=1&position=17&page=1&position=17&related_id=2853225&origin=search)
 * [Light](https://www.flaticon.com/premium-icon/cloudy-day_3222797?term=cloudy&page=1&position=9&page=1&position=9&related_id=3222797&origin=search)
 * [Ease of care](https://www.flaticon.com/premium-icon/hand_3131301?term=plant%20love&page=1&position=60&page=1&position=60&related_id=3131301&origin=search)
 * [Temperature](https://www.flaticon.com/free-icon/thermometer_1843544?term=temperature&page=1&position=7&page=1&position=7&related_id=1843544&origin=search)
-
-HOME.HTML
 * [Sustainability](https://www.flaticon.com/free-icon/agriculture_1772243?term=gardening&page=2&position=37&page=2&position=37&related_id=1772243&origin=search)
 * [Guidance](https://www.flaticon.com/free-icon/love_3994063?term=plant%20love&page=2&position=64&page=2&position=64&related_id=3994063&origin=search)
 * [Delivery](https://www.flaticon.com/free-icon/delivery_2358147?related_id=2358132&origin=search)
@@ -36,36 +38,20 @@ HOME.HTML
 * [Hearts](https://www.flaticon.com/free-icon/hearts_1405110?term=love%20hearts&page=1&position=27&page=1&position=27&related_id=1405110&origin=search)
 * [Butterflies](https://www.flaticon.com/premium-icon/butterfly_2716942)
 * [Sun](https://www.flaticon.com/free-icon/sun_869869?term=sun&page=1&position=5&page=1&position=5&related_id=869869&origin=search)
-
-DISCOUNT.HTML
 * [Truck](https://www.flaticon.com/free-icon/delivery_709790?term=delivery%20truck&page=1&position=1&page=1&position=1&related_id=709790&origin=search)
-
-SHOPPING-BAG.HTML
 * [Empty box](https://www.flaticon.com/premium-icon/wallet_1992132)
-
-CHECKOUT-SUCCESS.HTML
 * [Confetti](https://www.flaticon.com/free-icon/confetti_308066?term=confetti&page=1&position=1&page=1&position=1&related_id=308066&origin=search#)
+* [Calathea](https://www.flaticon.com/free-icon/calathea_4842629?term=calathea&page=1&position=11&page=1&position=11&related_id=4842629&origin=search)
+* [Leaf](https://www.flaticon.com/free-icon/leaf_2362779?term=leaf&page=1&position=72&page=1&position=72&related_id=2362779&origin=search)
 
-**Images**
+***Images & videos***
 
-ABOUT.HTML
-* [Environemnt](
-https://unsplash.com/photos/o41CLC24-SE)
+* [Environemnt](https://unsplash.com/photos/o41CLC24-SE)
 * [Ethics](https://unsplash.com/photos/WYGhTLym344)
 * [Everyone](https://unsplash.com/photos/qhQigi52kXw)
 * [Evergreen](https://unsplash.com/photos/x8ZStukS2PM)
-* [Video](https://www.pexels.com/video/nature-plant-pot-plants-4503294/)
-
-FAQS.HTML
-
-* [Leaf](https://www.flaticon.com/free-icon/leaf_2362779?term=leaf&page=1&position=72&page=1&position=72&related_id=2362779&origin=search)
-
-HOME.HTML
-
-* [Plants](
-https://unsplash.com/photos/gCKJD71IgRI)
-
-ITEM-PAGE.HTML - PLANTS
+* ['About us' video](https://www.pexels.com/video/nature-plant-pot-plants-4503294/)
+* [Plants](https://unsplash.com/photos/gCKJD71IgRI)
 
 * [Acera palm](https://unsplash.com/photos/AU5F441QvvQ)
 * [Begonia](https://www.pexels.com/photo/summer-pattern-leaf-plants-4499368/)
@@ -81,13 +67,12 @@ ITEM-PAGE.HTML - PLANTS
 * [Frittonia](https://www.pexels.com/photo/fittonia-with-wavy-leaves-in-pot-on-gray-background-7189360/)
 * [Ginseng bonsai](https://www.pexels.com/photo/bonsai-on-white-background-4050790/)
 * [Gypsophila](https://www.pexels.com/photo/crop-person-showing-blooming-gypsophila-bouquet-with-wavy-stems-6913052/)
-* [Hoya](
-https://unsplash.com/photos/pGglEaGaN2E)
+* [Hoya](https://unsplash.com/photos/pGglEaGaN2E)
 * [Jasmine](https://www.theonlinesecretgarden.com/plants/jasmine)
 * [Mistletoe](https://unsplash.com/photos/_-7VBOQoEDM)
 * [Monstera](https://unsplash.com/photos/bwsTJMnhcwE)
 * [Moth orchid](https://unsplash.com/photos/D_TIIC7jhg8)
-* [Orange tree - needs finding]()
+* [Orange tree - needs finding](https://unsplash.com/photos/dYYmeKBM6RU)
 * [Peace lily](https://unsplash.com/photos/lmczPemWjQQ)
 * [Pine bonsai](https://unsplash.com/photos/TYUS-cXzy50)
 * [Pothos](https://unsplash.com/photos/dTLeHGu9FAw)
@@ -97,22 +82,15 @@ https://unsplash.com/photos/pGglEaGaN2E)
 * [String of hearts](https://unsplash.com/photos/rmYAJLWdH3Q)
 * [Winter cactus](https://unsplash.com/photos/N9lmtlOuaDM)
 
-ITEM-PAGE.HTML - ACCESSORIES
-
-* [Dustpan & brush](
-https://unsplash.com/photos/77La8Of1F9g)
+* [Dustpan & brush](https://unsplash.com/photos/77La8Of1F9g)
 * [Gardening kit](https://www.pexels.com/photo/gardening-tools-in-pot-near-gloves-6231714/)
 * [Gloves](https://www.pexels.com/photo/person-wearing-white-garden-gloves-9413747/)
 * [Oil & brush kit](https://unsplash.com/photos/uooMllXe6gE)
 * [Pot](https://www.nisbets.co.uk/terracotta-planter-320mm/cc539)
 * [Pots](https://www.wmpot.co.uk/terracotta-plant-pots-f13-13cm-dia-pk-10)
 * [Potting mix](https://www.pexels.com/photo/person-holding-brown-plastic-pot-4505162/)
-* [Shovel](
-https://unsplash.com/photos/JR7IPWMMXcc)
+* [Shovel](https://unsplash.com/photos/JR7IPWMMXcc)
 * [Shovel set](https://www.pexels.com/photo/top-view-photo-of-gardening-tools-4503269/)
 * [Spray bottle](https://unsplash.com/photos/MHrmbMQ8DJ8)
 * [Terrarium - open](https://www.pexels.com/photo/plants-in-a-glass-container-4650142/)
 * [Terrarium - closed](https://www.pexels.com/photo/plants-in-a-terrarium-jar-4650144/)
-
-
-## **Content**
