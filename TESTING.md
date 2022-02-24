@@ -9,7 +9,7 @@ Find the testing for MS4 - Greensleeves
 * [Responsiveness](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#responsiveness)
 * [Browser compatability](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#browser-compatability)
 * [Testing user stories](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#testing-user-stories)
-* [Ongoing issues and bugs]()
+* [Issues and bugs](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#issues-bugs)
 
 ## **Validation**
 
@@ -199,6 +199,66 @@ The application proved itself highly compatible with all browsers and performanc
 
 * Verdict: PASS
 
-20)
+20) As an account holder, I want to delete my account so that my personal information are removed from the website
 
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-18(1).png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-18(2).png)
 
+* Verdict: PASS
+
+21) As an account holder, I want to be able to view exclusive blog posts and leave comments as feedback
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-19(1).png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-19(2).png)
+
+* Verdict: PASS
+
+22) As site admin, I want to add, edit and delete an item and its contents so that the website stays up to date and accurate
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-20(1).png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-20(2).png)
+
+* Verdict: PASS
+
+24) As site admin, I want to be able to add related products so that I can encourage multiple sales
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-21(1).png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-21(2).png)
+
+* Verdict: PASS
+
+25) As site admin, I want to be able to edit most of the content of the website, so that I can keep my website up to date
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-20(1).png)
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-20(2).png)
+
+* Verdict: PASS
+
+26) As site admin, I want to manage orders from the console so I can keep up to date with them
+
+![](https://github.com/lmw95/MS4-greensleeves/blob/main/documentation/testing/us-21.png)
+
+## **Bugs & issues**
+
+The list of persistant issues throughout the project are listed below:
+
+1) 
+* ISSUE: A major and persisitant issue during development involved confirmation emails not being sent to the user upon successful checkout, sending verification emails to the user upon sign up
+* FIX: Changing the gmail configuation settings in settings.py by adding forgotten envionment variables to condition when development is off
+* [Commit]()
+
+2)
+* ISSUE: A parallel issue to the confirmation emails was that the emails were still not being sent upon order confirmation
+* FIX: There was a typo with the email files, which were fixed and sorted the issue
+* [Commit 1](https://github.com/lmw95/MS4-greensleeves/commit/baef4ebfd53badeec4a84a68f3ad2f0a0b638769)
+* [Commit 2](https://github.com/lmw95/MS4-greensleeves/commit/9b3f8e8d48dcb2bc9f57386ce62133b1df45c928)
+
+3)
+* ISSUE: Trying to conduct a search query would throw a 500 error
+* FIX: Old model fields that were not deleted from the query fields, these were deleted and fixed the error
+* [Commit](https://github.com/lmw95/MS4-greensleeves/commit/015f4dd7e8c470c2ac214821602057c3b4f980f2)
+
+4)
+* ISSUE: The payments would not process, Stripe would throw an error that declared 'unknown parameters: country, postcode' on attempt to checkout 
+* FIX: I had to change 'state' to 'country' in stripe_elements.js
+* [Commit](https://github.com/lmw95/MS4-greensleeves/commit/b6ffb62c413657d2f2557d21e5240c8118279802)
