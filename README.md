@@ -25,15 +25,13 @@ Greensleeves was created for educational purposes as the 4th milestine project f
 
 [The live site can be found here.](https://ms4-greensleeves.herokuapp.com/)
 
-To make a test payment, you may use the following card number:
-
-***(PLEASE NOTE: This is an educational site so do not use real card numbers!)***
-
+***(PLEASE NOTE: This is an educational site so do not use real card numbers upon checkout!)***
 
 # Table of contents
 * [UX](https://github.com/lmw95/MS4-greensleeves#ux)
 * [Features](https://github.com/lmw95/MS4-greensleeves#user-stories)
 * [Technologies](https://github.com/lmw95/MS4-greensleeves#technologies)
+* [Data structure](https://github.com/lmw95/MS4-greensleeves#data-structure)
 * [Testing](https://github.com/lmw95/MS4-greensleeves#testing)
 * [Deployment](https://github.com/lmw95/MS4-greensleeves#deployment)
 * [Credits](https://github.com/lmw95/MS4-greensleeves#credits)
@@ -224,6 +222,17 @@ To see testing, please see [TESTING.md](https://github.com/lmw95/MS4-greensleeve
 
 [Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
 
+## **Data structure**
+
+The project uses Postgres as a relational database to store data in SQL format for the live site, which is visible in the Django admin panel. Model classes allow for interaction with the database. An example of relational data at play is as follows:
+* A registered user's user ID is used in the user field of the store user model when they register.
+* When the user places an order, the shop order model takes the user's data to populate its store user field with the user's username and attach the order to the user's profile. The order exists in the database as having been placed by this user. If the user deletes their profile, this field is set to null as the order should always exist in the database.
+* The order line item model interacts with the shop order model using its shop_order field to create an instance of each item in the user's cart and calculate the total cost.
+* If the user checks the 'save user info' box upon checkout, the store user model will get the information from the shop order model and store each entry as the value of its relevant field, namely default_email_address, default_phone_number, default_address_line1 etc.
+* When the user next places an order, the shop order model grabs the user's data from the store user model to pre-populate the checkout form with the stored information.
+* The post model is created in the admin console, where the superuser populates the fields of post, slug, title, body and date_added (which is grabbed upon creation)
+* If a user leaves a comment on a blog, the comment model is populated with the fields post & user_profile (which are grabbed by a foregin key linking the user's comment to the post and the user's username to the comment), comment and date_added (again calculated upon creation). If a post is deleted, the comments are deleted too. 
+
 ## **Deployment**
 
 To see deployment, please see [DEPLOYMENT.md](https://github.com/lmw95/MS4-greensleeves/blob/main/DEPLOYMENT.md)
@@ -239,6 +248,7 @@ To see credits, please see [CREDITS.md](https://github.com/lmw95/MS4-greensleeve
 ***Acknowledgements***
 * Inspiration for this site comes from other plant sites such as [Beards & Daisies](https://www.beardsanddaisies.co.uk/cart)
 * Thank you to everyone who has supported me throughout this diploma, including my mentor, fellow students and as always, StackOverflow
+* Special thanks to my boyfriend Connor, who has been a strong shoulder of support throughout this life-changing period, and has been there through my grumbles, stresses and celebrations!
 
 [Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
 
