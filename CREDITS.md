@@ -54,7 +54,7 @@ The plant-based facts all come from information gleamed from Google searches.
 
 (Some of these may have been omitted in the final product, but added here just in case)
 
-* [Environemnt](https://unsplash.com/photos/o41CLC24-SE)
+* [Environment](https://unsplash.com/photos/o41CLC24-SE)
 * [Ethics](https://unsplash.com/photos/WYGhTLym344)
 * [Everyone](https://unsplash.com/photos/qhQigi52kXw)
 * [Evergreen](https://unsplash.com/photos/x8ZStukS2PM)

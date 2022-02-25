@@ -158,6 +158,7 @@ Forms on the website utilise the django-crispy-forms package for maximum respons
 * Admin can manage stock levels
 * Pagination for shop items results
 * Users can add items to a wishlist
+* Privacy/return policies which were left out due to time contraints
 
 [Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
 
@@ -290,4 +291,3 @@ To see credits, please see [CREDITS.md](https://github.com/lmw95/MS4-greensleeve
 * Special thanks to my boyfriend Connor, who has been a strong shoulder of support throughout this life-changing period, and has been there through my grumbles, stresses and celebrations!
 
 [Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
-
