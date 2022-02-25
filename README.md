@@ -286,6 +286,7 @@ To see credits, please see [CREDITS.md](https://github.com/lmw95/MS4-greensleeve
 ***Acknowledgements***
 * Inspiration for this site comes from other plant sites such as [Beards & Daisies](https://www.beardsanddaisies.co.uk/cart)
 * Thank you to everyone who has supported me throughout this diploma, including my mentor, fellow students and as always, StackOverflow
+* Shout out to my parents who have been great springboards for ideas and inspiration
 * Special thanks to my boyfriend Connor, who has been a strong shoulder of support throughout this life-changing period, and has been there through my grumbles, stresses and celebrations!
 
 [Back to top](https://github.com/lmw95/MS4-greensleeves#ms4---greensleeves)
