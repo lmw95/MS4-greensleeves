@@ -237,7 +237,7 @@ The project uses Postgres as a relational database to store data in SQL format f
 
 ***Database schema***
 
-![](documentation/wireframes/database-schema.png)
+![](documentation/structure/database-schema.png)
 
 ***CRUD / defensive design***
 
