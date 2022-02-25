@@ -1,11 +1,17 @@
 # Credits 
 
 ## **Code**
-The shop, cart and checkout applications and the main bulk of the code for this project are based heavily on the materials provided in the Boutique Ado project in the Full Stack Frameworks with Django module, delivered by Chris Z. (ckz8780). Much of the software written for these applications draws on this project's source code and follows a similar structure, while some chunks such as the webhooks and JavaScript logic for handling secure payments are directly lifted. Credit should be given to Chris where this is the case.
+The main bulk of the code for this project is based heavily on the materials provided in the Boutique Ado project in the Full Stack Frameworks with Django module provided by Chris Z (ckz8780). Most of the software written for these applications draws on this project's source code and follows a similar structure, while some code such as the webhooks and JavaScript logic for handling payments are directly extracted.
 
-The website uses a number of components from Bootstrap, such as the navbar, cards, classes and buttons. 
+The code for the blog app comes from [this tutorial](https://www.youtube.com/watch?v=m3hhLE1KR5Q) by YouTuber Code with Stein.
 
-The site's icons also come from Font Awesome and Flaticon which are linked below.
+The code for the contact app was extracted from the [Django documentation](https://docs.djangoproject.com/en/4.0/topics/email/).
+
+Toggle password functionality was adapted from [this W3C tutorial](https://www.w3schools.com/howto/howto_js_toggle_password.asp).
+
+The website uses a number of components from Bootstrap5, such as the navbar, cards, classes and buttons. 
+
+The site's icons also come from FontAwesome and Flaticon which are linked below.
 
 The images mostly came from Unsplash and Pexels, and are all linked below.
 
@@ -46,6 +52,8 @@ The plant-based facts all come from information gleamed from Google searches.
 
 ***Images & videos***
 
+(Some of these may have been omitted in the final product, but added here just in case)
+
 * [Environemnt](https://unsplash.com/photos/o41CLC24-SE)
 * [Ethics](https://unsplash.com/photos/WYGhTLym344)
 * [Everyone](https://unsplash.com/photos/qhQigi52kXw)
@@ -72,7 +80,7 @@ The plant-based facts all come from information gleamed from Google searches.
 * [Mistletoe](https://unsplash.com/photos/_-7VBOQoEDM)
 * [Monstera](https://unsplash.com/photos/bwsTJMnhcwE)
 * [Moth orchid](https://unsplash.com/photos/D_TIIC7jhg8)
-* [Orange tree - needs finding](https://unsplash.com/photos/dYYmeKBM6RU)
+* [Orange tree](https://unsplash.com/photos/dYYmeKBM6RU)
 * [Peace lily](https://unsplash.com/photos/lmczPemWjQQ)
 * [Pine bonsai](https://unsplash.com/photos/TYUS-cXzy50)
 * [Pothos](https://unsplash.com/photos/dTLeHGu9FAw)
