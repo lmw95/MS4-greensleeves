@@ -10,6 +10,7 @@ Find the testing for MS4 - Greensleeves
 * [Browser compatability](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#browser-compatability)
 * [Testing user stories](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#testing-user-stories)
 * [Issues and bugs](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#issues-bugs)
+* [Automated testing](https://github.com/lmw95/MS4-greensleeves/blob/main/TESTING.md#automated-testing)
 
 ## **Validation**
 
@@ -245,7 +246,7 @@ The list of persistant issues throughout the project are listed below:
 1) 
 * ISSUE: A major and persisitant issue during development involved confirmation emails not being sent to the user upon successful checkout, sending verification emails to the user upon sign up
 * FIX: Changing the gmail configuation settings in settings.py by adding forgotten envionment variables to condition when development is off
-* [Commit]()
+* [Commit](https://github.com/lmw95/MS4-greensleeves/commit/3ccef24e508339d7c50b3506f2ae2fb8cb30ce7f)
 
 2)
 * ISSUE: A parallel issue to the confirmation emails was that the emails were still not being sent upon order confirmation
@@ -262,3 +263,7 @@ The list of persistant issues throughout the project are listed below:
 * ISSUE: The payments would not process, Stripe would throw an error that declared 'unknown parameters: country, postcode' on attempt to checkout 
 * FIX: I had to change 'state' to 'country' in stripe_elements.js
 * [Commit](https://github.com/lmw95/MS4-greensleeves/commit/b6ffb62c413657d2f2557d21e5240c8118279802)
+
+**Automated testing**
+
+Unfortunately, I am new to automated testing and time was of the essence, full case automated testing on all models and forms were not implemented. However this is something that I am keen to learn and implemrnt in future projects. The testing conducted in this project was done manually.

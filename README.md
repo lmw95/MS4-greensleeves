@@ -224,6 +224,8 @@ To see testing, please see [TESTING.md](https://github.com/lmw95/MS4-greensleeve
 
 ## **Data structure**
 
+***Data models***
+
 The project uses Postgres as a relational database to store data in SQL format for the live site, which is visible in the Django admin panel. Model classes allow for interaction with the database. An example of relational data at play is as follows:
 * A registered user's user ID is used in the user field of the store user model when they register.
 * When the user places an order, the shop order model takes the user's data to populate its store user field with the user's username and attach the order to the user's profile. The order exists in the database as having been placed by this user. If the user deletes their profile, this field is set to null as the order should always exist in the database.
@@ -232,6 +234,42 @@ The project uses Postgres as a relational database to store data in SQL format f
 * When the user next places an order, the shop order model grabs the user's data from the store user model to pre-populate the checkout form with the stored information.
 * The post model is created in the admin console, where the superuser populates the fields of post, slug, title, body and date_added (which is grabbed upon creation)
 * If a user leaves a comment on a blog, the comment model is populated with the fields post & user_profile (which are grabbed by a foregin key linking the user's comment to the post and the user's username to the comment), comment and date_added (again calculated upon creation). If a post is deleted, the comments are deleted too. 
+
+***Database schema***
+
+![](documentation/wireframes/database-schema.png)
+
+***CRUD / defensive design***
+
+**Action** | **Guests** | **Authenticated user** | **Superuser / Admin**
+-- | -- | -- | --
+View homepage | Yes | Yes | Yes
+View about page | Yes | Yes | Yes
+View FAQs | Yes | Yes | Yes
+View contact page | Yes | Yes | Yes
+Submit contact query | Yes | Yes | Yes
+View shop | Yes | Yes | Yes
+Submit search query | Yes | Yes | Yes
+View shop item | Yes | Yes | Yes
+Add/edit/delete shop item | No | No | Yes
+Add/edit/delete shop category | No | No | Yes
+View shopping bag | Yes | Yes | Yes
+Add/update/delete item from bag | Yes | Yes | Yes
+Checkout | Yes | Yes | Yes
+Login | Yes | Yes | Yes
+Register | Yes | Yes | No
+View profile | Yes | Yes | Yes
+Edit profile | Yes | Yes | Yes
+Delete account | Yes | Yes | Yes
+View order history | Yes | Yes | Yes
+View blog list | Yes | Yes | Yes
+View blog page | No | Yes | Yes
+Add blog post | No | No | Yes
+Add comment to blog | No | Yes | Yes
+
+
+***Defensive design***
+* All delete functions apart from deleting items from the users bag are done using defensive programming - a modal will pop up asking the user to confirm their decision before deletion (the only function that exists like this is the deletion of the user's account)
 
 ## **Deployment**
 
